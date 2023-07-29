@@ -6,9 +6,21 @@ class IncorrectPhoneeFormat(Exception):
     pass
 
 
-class IncorrectEmailFormat(Exception): # new
+class IncorrectEmailFormat(Exception): 
     pass
 
 
-class IncorrectNameFormat(Exception): # new
+class IncorrectNameFormat(Exception): 
+    pass
+
+
+class IncorrectStatusFormat(Exception): 
+    pass
+
+
+class IncorrectAddressFormat(Exception): 
+    pass
+
+
+class IncorrectBirthdayFormat(Exception): 
     pass
