@@ -10,7 +10,8 @@ birthday_list = None
 # Функція яка перевіряє в кого день народження на протязі наступної кількості днів.
 def get_birthdays_per_week(users):
     for user, birthday in users.items():
-
+        if birthday == "None":
+            continue
         date_u = birthday
         date = datetime(year=today.year, month=date_u.month, day=date_u.day)
 
@@ -63,5 +64,5 @@ def main(adress_book, days=7):
     today = dt.now()
     next_week = today + timedelta(days)
     users = {}
-    users = dict(map(lambda i: (adress_book[i].name.value, adress_book[i].birthday.value), adress_book.keys()))
+    users = dict(map(lambda i: (adress_book[i].name.value, adress_book[i].birthday.value if adress_book[i].birthday else "None"), adress_book.keys()))
     return get_birthdays_per_week(users)

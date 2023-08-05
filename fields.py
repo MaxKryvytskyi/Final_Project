@@ -71,39 +71,20 @@ class Birthday(Field):
         else: self.__value = None
 
 
-# class Email(Field): 
-#     @property
-#     def value(self): 
-#         return self.__value
-    
-#     @value.setter
-#     def value(self, value: str) -> IncorrectEmailFormat:
-#         if value:
-#             if value == None: self.__value = None
-#             verified = str(*re.findall(r"[a-zA-Z]{1}[a-zA-Z0-9._]{1,}@[a-zA-Z]+\.[a-zA-Z]{2,}", value))
-#             if verified: self.__value = verified
-#             else: raise IncorrectEmailFormat
-#         else: self.__value = None
-
-    
-# class Address(Field):
-#     pass
-
-class Address(Field): 
-    def __init__(self, value=None):
-        self.__value = None
-        self.value = ' '.join(value)
-
-
-class Email(Field):
+class Email(Field): 
     @property
-    def value(self):
+    def value(self): 
         return self.__value
     
     @value.setter
-    def value(self, value: str):
-        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-        if not re.match(pattern, value):
-            raise ValueError("Invalid email address!")
-        else:
-            self.__value = value 
+    def value(self, value: str) -> IncorrectEmailFormat:
+        if value:
+            if value == None: self.__value = None
+            verified = str(*re.findall(r"[a-zA-Z]{1}[a-zA-Z0-9._]{1,}@[a-zA-Z]+\.[a-zA-Z]{2,}", value))
+            if verified: self.__value = verified
+            else: raise IncorrectEmailFormat
+        else: self.__value = None
+
+    
+class Address(Field):
+    pass

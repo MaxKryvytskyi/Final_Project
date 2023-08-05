@@ -55,6 +55,7 @@ class AddressBook(UserDict):
 
     # Записує книгу контактів посторінково для виводу в консоль 
     def create_print_page(self, page:int, contacts:list, flag:bool) -> str | None:
+        # print(page, contacts, flag)
         result = ""
         n = 12
         pattern = r"[\[\'\'\"\"\]]" 
@@ -80,13 +81,13 @@ class AddressBook(UserDict):
                 if len(p) > 1:
                     for iii in p:
                         new_i = re.sub(pattern, "", iii)
-                        if count == 1 and i == 0: result += f"Name : {name_value}\n" + f"Phone {count} :{new_i}\n"
+                        if count == 1 and i == 0: result += f"Name : {name_value}\n" + f"Phone {count} : {new_i}\n"
                         else: result += f"Phone {count} :{new_i}\n"
                         count += 1
                     result += f"Birthday : {birthday_value}\n"
                 else:
                     new_i = re.sub(pattern, "", phone_value)
-                    result += f"Name : {name_value}\n" + f"Phone {count} :{new_i}\n" + f"Birthday : {birthday_value}\n"
+                    result += f"Name : {name_value}\n" + f"Phone {count} : {new_i}\n" + f"Birthday : {birthday_value}\n"
                 result += f"Email : {email_value}\n" + f"Address : {address_value}\n\n" 
             return result
         return None
@@ -115,7 +116,10 @@ class AddressBook(UserDict):
             num = 0
             for i in name:
                 birthday = self.data[i].birthday.value.strftime('%d-%m-%Y') if self.data[i].birthday else log("No birthday date", "[Bot's answer] ")
-                dict_contacts[num] = [str(self.data[i].name), f" {self.data[i].phones}", birthday]
+                phones = self.data[i].phones if self.data[i].phones else log(" No phone", "[Bot's answer] ")
+                email = self.data[i].email if self.data[i].email else log("No email", "[Bot's answer] ")
+                address = self.data[i].address if self.data[i].address else log("No address", "[Bot's answer] ")
+                dict_contacts[num] = [str(self.data[i].name), phones, birthday, email, address]
                 num += 1
             text = self.create_print_page(len(dict_contacts), dict_contacts, False)
         
@@ -131,3 +135,6 @@ class AddressBook(UserDict):
         with open("Save_adress_book.bin", "rb") as file:
             deserialized_adress_book = pickle.load(file)
             return deserialized_adress_book
+        
+
+        # result += "{:^90}".format("|" + "_"*30 +"|"+ "_"*30 +"|"+ "_"*30 +"|") + "\n"

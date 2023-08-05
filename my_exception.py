@@ -1,4 +1,4 @@
-class IncorrectDateFormat(Exception):
+class IncorrectNameFormat(Exception): 
     pass
 
 
@@ -6,17 +6,9 @@ class IncorrectPhoneeFormat(Exception):
     pass
 
 
+class IncorrectDateFormat(Exception):
+    pass
+
+
 class IncorrectEmailFormat(Exception): 
-    pass
-
-
-class IncorrectNameFormat(Exception): 
-    pass
-
-
-class IncorrectAddressFormat(Exception): 
-    pass
-
-
-class IncorrectBirthdayFormat(Exception): 
     pass

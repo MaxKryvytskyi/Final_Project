@@ -9,7 +9,7 @@ from my_exception import IncorrectDateFormat, IncorrectPhoneeFormat, IncorrectEm
 
 works_bot = True
     
-# Відповідає за те як саме почати роботу
+# Відповідає за те загрузити стару книгу чи створити нову
 def start_work_bot(adress_book: AddressBook):
     while True:
         try:
@@ -40,9 +40,9 @@ def input_error(func):
         # except AttributeError: return log(f"Enter command.", "[Error] ")
         # except IncorrectDateFormat: return log(f"Incorrect date format", "[Error] ")
         # except IncorrectPhoneeFormat: return log(f"Incorrect phone format", "[Error] ")
-        # except IncorrectEmailFormat: return log(f"Incorrect email format", "[Error] ") # new
-        # except IncorrectNameFormat: return log(f"Incorrect name format", "[Error] ") # new
-        except KeyboardInterrupt: return exit_uzer() # new
+        # except IncorrectEmailFormat: return log(f"Incorrect email format", "[Error] ") 
+        # except IncorrectNameFormat: return log(f"Incorrect name format", "[Error] ") 
+        except KeyboardInterrupt: return exit_uzer()
     return inner
 
 # ======================================================================================================
@@ -112,7 +112,8 @@ def remove(*args:str):
         rec.remove_address()
         return log(f'address removed from {args[1].capitalize()}\'s profile', "[Bot's answer] ")
     else:
-        return "якийсь Error"
+        return log("якийсь Error remove", "[Bot's answer] ")
+    
 # ======================================================================================================
 # =========================================[ change ]===================================================
 # ======================================================================================================
@@ -126,26 +127,26 @@ def change(*args:str):
             rec.change_name(Name(args[1].capitalize()), Name(args[2].capitalize()))
             adress_book.data.pop(args[1].capitalize())
             adress_book[args[2].capitalize()] = rec
-            return f"Contact name {args[1].capitalize()}`s changed to {args[2].capitalize()}'s"
-        else: return f"Contact with the name {args[2].capitalize()}'s already exists"
+            return log(f"Contact name {args[1].capitalize()}`s changed to {args[2].capitalize()}'s", "[Bot's answer] ")
+        else: return log(f"Contact with the name {args[2].capitalize()}'s already exists", "[Bot's answer] ")
 
     elif args[0].lower() == "phone":
         if rec: return rec.change_phone(Phone(args[2]), Phone(args[3]))
-        return f"Contact wit name {args[1].capitalize()} doesn`t exist."
+        return log(f"Contact wit name {args[1].capitalize()} doesn`t exist.", "[Bot's answer] ")
 
     elif args[0].lower() == "email":
         rec.change_email(Email(args[2]), Email(args[3]))
-        return f"Email is profile {args[1].capitalize()}'s has been changed"
+        return log(f"Email is profile {args[1].capitalize()}'s has been changed", "[Bot's answer] ")
 
     elif args[0].lower() == "birthday":
         rec.change_birthday(Birthday(args[2]), Birthday(args[3]))
-        return f"Birthday profile {args[1].capitalize()}'s has been changed"
+        return log(f"Birthday profile {args[1].capitalize()}'s has been changed", "[Bot's answer] ")
 
     elif args[0].lower() == "address":
         rec.change_address(Address(args[2:]))
-        return f'The contact "{args[1].capitalize()}" was updated with new address: {rec.address}'
+        return log(f'The contact "{args[1].capitalize()}" was updated with new address: {rec.address}', "[Bot's answer] ")
     else:
-        return "якийсь Error"
+        return log("якийсь Error change", "[Bot's answer] ")
 
 # ======================================================================================================
 # =========================================[ other ]====================================================
@@ -239,24 +240,23 @@ COMMANDS_LIST = {
 
 # Список команд.
 COMMANDS = {
-    add_birthday : ("add birthday", ), 
-    add_address : ("add address", ), 
-    add_email : ("add email", ),
-    add_phone : ("add phone", ), 
-    add : ("add", ), 
+    add_birthday : ("add birthday", ), # +
+    add_address : ("add address", ), # +
+    add_email : ("add email", ), # +
+    add_phone : ("add phone", ), # +
+    add : ("add", ), # +
     
-    remove : ("remove", ),
+    remove : ("remove", ), # +
+    change : ("change", ), # +
 
-    change : ("change", ),
-
-    all_birthday : ("all birthday", ),
-    birthday : ("birthday", ), 
-    exit_uzer : ("close", "exit", "good bye"), 
-    show_page : ("show page", ), 
-    search : ("search", ), 
-    helper : ("help", ), 
-    phone : ("phone", ), 
-    hello : ("hello", ) 
+    all_birthday : ("all birthday", ), # +
+    birthday : ("birthday", ), # +
+    exit_uzer : ("close", "exit", "good bye"), # +
+    show_page : ("show page", ), # +
+    search : ("search", ), # +
+    helper : ("help", ), # +-
+    phone : ("phone", ), # +
+    hello : ("hello", ) # +
 }
 
 # Знаходить команду.

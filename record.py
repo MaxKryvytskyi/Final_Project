@@ -1,5 +1,4 @@
 from fields import Name, Phone, Birthday, Email, Address
-from my_exception import IncorrectDateFormat, IncorrectPhoneeFormat, IncorrectEmailFormat, IncorrectNameFormat, IncorrectAddressFormat, IncorrectBirthdayFormat
 from log import log
 from datetime import datetime
 
@@ -59,9 +58,8 @@ class Record:
 # =========================================[ change ]===================================================
 # ======================================================================================================
 
-    def change_name(self, name:Name, new_name:Name) -> None | IncorrectNameFormat: 
+    def change_name(self, name:Name, new_name:Name) -> None: 
         if self.name.value == name.value: self.name = new_name
-        else: raise IncorrectNameFormat
 
     def change_phone(self, old_phone:Phone, new_phone:Phone) -> str:
         for phones in self.phones:
@@ -71,18 +69,15 @@ class Record:
                 return log(f"Phone {old_phone} change to {new_phone} for {self.name} contact ", "[Bot's answer] ")
         return log(f"Phone {old_phone} for contact {self.name} doesn`t exist", "[Bot's answer] ")
 
-    def change_birthday(self, birthday:Birthday, new_birthday:Birthday) -> None | IncorrectBirthdayFormat:
+    def change_birthday(self, birthday:Birthday, new_birthday:Birthday) -> None:
         if self.birthday.value == birthday.value: self.birthday = new_birthday
-        else: raise IncorrectBirthdayFormat
 
-    def change_email(self, email:Email, new_email:Email) -> None | IncorrectEmailFormat: 
+    def change_email(self, email:Email, new_email:Email) -> None: 
         if self.email.value == email.value: self.email = new_email
-        else: raise IncorrectEmailFormat
 
-    def change_address(self, new_address:Address) -> None | IncorrectAddressFormat: 
-        if new_address:
-            self.address.value = new_address.value
-        else: raise IncorrectAddressFormat
+    def change_address(self, new_address:Address) -> None: 
+        self.address = ' '.join(new_address.value)
+        
 
 # ======================================================================================================
 # =========================================[ other ]====================================================
