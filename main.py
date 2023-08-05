@@ -2,10 +2,10 @@ import re
 
 import birthday_n_days as bd
 from log import log
-from fields import Name, Phone, Birthday, Email, Address, Status
+from fields import Name, Phone, Birthday, Email, Address
 from record import Record
 from address_book import AddressBook
-from my_exception import IncorrectDateFormat, IncorrectPhoneeFormat, IncorrectEmailFormat, IncorrectNameFormat, IncorrectStatusFormat
+from my_exception import IncorrectDateFormat, IncorrectPhoneeFormat, IncorrectEmailFormat, IncorrectNameFormat
 
 works_bot = True
     
@@ -42,7 +42,6 @@ def input_error(func):
         # except IncorrectPhoneeFormat: return log(f"Incorrect phone format", "[Error] ")
         # except IncorrectEmailFormat: return log(f"Incorrect email format", "[Error] ") # new
         # except IncorrectNameFormat: return log(f"Incorrect name format", "[Error] ") # new
-        # except IncorrectStatusFormat: return log(f"Incorrect status format", "[Error] ") # new
         except KeyboardInterrupt: return exit_uzer() # new
     return inner
 
@@ -56,15 +55,14 @@ def add(*args: str) -> str:
     phone = Phone(args[1]) if len(args) >= 2 else None
     birthday = Birthday(args[2]) if len(args) >= 3 else None
     email = Email(args[3]) if len(args) >= 4 else None
-    status = Status(args[4]) if len(args) >= 6 else None
-    address = Address(args[5]) if len(args) >= 5 else None
-    rec = Record(name, phone, birthday, email, status, address) 
+    address = Address(args[4:]) if len(args) >= 5 else None
+    rec = Record(name, phone, birthday, email, address) 
     return adress_book.add_record(rec)
 
 @input_error
 def add_phone(*args: str) -> str:
     rec = adress_book[args[0].capitalize()]
-    return rec.add_phone(Phone(args[1]))
+    return log(rec.add_phone(Phone(args[1])), "[Bot's answer] ")
 
 @input_error
 def add_birthday(*args: str) -> str:
@@ -80,20 +78,9 @@ def add_email(*args: str) -> str:
     return log(f'The contact "{args[0].capitalize()}" was updated with new email: {rec.email}', "[Bot's answer] ")
 
 @input_error 
-def add_status(*args: str) -> str: 
-    rec = adress_book[args[0].capitalize()]
-    status = Status(args[1])
-    rec.add_status(status)
-    return log(f'The contact "{args[0].capitalize()}" was updated with new status: {rec.status}', "[Bot's answer] ")
-
-@input_error 
 def add_address(*args: str) -> str:
     rec = adress_book[args[0].capitalize()]
-    city = input("City ---> ") 
-    street = input("Street ---> ") 
-    country = input("Country ---> ")
-    address = Address(city, street, country)
-    rec.add_address(address)
+    rec.add_address(args[1:])
     return log(f'The contact "{args[0].capitalize()}" was updated with new address: {rec.address}', "[Bot's answer] ")
 
 # ======================================================================================================
@@ -101,84 +88,64 @@ def add_address(*args: str) -> str:
 # ======================================================================================================
 
 @input_error
-def remove_name(*args: str) -> str:
-    del adress_book[args[0].capitalize()]
-    return log(f"{args[0].capitalize()} is deleted from the contact book", "[Bot's answer] ")
+def remove(*args:str):
+    rec = adress_book[args[1].capitalize()]
+    if args[0].lower() == "name":
+        if adress_book[args[1].capitalize()].name.value == args[1].capitalize():
+            del adress_book[args[1].capitalize()]
+            return log(f"{args[1].capitalize()} is deleted from the contact book", "[Bot's answer] ") 
+        
+    elif args[0].lower() == "phone":
+        num = rec.remove_phone(Phone(args[2]))
+        if num == "This contact has no phone numbers saved": return num
+        return log(f"Phone number {args[1].capitalize()} : {num}\nDeleted", "[Bot's answer] ")
 
-@input_error
-def remove_phones(*args: str) -> str:
-    rec = adress_book[args[0].capitalize()]
-    num = rec.remove_phone(Phone(args[1]))
-    if num == "This contact has no phone numbers saved": return log(num, "[Bot's answer] ")
-    return log(f"Phone number {args[0].capitalize()} : {num}\nDeleted", "[Bot's answer] ")
+    elif args[0].lower() == "email":
+        rec.remove_email(Email(args[2]))
+        return log(f"{args[1].capitalize()}'s email has been removed from the contact list", "[Bot's answer] ")
 
-@input_error
-def remove_email(*args: str) -> str:
-    adress_book[args[0].capitalize()].remove_email(Email(args[1]))
-    return log(f"{args[0].capitalize()}'s email has been removed from the contact list", "[Bot's answer] ")
+    elif args[0].lower() == "birthday":
+        rec.remove_birthday(Birthday(args[2]))
+        return log(f"{args[1].capitalize()}'s birthday has been removed from the contact list", "[Bot's answer] ")
 
-@input_error
-def remove_birthday(*args: str) -> str:
-    adress_book[args[0].capitalize()].remove_birthday(Birthday(args[1]))
-    return log(f"{args[0].capitalize()}'s birthday has been removed from the contact list", "[Bot's answer] ")
-
-@input_error
-def remove_status(*args: str) -> str:
-    adress_book[args[0].capitalize()].remove_status(Status(args[1].capitalize()))
-    return log(f'"{args[1].capitalize()}" status removed from {args[0].capitalize()}\'s profile', "[Bot's answer] ")
-
-@input_error
-def remove_address(*args: str) -> str:
-    adress_book[args[0].capitalize()].remove_address()
-    return log(f'address removed from {args[0].capitalize()}\'s profile', "[Bot's answer] ")
-
+    elif args[0].lower() == "address":
+        rec.remove_address()
+        return log(f'address removed from {args[1].capitalize()}\'s profile', "[Bot's answer] ")
+    else:
+        return "якийсь Error"
 # ======================================================================================================
 # =========================================[ change ]===================================================
 # ======================================================================================================
 
 @input_error
-def change_name(*args: str) -> str:
-    if not args[1].capitalize() is adress_book.data.keys():
-        rec = adress_book[args[0].capitalize()]
-        rec.change_name(Name(args[0].capitalize()), Name(args[1].capitalize()))
-        adress_book.data.pop(args[0].capitalize())
-        adress_book[args[1].capitalize()] = rec
-        return log(f"Contact name {args[0].capitalize()}`s changed to {args[1].capitalize()}'s", "[Bot's answer] ")
-    else: return log(f"Contact with the name {args[1].capitalize()}'s already exists", "[Bot's answer] ")
+def change(*args:str):
+    rec = adress_book[args[1].capitalize()]
+    if args[0].lower() == "name":
+        if not args[2].capitalize() is adress_book.data.keys():
+            rec = adress_book[args[1].capitalize()]
+            rec.change_name(Name(args[1].capitalize()), Name(args[2].capitalize()))
+            adress_book.data.pop(args[1].capitalize())
+            adress_book[args[2].capitalize()] = rec
+            return f"Contact name {args[1].capitalize()}`s changed to {args[2].capitalize()}'s"
+        else: return f"Contact with the name {args[2].capitalize()}'s already exists"
 
-@input_error
-def change_phone(*args: str) -> str:
-    rec = adress_book.get(args[0].capitalize())
-    if rec: return log(rec.change_phone(Phone(args[1]), Phone(args[2])))
-    return log(f"Contact wit name {args[0].capitalize()} doesn`t exist.", "[Bot's answer] ")
+    elif args[0].lower() == "phone":
+        if rec: return rec.change_phone(Phone(args[2]), Phone(args[3]))
+        return f"Contact wit name {args[1].capitalize()} doesn`t exist."
 
-@input_error
-def change_birthday(*args: str) -> str:
-    rec = adress_book[args[0].capitalize()]
-    rec.change_birthday(Birthday(args[1]), Birthday(args[2]))
-    return log(f"Birthday profile {args[0].capitalize()}'s has been changed")
+    elif args[0].lower() == "email":
+        rec.change_email(Email(args[2]), Email(args[3]))
+        return f"Email is profile {args[1].capitalize()}'s has been changed"
 
-@input_error
-def change_email(*args: str) -> str:
-    rec = adress_book[args[0].capitalize()]
-    rec.change_email(Email(args[1]), Email(args[2]))
-    return log(f"Email is profile {args[0].capitalize()}'s has been changed")
+    elif args[0].lower() == "birthday":
+        rec.change_birthday(Birthday(args[2]), Birthday(args[3]))
+        return f"Birthday profile {args[1].capitalize()}'s has been changed"
 
-@input_error
-def change_status(*args: str) -> str:
-    rec = adress_book[args[0].capitalize()]
-    rec.change_status(Status(args[1]), Status(args[2]))
-    return log(f"Status is profile {args[0].capitalize()}'s has been changed")
-
-@input_error
-def change_address(*args: str) -> str:
-    rec = adress_book[args[0].capitalize()]
-    city = input("New City ---> ") 
-    street = input("New Street ---> ") 
-    country = input("New Country ---> ")
-    address = Address(city, street, country)
-    rec.change_address(address)
-    return log(f'The contact "{args[0].capitalize()}" was updated with new address: {rec.address}', "[Bot's answer] ")
+    elif args[0].lower() == "address":
+        rec.change_address(Address(args[2:]))
+        return f'The contact "{args[1].capitalize()}" was updated with new address: {rec.address}'
+    else:
+        return "якийсь Error"
 
 # ======================================================================================================
 # =========================================[ other ]====================================================
@@ -204,8 +171,7 @@ def birthday(*args: str):
     else: return log(f"To the bottom of the birth of {args[0].capitalize()} remained {time}", "[Bot's answer] ")
     
 @input_error
-def show_page(*args:str) -> None:
-    
+def show_page(*args:str) -> str:
     n = 1
     count = args[0] if len(args) >= 1 else 5
     c = adress_book.iterator(count)
@@ -275,26 +241,13 @@ COMMANDS_LIST = {
 COMMANDS = {
     add_birthday : ("add birthday", ), 
     add_address : ("add address", ), 
-    add_status : ("add status", ), 
     add_email : ("add email", ),
     add_phone : ("add phone", ), 
     add : ("add", ), 
     
-    remove_birthday : ("remove birthday", ), 
-    remove_address : ("remove address", ), 
-    remove_phones : ("remove phone", ), 
-    remove_status : ("remove status", ), 
-    remove_email : ("remove email", ), 
-    remove_name : ("remove name", ), 
+    remove : ("remove", ),
 
-
-    change_birthday : ("change birthday", ), 
-    change_address : ("change address",),
-    change_status : ("change status", ),
-    change_phone : ("change phone", ), 
-    change_email : ("change email", ),
-    change_name : ("change name", ), 
-    
+    change : ("change", ),
 
     all_birthday : ("all birthday", ),
     birthday : ("birthday", ), 

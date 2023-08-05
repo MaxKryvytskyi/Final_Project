@@ -4650,3 +4650,872 @@ add successful
 [2023-07-28 21:36:26] [User input] search shasha
 [2023-07-28 21:36:26] [Data processing] Found command to [search], parameters to ['shasha']
 [2023-07-28 21:36:26] [Bot's answer] Nothing found
+[2023-07-31 21:04:03] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:04:06] [User input] n
+[2023-07-31 21:04:06] [Bot's answer] Creates new contact book...
+[2023-07-31 21:04:14] [User input] show page
+[2023-07-31 21:04:14] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:04:14] [Bot's answer] No saved contacts
+[2023-07-31 21:05:40] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work kiev zoi ua
+[2023-07-31 21:05:40] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'kiev', 'zoi', 'ua']
+[2023-07-31 21:05:40] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: WorkAddress: City: Kiev, Street: None, Country: None
+add successful
+[2023-07-31 21:07:59] [User input] show page
+[2023-07-31 21:07:59] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:08:00] [Bot's answer] No more pages
+[2023-07-31 21:08:21] [User input] show page
+[2023-07-31 21:08:21] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:08:21] [Bot's answer] No more pages
+[2023-07-31 21:08:32] [User input] add maxs 0991234567 31-01-1999 m.kriv@gmail.com work kiev zoi ua
+[2023-07-31 21:08:32] [Data processing] Found command to [add], parameters to ['maxs', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'kiev', 'zoi', 'ua']
+[2023-07-31 21:08:32] [Bot's answer] Name: Maxs
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: WorkAddress: City: Kiev, Street: None, Country: None
+add successful
+[2023-07-31 21:09:09] [User input] show page
+[2023-07-31 21:09:09] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:09:09] [Bot's answer] No more pages
+[2023-07-31 21:09:35] [Bot's answer] Good bye!
+[2023-07-31 21:09:36] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:09:37] [User input] y
+[2023-07-31 21:09:37] [Bot's answer] Downloading the contact book...
+[2023-07-31 21:09:39] [User input] show page
+[2023-07-31 21:09:39] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:09:39] [Bot's answer] No more pages
+[2023-07-31 21:09:42] [Bot's answer] Good bye!
+[2023-07-31 21:09:44] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:09:45] [User input] n
+[2023-07-31 21:09:45] [Bot's answer] Creates new contact book...
+[2023-07-31 21:09:48] [User input] add maxs 0991234567 31-01-1999 m.kriv@gmail.com work kiev zoi ua
+[2023-07-31 21:09:48] [Data processing] Found command to [add], parameters to ['maxs', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'kiev', 'zoi', 'ua']
+[2023-07-31 21:09:56] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:09:57] [User input] y
+[2023-07-31 21:09:57] [Bot's answer] Downloading the contact book...
+[2023-07-31 21:10:04] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work kiev zoi ua
+[2023-07-31 21:10:04] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'kiev', 'zoi', 'ua']
+[2023-07-31 21:11:02] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:11:04] [User input] n
+[2023-07-31 21:11:04] [Bot's answer] Creates new contact book...
+[2023-07-31 21:11:06] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work kiev zoi ua
+[2023-07-31 21:11:06] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'kiev', 'zoi', 'ua']
+[2023-07-31 21:12:33] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:12:34] [User input] y
+[2023-07-31 21:12:34] [Bot's answer] Downloading the contact book...
+[2023-07-31 21:12:35] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work kiev zoi ua
+[2023-07-31 21:12:35] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'kiev', 'zoi', 'ua']
+[2023-07-31 21:12:35] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: City: Kiev, Street: Zoi, Country: Ua
+add successful
+[2023-07-31 21:18:45] [Bot's answer] Good bye!
+[2023-07-31 21:18:46] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:18:47] [User input] y
+[2023-07-31 21:18:47] [Bot's answer] Downloading the contact book...
+[2023-07-31 21:19:19] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 
+[2023-07-31 21:19:19] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi']
+[2023-07-31 21:19:19] [Bot's answer] Contact with name Max already exist. Try add phone command for add extra phone.
+[2023-07-31 21:19:27] [User input] show page
+[2023-07-31 21:19:27] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:19:27] [Bot's answer] No more pages
+[2023-07-31 21:19:34] [Bot's answer] Good bye!
+[2023-07-31 21:26:13] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:26:14] [User input] y
+[2023-07-31 21:26:14] [Bot's answer] Downloading the contact book...
+[2023-07-31 21:26:15] [User input] show page
+[2023-07-31 21:26:15] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:26:16] [Bot's answer] No more pages
+[2023-07-31 21:26:18] [Bot's answer] Good bye!
+[2023-07-31 21:26:20] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:26:21] [User input] n
+[2023-07-31 21:26:21] [Bot's answer] Creates new contact book...
+[2023-07-31 21:26:22] [User input] show page
+[2023-07-31 21:26:22] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:26:22] [Bot's answer] No saved contacts
+[2023-07-31 21:26:33] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:26:33] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:30:01] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:30:04] [User input] n
+[2023-07-31 21:30:04] [Bot's answer] Creates new contact book...
+[2023-07-31 21:30:05] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:30:05] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:30:05] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: Country: Ua, City: Kiev, Street: ('zoi', '23', 'fsdsawd', '444')
+add successful
+[2023-07-31 21:30:24] [Bot's answer] Good bye!
+[2023-07-31 21:30:24] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:30:25] [User input] n
+[2023-07-31 21:30:25] [Bot's answer] Creates new contact book...
+[2023-07-31 21:30:26] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:30:26] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:31:28] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:31:29] [User input] n
+[2023-07-31 21:31:29] [Bot's answer] Creates new contact book...
+[2023-07-31 21:31:31] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:31:31] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:32:00] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:32:01] [User input] n
+[2023-07-31 21:32:01] [Bot's answer] Creates new contact book...
+[2023-07-31 21:32:03] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:32:03] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:32:03] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: Country: Ua, City: Kiev, Street: ['zoi', '23', 'fsdsawd', '444']
+add successful
+[2023-07-31 21:32:18] [Bot's answer] Good bye!
+[2023-07-31 21:32:19] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:32:19] [User input] n
+[2023-07-31 21:32:19] [Bot's answer] Creates new contact book...
+[2023-07-31 21:32:21] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:32:21] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:32:21] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: Country: Ua, City: Kiev, Street: ['zoi', '23', 'fsdsawd', '444']
+add successful
+[2023-07-31 21:34:34] [Bot's answer] Good bye!
+[2023-07-31 21:34:34] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:34:35] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:34:39] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:34:42] [User input] n
+[2023-07-31 21:34:42] [Bot's answer] Creates new contact book...
+[2023-07-31 21:34:44] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:34:44] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:34:44] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: Country: Ua, City: Kiev, Street: ['zoi', '23', 'fsdsawd', '444']
+add successful
+[2023-07-31 21:43:11] [Bot's answer] Good bye!
+[2023-07-31 21:43:12] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:43:13] [User input] n
+[2023-07-31 21:43:13] [Bot's answer] Creates new contact book...
+[2023-07-31 21:43:15] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444  
+[2023-07-31 21:43:15] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:43:15] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: Country: Ua, City: Kiev, Street: zoi 23 fsdsawd 444
+add successful
+[2023-07-31 21:45:05] [User input] show page
+[2023-07-31 21:45:05] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:45:06] [Bot's answer] No more pages
+[2023-07-31 21:45:57] [Bot's answer] Good bye!
+[2023-07-31 21:45:58] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:45:59] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:46:02] [User input] n
+[2023-07-31 21:46:02] [Bot's answer] Creates new contact book...
+[2023-07-31 21:46:03] [User input] show page
+[2023-07-31 21:46:03] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:46:03] [Bot's answer] No saved contacts
+[2023-07-31 21:46:06] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444
+[2023-07-31 21:46:06] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:46:06] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Address: Country: Ua, City: Kiev, Street: zoi 23 fsdsawd 444
+Status: Work
+add successful
+[2023-07-31 21:46:16] [User input] show page
+[2023-07-31 21:46:16] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:46:17] [Bot's answer] No more pages
+[2023-07-31 21:51:38] [Bot's answer] Good bye!
+[2023-07-31 21:51:39] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:51:43] [User input] n
+[2023-07-31 21:51:43] [Bot's answer] Creates new contact book...
+[2023-07-31 21:52:54] [User input] show page
+[2023-07-31 21:52:54] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:52:54] [Bot's answer] No saved contacts
+[2023-07-31 21:52:55] [User input] 
+[2023-07-31 21:52:55] [Error] You have not entered anything
+[2023-07-31 21:52:57] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444
+[2023-07-31 21:52:57] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:52:57] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Address: Country: Ua, City: Kiev, Street: zoi 23 fsdsawd 444
+Status: Work
+add successful
+[2023-07-31 21:53:01] [User input] show page
+[2023-07-31 21:53:01] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:53:02] [Bot's answer] No more pages
+[2023-07-31 21:54:12] [Bot's answer] Good bye!
+[2023-07-31 21:54:13] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 21:54:15] [User input] n
+[2023-07-31 21:54:15] [Bot's answer] Creates new contact book...
+[2023-07-31 21:54:16] [User input] show page
+[2023-07-31 21:54:16] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:54:16] [Bot's answer] No saved contacts
+[2023-07-31 21:54:18] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444
+[2023-07-31 21:54:18] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 21:54:18] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: Country: Ua, City: Kiev, Street: zoi 23 fsdsawd 444
+add successful
+[2023-07-31 21:54:24] [User input] show page
+[2023-07-31 21:54:24] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:54:25] [Bot's answer] No more pages
+[2023-07-31 21:54:47] [User input] add phone max 0994563434
+[2023-07-31 21:54:47] [Data processing] Found command to [add phone], parameters to ['max', '0994563434']
+[2023-07-31 21:54:47] [Bot's answer] Phone +380994563434 add to contact Max
+[2023-07-31 21:54:49] [User input] show page
+[2023-07-31 21:54:49] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 21:54:50] [Bot's answer] No more pages
+[2023-07-31 22:02:40] [Bot's answer] Good bye!
+[2023-07-31 22:02:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 22:02:53] [User input] y
+[2023-07-31 22:02:53] [Bot's answer] Downloading the contact book...
+[2023-07-31 22:05:26] [User input] 
+[2023-07-31 22:05:26] [Error] There is no such command
+[2023-07-31 22:08:32] [User input] all birthday max
+[2023-07-31 22:08:32] [Data processing] Found command to [all birthday], parameters to ['max']
+[2023-07-31 22:08:35] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 22:08:36] [User input] y
+[2023-07-31 22:08:36] [Bot's answer] Downloading the contact book...
+[2023-07-31 22:08:39] [User input] show page
+[2023-07-31 22:08:39] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:08:40] [Bot's answer] No more pages
+[2023-07-31 22:08:47] [User input] all birthday max
+[2023-07-31 22:08:47] [Data processing] Found command to [all birthday], parameters to ['max']
+[2023-07-31 22:09:38] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 22:09:39] [User input] y
+[2023-07-31 22:09:39] [Bot's answer] Downloading the contact book...
+[2023-07-31 22:09:42] [User input] all birthday
+[2023-07-31 22:09:42] [Data processing] Found command to [all birthday], parameters to []
+[2023-07-31 22:09:51] [User input] all birthday 1000
+[2023-07-31 22:09:51] [Data processing] Found command to [all birthday], parameters to ['1000']
+[2023-07-31 22:10:17] [Bot's answer] Good bye!
+[2023-07-31 22:10:19] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 22:10:20] [User input] n
+[2023-07-31 22:10:20] [Bot's answer] Creates new contact book...
+[2023-07-31 22:10:24] [User input] show page
+[2023-07-31 22:10:24] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:10:24] [Bot's answer] No saved contacts
+[2023-07-31 22:10:30] [User input] add max 0991234567 31-01-1999 m.kriv@gmail.com work ua kiev zoi 23 fsdsawd 444
+[2023-07-31 22:10:30] [Data processing] Found command to [add], parameters to ['max', '0991234567', '31-01-1999', 'm.kriv@gmail.com', 'work', 'ua', 'kiev', 'zoi', '23', 'fsdsawd', '444']
+[2023-07-31 22:10:30] [Bot's answer] Name: Max
+Phone: +380991234567
+Birthday: 31-01-1999
+Email: m.kriv@gmail.com
+Status: Work
+Address: Country: Ua, City: Kiev, Street: zoi 23 fsdsawd 444
+add successful
+[2023-07-31 22:10:32] [User input] show page
+[2023-07-31 22:10:32] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:10:34] [Bot's answer] No more pages
+[2023-07-31 22:10:48] [User input] all birthday
+[2023-07-31 22:10:48] [Data processing] Found command to [all birthday], parameters to []
+[2023-07-31 22:10:51] [User input] show page
+[2023-07-31 22:10:51] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:10:51] [Bot's answer] No more pages
+[2023-07-31 22:10:59] [User input] add phone max 0994563434
+[2023-07-31 22:10:59] [Data processing] Found command to [add phone], parameters to ['max', '0994563434']
+[2023-07-31 22:10:59] [Bot's answer] Phone +380994563434 add to contact Max
+[2023-07-31 22:11:01] [User input] show page
+[2023-07-31 22:11:01] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:11:02] [Bot's answer] No more pages
+[2023-07-31 22:11:22] [User input] show page
+[2023-07-31 22:11:22] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:11:23] [Bot's answer] No more pages
+[2023-07-31 22:11:24] [User input] show page
+[2023-07-31 22:11:24] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:11:26] [Bot's answer] No more pages
+[2023-07-31 22:14:10] [Bot's answer] Good bye!
+[2023-07-31 22:14:11] [Bot's answer] Download contact book? Y/N ---> 
+[2023-07-31 22:14:14] [User input] y
+[2023-07-31 22:14:14] [Bot's answer] Downloading the contact book...
+[2023-07-31 22:14:15] [User input] show page
+[2023-07-31 22:14:15] [Data processing] Found command to [show page], parameters to []
+[2023-07-31 22:14:15] [Bot's answer] No more pages
+[2023-07-31 22:42:16] [Bot's answer] Good bye!
+[2023-08-05 15:11:16] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 15:11:19] [User input] y
+[2023-08-05 15:11:19] [Bot's answer] Downloading the contact book...
+[2023-08-05 15:11:26] [User input] show page
+[2023-08-05 15:11:26] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 15:11:26] [Bot's answer] No more pages
+[2023-08-05 15:11:40] [User input] remove phone
+[2023-08-05 15:11:40] [Data processing] Found command to [remove], parameters to ['phone']
+[2023-08-05 15:12:32] [User input] remove phone +380994563434
+[2023-08-05 15:12:32] [Data processing] Found command to [remove], parameters to ['phone', '+380994563434']
+[2023-08-05 16:32:36] [Bot's answer] Good bye!
+[2023-08-05 16:32:37] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:32:38] [User input] y
+[2023-08-05 16:32:38] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:32:42] [User input] remove phone +380994563434
+[2023-08-05 16:32:42] [Data processing] Found command to [remove], parameters to ['phone', '+380994563434']
+[2023-08-05 16:32:48] [User input] remove name
+[2023-08-05 16:32:48] [Data processing] Found command to [remove], parameters to ['name']
+[2023-08-05 16:33:09] [User input] remove phone max +380994563434
+[2023-08-05 16:33:09] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380994563434']
+[2023-08-05 16:35:05] [Bot's answer] Good bye!
+[2023-08-05 16:35:05] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:35:06] [User input] y
+[2023-08-05 16:35:06] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:35:08] [User input] remove phone max +380994563434
+[2023-08-05 16:35:08] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380994563434']
+[2023-08-05 16:35:33] [Bot's answer] Good bye!
+[2023-08-05 16:35:34] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:35:35] [User input] y
+[2023-08-05 16:35:35] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:35:36] [User input] remove phone max +380994563434
+[2023-08-05 16:35:36] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380994563434']
+[2023-08-05 16:36:07] [User input] remove name max
+[2023-08-05 16:36:07] [Data processing] Found command to [remove], parameters to ['name', 'max']
+[2023-08-05 16:39:40] [Bot's answer] Good bye!
+[2023-08-05 16:39:41] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:39:42] [User input] y
+[2023-08-05 16:39:42] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:39:45] [User input] remove name max
+[2023-08-05 16:39:45] [Data processing] Found command to [remove], parameters to ['name', 'max']
+[2023-08-05 16:39:57] [User input] show page
+[2023-08-05 16:39:57] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:39:58] [Bot's answer] No more pages
+[2023-08-05 16:39:59] [User input] show page
+[2023-08-05 16:39:59] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:40:36] [Bot's answer] Good bye!
+[2023-08-05 16:40:37] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:40:38] [User input] y
+[2023-08-05 16:40:38] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:40:39] [User input] show page
+[2023-08-05 16:40:39] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:40:40] [Bot's answer] No more pages
+[2023-08-05 16:40:42] [User input] remove name max
+[2023-08-05 16:40:42] [Data processing] Found command to [remove], parameters to ['name', 'max']
+[2023-08-05 16:41:10] [Bot's answer] Good bye!
+[2023-08-05 16:41:10] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:41:11] [User input] y
+[2023-08-05 16:41:11] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:41:12] [User input] remove name max
+[2023-08-05 16:41:12] [Data processing] Found command to [remove], parameters to ['name', 'max']
+[2023-08-05 16:41:25] [Bot's answer] Good bye!
+[2023-08-05 16:41:25] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:41:26] [User input] y
+[2023-08-05 16:41:26] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:41:28] [User input] remove name max
+[2023-08-05 16:41:28] [Data processing] Found command to [remove], parameters to ['name', 'max']
+[2023-08-05 16:41:40] [Bot's answer] Good bye!
+[2023-08-05 16:41:40] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:41:41] [User input] y
+[2023-08-05 16:41:41] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:41:42] [User input] remove name max
+[2023-08-05 16:41:42] [Data processing] Found command to [remove], parameters to ['name', 'max']
+[2023-08-05 16:41:52] [User input] show page
+[2023-08-05 16:41:52] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:41:52] [Bot's answer] No saved contacts
+[2023-08-05 16:45:51] [Bot's answer] Good bye!
+[2023-08-05 16:45:52] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:45:54] [User input] n
+[2023-08-05 16:45:54] [Bot's answer] Creates new contact book...
+[2023-08-05 16:45:56] [User input] show page
+[2023-08-05 16:45:56] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:45:56] [Bot's answer] No saved contacts
+[2023-08-05 16:45:56] [User input] 
+[2023-08-05 16:45:56] [Error] You have not entered anything
+[2023-08-05 16:46:00] [User input] add max
+[2023-08-05 16:46:00] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-05 16:46:00] [Bot's answer] Name: Max
+Phone: No phone
+Birthday: No birthday date
+Email: No email
+Address: Country: None, City: None, Street: None
+add successful
+[2023-08-05 16:46:18] [User input] add phone max 380991236745
+[2023-08-05 16:46:18] [Data processing] Found command to [add phone], parameters to ['max', '380991236745']
+[2023-08-05 16:46:18] [Bot's answer] Phone +380991236745 add to contact Max
+[2023-08-05 16:46:21] [User input] show page
+[2023-08-05 16:46:21] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:46:21] [Bot's answer] No more pages
+[2023-08-05 16:46:38] [User input] remove phone max +380991236745
+[2023-08-05 16:46:38] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380991236745']
+[2023-08-05 16:47:08] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:47:09] [User input] y
+[2023-08-05 16:47:09] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:47:11] [User input] remove phone max +380991236745
+[2023-08-05 16:47:11] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380991236745']
+[2023-08-05 16:47:15] [User input] show page
+[2023-08-05 16:47:15] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:47:15] [Bot's answer] No more pages
+[2023-08-05 16:50:02] [User input] show page
+[2023-08-05 16:50:02] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:50:03] [Bot's answer] Good bye!
+[2023-08-05 16:50:04] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:50:05] [User input] y
+[2023-08-05 16:50:05] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:50:07] [User input] show page
+[2023-08-05 16:50:07] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:50:07] [Bot's answer] No more pages
+[2023-08-05 16:50:24] [User input] add email max m.kriv@gmail.com
+[2023-08-05 16:50:24] [Data processing] Found command to [add email], parameters to ['max', 'm.kriv@gmail.com']
+[2023-08-05 16:50:24] [Bot's answer] The contact "Max" was updated with new email: m.kriv@gmail.com
+[2023-08-05 16:50:26] [User input] show page
+[2023-08-05 16:50:26] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:50:26] [Bot's answer] No more pages
+[2023-08-05 16:50:42] [User input] remove email max m.kriv@gmail.com
+[2023-08-05 16:50:42] [Data processing] Found command to [remove], parameters to ['email', 'max', 'm.kriv@gmail.com']
+[2023-08-05 16:50:45] [User input] show page
+[2023-08-05 16:50:45] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:50:46] [Bot's answer] No more pages
+[2023-08-05 16:51:18] [User input] show page
+[2023-08-05 16:51:18] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:51:19] [Bot's answer] No more pages
+[2023-08-05 16:51:20] [Bot's answer] Good bye!
+[2023-08-05 16:51:22] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:51:23] [User input] y
+[2023-08-05 16:51:23] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:51:24] [User input] show page
+[2023-08-05 16:51:24] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:51:24] [Bot's answer] No more pages
+[2023-08-05 16:51:28] [User input] add email max m.kriv@gmail.com
+[2023-08-05 16:51:28] [Data processing] Found command to [add email], parameters to ['max', 'm.kriv@gmail.com']
+[2023-08-05 16:51:28] [Bot's answer] The contact "Max" was updated with new email: m.kriv@gmail.com
+[2023-08-05 16:51:30] [User input] remove email max m.kriv@gmail.com
+[2023-08-05 16:51:30] [Data processing] Found command to [remove], parameters to ['email', 'max', 'm.kriv@gmail.com']
+[2023-08-05 16:52:36] [User input] add birthday max 31-01-1999
+[2023-08-05 16:52:36] [Data processing] Found command to [add birthday], parameters to ['max', '31-01-1999']
+[2023-08-05 16:52:36] [Bot's answer] Date of birth Max, recorded
+[2023-08-05 16:52:40] [User input] show page
+[2023-08-05 16:52:40] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:52:41] [Bot's answer] No more pages
+[2023-08-05 16:52:45] [Bot's answer] Good bye!
+[2023-08-05 16:54:08] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 16:54:10] [User input] y
+[2023-08-05 16:54:10] [Bot's answer] Downloading the contact book...
+[2023-08-05 16:54:18] [User input] remove birthday max 31-01-1999
+[2023-08-05 16:54:18] [Data processing] Found command to [remove], parameters to ['birthday', 'max', '31-01-1999']
+[2023-08-05 16:54:21] [User input] show page
+[2023-08-05 16:54:21] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:54:21] [Bot's answer] No more pages
+[2023-08-05 16:54:58] [User input] remove address max m.kriv@gmail.com
+[2023-08-05 16:54:58] [Data processing] Found command to [remove], parameters to ['address', 'max', 'm.kriv@gmail.com']
+[2023-08-05 16:55:04] [User input] show page
+[2023-08-05 16:55:04] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 16:55:04] [Bot's answer] No more pages
+[2023-08-05 18:04:14] [Bot's answer] Good bye!
+[2023-08-05 18:04:15] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:04:16] [User input] y
+[2023-08-05 18:04:16] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:04:18] [User input] show page
+[2023-08-05 18:04:18] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:04:18] [Bot's answer] No more pages
+[2023-08-05 18:04:25] [Bot's answer] Good bye!
+[2023-08-05 18:04:58] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:04:59] [User input] y
+[2023-08-05 18:04:59] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:05:00] [User input] show page
+[2023-08-05 18:05:00] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:05:00] [Bot's answer] No more pages
+[2023-08-05 18:05:24] [User input] change name max bill
+[2023-08-05 18:05:24] [Data processing] Found command to [change], parameters to ['name', 'max', 'bill']
+[2023-08-05 18:05:26] [User input] show page
+[2023-08-05 18:05:26] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:05:26] [Bot's answer] No more pages
+[2023-08-05 18:07:32] [User input] show page
+[2023-08-05 18:07:32] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:07:33] [Bot's answer] No more pages
+[2023-08-05 18:07:49] [User input] add phone bill +380993452323
+[2023-08-05 18:07:49] [Data processing] Found command to [add phone], parameters to ['bill', '+380993452323']
+[2023-08-05 18:07:49] [Bot's answer] Phone +380993452323 add to contact Bill
+[2023-08-05 18:07:51] [User input] show page
+[2023-08-05 18:07:51] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:07:51] [Bot's answer] No more pages
+[2023-08-05 18:07:54] [Bot's answer] Good bye!
+[2023-08-05 18:07:56] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:07:57] [User input] y
+[2023-08-05 18:07:57] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:08:26] [User input] change phone max +380993452323 +380990000000
+[2023-08-05 18:08:26] [Data processing] Found command to [change], parameters to ['phone', 'max', '+380993452323', '+380990000000']
+[2023-08-05 18:08:36] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:08:37] [User input] y
+[2023-08-05 18:08:37] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:08:45] [User input] change phone bill +380993452323 +380990000000
+[2023-08-05 18:08:45] [Data processing] Found command to [change], parameters to ['phone', 'bill', '+380993452323', '+380990000000']
+[2023-08-05 18:08:45] [Bot's answer] Phone +380990000000 add to contact Bill
+[2023-08-05 18:08:45] [Bot's answer] Phone +380993452323 change to +380990000000 for Bill contact 
+[2023-08-05 18:08:49] [User input] show page
+[2023-08-05 18:08:49] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:08:50] [Bot's answer] No more pages
+[2023-08-05 18:10:47] [Bot's answer] Good bye!
+[2023-08-05 18:10:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:10:49] [User input] y
+[2023-08-05 18:10:49] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:10:49] [User input] show page
+[2023-08-05 18:10:49] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:10:50] [Bot's answer] No more pages
+[2023-08-05 18:10:56] [User input] change phone max +380993452323 +380990000000
+[2023-08-05 18:10:56] [Data processing] Found command to [change], parameters to ['phone', 'max', '+380993452323', '+380990000000']
+[2023-08-05 18:10:56] [Error] Enter another name.
+[2023-08-05 18:12:01] [Bot's answer] Good bye!
+[2023-08-05 18:17:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:17:49] [User input] y
+[2023-08-05 18:17:49] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:17:51] [Bot's answer] Good bye!
+[2023-08-05 18:18:05] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:18:06] [User input] y
+[2023-08-05 18:18:06] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:18:08] [User input] show page
+[2023-08-05 18:18:08] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:18:08] [Bot's answer] No more pages
+[2023-08-05 18:19:12] [User input] add address bill dwdwdwdwd wdasdsdawd asdw232 2 212 da dwa
+[2023-08-05 18:19:12] [Data processing] Found command to [add address], parameters to ['bill', 'dwdwdwdwd', 'wdasdsdawd', 'asdw232', '2', '212', 'da', 'dwa']
+[2023-08-05 18:19:20] [Bot's answer] Good bye!
+[2023-08-05 18:33:49] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:33:50] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:33:52] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:33:53] [User input] y
+[2023-08-05 18:33:53] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:33:56] [User input] show page
+[2023-08-05 18:33:56] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:33:56] [Bot's answer] No more pages
+[2023-08-05 18:34:19] [User input] cnahge name bill max
+[2023-08-05 18:34:19] [Error] There is no such command
+[2023-08-05 18:35:39] [User input] change name bill max
+[2023-08-05 18:35:39] [Data processing] Found command to [change], parameters to ['name', 'bill', 'max']
+[2023-08-05 18:35:44] [User input] show page
+[2023-08-05 18:35:44] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:35:44] [Bot's answer] No more pages
+[2023-08-05 18:37:28] [User input] add birthday 31-01-1999
+[2023-08-05 18:37:28] [Data processing] Found command to [add birthday], parameters to ['31-01-1999']
+[2023-08-05 18:37:28] [Error] Enter another name.
+[2023-08-05 18:37:33] [User input] add birthday max 31-01-1999
+[2023-08-05 18:37:33] [Data processing] Found command to [add birthday], parameters to ['max', '31-01-1999']
+[2023-08-05 18:37:33] [Bot's answer] Date of birth Max, recorded
+[2023-08-05 18:37:35] [User input] show page
+[2023-08-05 18:37:35] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:37:35] [Bot's answer] No more pages
+[2023-08-05 18:38:46] [Bot's answer] Good bye!
+[2023-08-05 18:38:47] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:38:48] [User input] y
+[2023-08-05 18:38:48] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:38:49] [User input] show page
+[2023-08-05 18:38:49] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:38:49] [Bot's answer] No more pages
+[2023-08-05 18:39:15] [User input] add email max m.kriv@gmail.com
+[2023-08-05 18:39:15] [Data processing] Found command to [add email], parameters to ['max', 'm.kriv@gmail.com']
+[2023-08-05 18:39:15] [Bot's answer] The contact "Max" was updated with new email: m.kriv@gmail.com
+[2023-08-05 18:39:18] [User input] show page
+[2023-08-05 18:39:18] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:39:18] [Bot's answer] No more pages
+[2023-08-05 18:39:45] [User input] add address max dnaiwndoinawdw 323 nioanwi niaw2on, wad12w da,wd wad
+[2023-08-05 18:39:45] [Data processing] Found command to [add address], parameters to ['max', 'dnaiwndoinawdw', '323', 'nioanwi', 'niaw2on,', 'wad12w', 'da,wd', 'wad']
+[2023-08-05 18:39:45] [Bot's answer] The contact "Max" was updated with new address: ('dnaiwndoinawdw', '323', 'nioanwi', 'niaw2on,', 'wad12w', 'da,wd', 'wad')
+[2023-08-05 18:39:50] [User input] show page
+[2023-08-05 18:39:50] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:39:51] [Bot's answer] No more pages
+[2023-08-05 18:41:55] [Bot's answer] Good bye!
+[2023-08-05 18:41:56] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:41:57] [User input] y
+[2023-08-05 18:41:57] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:41:59] [User input] show page
+[2023-08-05 18:41:59] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:41:59] [Bot's answer] No more pages
+[2023-08-05 18:42:03] [User input] add address max dnaiwndoinawdw 323 nioanwi niaw2on, wad12w da,wd wad
+[2023-08-05 18:42:03] [Data processing] Found command to [add address], parameters to ['max', 'dnaiwndoinawdw', '323', 'nioanwi', 'niaw2on,', 'wad12w', 'da,wd', 'wad']
+[2023-08-05 18:42:03] [Error] Enter command.
+[2023-08-05 18:42:06] [User input] add address max dnaiwndoinawdw 323 nioanwi niaw2on, wad12w da,wd wad
+[2023-08-05 18:42:06] [Data processing] Found command to [add address], parameters to ['max', 'dnaiwndoinawdw', '323', 'nioanwi', 'niaw2on,', 'wad12w', 'da,wd', 'wad']
+[2023-08-05 18:42:06] [Error] Enter command.
+[2023-08-05 18:42:11] [User input] add address max dnaiwndoinawdw 323 nioanwi niaw2on, wad12w da,wd wad
+[2023-08-05 18:42:11] [Data processing] Found command to [add address], parameters to ['max', 'dnaiwndoinawdw', '323', 'nioanwi', 'niaw2on,', 'wad12w', 'da,wd', 'wad']
+[2023-08-05 18:42:11] [Error] Enter command.
+[2023-08-05 18:42:26] [User input] remove address max 
+[2023-08-05 18:42:26] [Data processing] Found command to [remove], parameters to ['address', 'max']
+[2023-08-05 18:42:26] [Bot's answer] address removed from Max's profile
+[2023-08-05 18:42:29] [User input] show page
+[2023-08-05 18:42:29] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:42:30] [Bot's answer] No more pages
+[2023-08-05 18:42:32] [User input] add address max dnaiwndoinawdw 323 nioanwi niaw2on, wad12w da,wd wad
+[2023-08-05 18:42:32] [Data processing] Found command to [add address], parameters to ['max', 'dnaiwndoinawdw', '323', 'nioanwi', 'niaw2on,', 'wad12w', 'da,wd', 'wad']
+[2023-08-05 18:42:32] [Error] Enter command.
+[2023-08-05 18:42:34] [User input] add address max dnaiwndoinawdw 323 nioanwi niaw2on, wad12w da,wd wad
+[2023-08-05 18:42:34] [Data processing] Found command to [add address], parameters to ['max', 'dnaiwndoinawdw', '323', 'nioanwi', 'niaw2on,', 'wad12w', 'da,wd', 'wad']
+[2023-08-05 18:42:34] [Error] Enter command.
+[2023-08-05 18:53:47] [Bot's answer] Good bye!
+[2023-08-05 18:53:51] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:53:53] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:53:54] [User input] y
+[2023-08-05 18:53:54] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:53:57] [User input] show page
+[2023-08-05 18:53:57] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:53:58] [Bot's answer] No more pages
+[2023-08-05 18:56:38] [Bot's answer] Good bye!
+[2023-08-05 18:56:39] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:56:40] [User input] y
+[2023-08-05 18:56:40] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:56:42] [User input] show page
+[2023-08-05 18:56:42] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 18:56:43] [Bot's answer] No more pages
+[2023-08-05 18:56:59] [User input] remove phone max +380990000000
+[2023-08-05 18:56:59] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380990000000']
+[2023-08-05 18:56:59] [Error] Enter command.
+[2023-08-05 18:58:01] [Bot's answer] Good bye!
+[2023-08-05 18:58:02] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:58:03] [User input] y
+[2023-08-05 18:58:03] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:58:04] [User input] remove phone max +380990000000
+[2023-08-05 18:58:04] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380990000000']
+[2023-08-05 18:58:04] [Error] Enter command.
+[2023-08-05 18:58:06] [User input] remove phone max +380990000000
+[2023-08-05 18:58:06] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380990000000']
+[2023-08-05 18:58:06] [Error] Enter command.
+[2023-08-05 18:58:26] [Bot's answer] Good bye!
+[2023-08-05 18:58:26] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 18:58:27] [User input] y
+[2023-08-05 18:58:27] [Bot's answer] Downloading the contact book...
+[2023-08-05 18:58:29] [User input] remove phone max +380990000000
+[2023-08-05 18:58:29] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380990000000']
+[2023-08-05 18:58:29] [Error] Enter command.
+[2023-08-05 19:13:06] [Bot's answer] Good bye!
+[2023-08-05 19:13:07] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:13:08] [User input] y
+[2023-08-05 19:13:08] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:13:19] [User input] add address max kiev
+[2023-08-05 19:13:19] [Data processing] Found command to [add address], parameters to ['max', 'kiev']
+[2023-08-05 19:13:19] [Error] Enter command.
+[2023-08-05 19:13:59] [Bot's answer] Good bye!
+[2023-08-05 19:14:00] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:14:01] [User input] y
+[2023-08-05 19:14:01] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:14:02] [User input] add address max kiev
+[2023-08-05 19:14:02] [Data processing] Found command to [add address], parameters to ['max', 'kiev']
+[2023-08-05 19:14:02] [Error] Enter command.
+[2023-08-05 19:14:49] [Bot's answer] Good bye!
+[2023-08-05 19:14:49] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:14:51] [User input] y
+[2023-08-05 19:14:51] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:14:52] [User input] add address max kiev
+[2023-08-05 19:14:52] [Data processing] Found command to [add address], parameters to ['max', 'kiev']
+[2023-08-05 19:14:52] [Error] Enter command.
+[2023-08-05 19:15:03] [Bot's answer] Good bye!
+[2023-08-05 19:15:03] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:15:04] [User input] y
+[2023-08-05 19:15:04] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:15:05] [User input] add address max kiev
+[2023-08-05 19:15:05] [Data processing] Found command to [add address], parameters to ['max', 'kiev']
+[2023-08-05 19:15:05] [Error] Enter command.
+[2023-08-05 19:15:23] [Bot's answer] Good bye!
+[2023-08-05 19:15:24] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:15:25] [User input] y
+[2023-08-05 19:15:25] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:15:26] [User input] add address max kiev
+[2023-08-05 19:15:26] [Data processing] Found command to [add address], parameters to ['max', 'kiev']
+[2023-08-05 19:15:55] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:15:56] [User input] y
+[2023-08-05 19:15:56] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:15:57] [User input] add address max kiev
+[2023-08-05 19:15:57] [Data processing] Found command to [add address], parameters to ['max', 'kiev']
+[2023-08-05 19:15:57] [Bot's answer] The contact "Max" was updated with new address: kiev
+[2023-08-05 19:16:05] [Bot's answer] Good bye!
+[2023-08-05 19:16:06] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:16:07] [User input] y
+[2023-08-05 19:16:07] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:16:23] [User input] remove  address max kiev
+[2023-08-05 19:16:23] [Data processing] Found command to [remove], parameters to ['address', 'max', 'kiev']
+[2023-08-05 19:16:23] [Bot's answer] address removed from Max's profile
+[2023-08-05 19:16:29] [User input] show page
+[2023-08-05 19:16:29] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:16:31] [Bot's answer] No more pages
+[2023-08-05 19:16:49] [User input] add address max kievkiev wdawd awd 889l,3 3q 3 2
+[2023-08-05 19:16:49] [Data processing] Found command to [add address], parameters to ['max', 'kievkiev', 'wdawd', 'awd', '889l,3', '3q', '3', '2']
+[2023-08-05 19:16:49] [Bot's answer] The contact "Max" was updated with new address: ('kievkiev', 'wdawd', 'awd', '889l,3', '3q', '3', '2')
+[2023-08-05 19:16:52] [User input] show page
+[2023-08-05 19:16:52] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:16:53] [Bot's answer] No more pages
+[2023-08-05 19:17:08] [Bot's answer] Good bye!
+[2023-08-05 19:17:09] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:17:10] [User input] y
+[2023-08-05 19:17:10] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:17:12] [User input] show page
+[2023-08-05 19:17:12] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:17:13] [Bot's answer] No more pages
+[2023-08-05 19:17:19] [User input] remove  address max kiev
+[2023-08-05 19:17:19] [Data processing] Found command to [remove], parameters to ['address', 'max', 'kiev']
+[2023-08-05 19:17:19] [Bot's answer] address removed from Max's profile
+[2023-08-05 19:17:23] [User input] show page
+[2023-08-05 19:17:23] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:17:24] [Bot's answer] No more pages
+[2023-08-05 19:17:27] [User input] add address max kievkiev wdawd awd 889l,3 3q 3 2
+[2023-08-05 19:17:27] [Data processing] Found command to [add address], parameters to ['max', 'kievkiev', 'wdawd', 'awd', '889l,3', '3q', '3', '2']
+[2023-08-05 19:18:40] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:18:41] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:18:44] [User input] y
+[2023-08-05 19:18:44] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:18:46] [User input] add address max kievkiev wdawd awd 889l,3 3q 3 2
+[2023-08-05 19:18:46] [Data processing] Found command to [add address], parameters to ['max', 'kievkiev', 'wdawd', 'awd', '889l,3', '3q', '3', '2']
+[2023-08-05 19:18:46] [Bot's answer] The contact "Max" was updated with new address: kievkiev wdawd awd 889l,3 3q 3 2
+[2023-08-05 19:18:49] [User input] show page
+[2023-08-05 19:18:49] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:18:49] [Bot's answer] No more pages
+[2023-08-05 19:22:26] [Bot's answer] Good bye!
+[2023-08-05 19:22:28] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:22:29] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:22:33] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:22:34] [User input] n
+[2023-08-05 19:22:34] [Bot's answer] Creates new contact book...
+[2023-08-05 19:22:37] [User input] show page
+[2023-08-05 19:22:37] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:22:37] [Bot's answer] No saved contacts
+[2023-08-05 19:22:40] [User input] add max
+[2023-08-05 19:22:40] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-05 19:22:40] [Bot's answer] Name: Max
+Phone: No phone
+Birthday: No birthday date
+Email: No email
+Address: No address
+add successful
+[2023-08-05 19:22:53] [User input] add phone max 0991234567
+[2023-08-05 19:22:53] [Data processing] Found command to [add phone], parameters to ['max', '0991234567']
+[2023-08-05 19:22:53] [Bot's answer] Phone +380991234567 add to contact Max
+[2023-08-05 19:22:58] [User input] add phone max 0991234568
+[2023-08-05 19:22:58] [Data processing] Found command to [add phone], parameters to ['max', '0991234568']
+[2023-08-05 19:22:58] [Bot's answer] Phone +380991234568 add to contact Max
+[2023-08-05 19:23:32] [User input] add email max m.kriv@gmail.com 
+[2023-08-05 19:23:32] [Data processing] Found command to [add email], parameters to ['max', 'm.kriv@gmail.com']
+[2023-08-05 19:23:54] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:23:55] [User input] y
+[2023-08-05 19:23:55] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:23:56] [User input] add email max m.kriv@gmail.com 
+[2023-08-05 19:23:56] [Data processing] Found command to [add email], parameters to ['max', 'm.kriv@gmail.com']
+[2023-08-05 19:23:56] [Bot's answer] The contact "Max" was updated with new email: m.kriv@gmail.com
+[2023-08-05 19:24:42] [Bot's answer] Good bye!
+[2023-08-05 19:24:43] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:24:45] [User input] y
+[2023-08-05 19:24:45] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:24:55] [User input] remove email max
+[2023-08-05 19:24:55] [Data processing] Found command to [remove], parameters to ['email', 'max']
+[2023-08-05 19:25:05] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:25:06] [User input] y
+[2023-08-05 19:25:06] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:25:15] [User input] remove email max m.kriv@gmail.com
+[2023-08-05 19:25:15] [Data processing] Found command to [remove], parameters to ['email', 'max', 'm.kriv@gmail.com']
+[2023-08-05 19:25:15] [Bot's answer] Max's email has been removed from the contact list
+[2023-08-05 19:25:21] [User input] show page
+[2023-08-05 19:25:21] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:25:22] [Bot's answer] No more pages
+[2023-08-05 19:25:28] [User input] add email max m.kriv@gmail.com 
+[2023-08-05 19:25:28] [Data processing] Found command to [add email], parameters to ['max', 'm.kriv@gmail.com']
+[2023-08-05 19:25:28] [Bot's answer] The contact "Max" was updated with new email: m.kriv@gmail.com
+[2023-08-05 19:25:32] [Bot's answer] Good bye!
+[2023-08-05 19:30:41] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:30:42] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:30:45] [User input] y
+[2023-08-05 19:30:45] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:30:50] [User input] show page
+[2023-08-05 19:30:50] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:30:51] [Bot's answer] No more pages
+[2023-08-05 19:31:06] [User input] add address max kievkiev wdawd awd 889l,3 3q 3 2
+[2023-08-05 19:31:06] [Data processing] Found command to [add address], parameters to ['max', 'kievkiev', 'wdawd', 'awd', '889l,3', '3q', '3', '2']
+[2023-08-05 19:31:06] [Bot's answer] The contact "Max" was updated with new address: kievkiev wdawd awd 889l,3 3q 3 2
+[2023-08-05 19:31:08] [User input] show page
+[2023-08-05 19:31:08] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:31:08] [Bot's answer] No more pages
+[2023-08-05 19:32:20] [User input] add bill 0991234545 31-01-1999 b.b@gmail.com dalwdlmwdawdm 8wa wadan, wa wdwad.
+[2023-08-05 19:32:20] [Data processing] Found command to [add], parameters to ['bill', '0991234545', '31-01-1999', 'b.b@gmail.com', 'dalwdlmwdawdm', '8wa', 'wadan,', 'wa', 'wdwad.']
+[2023-08-05 19:33:04] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:33:07] [User input] y
+[2023-08-05 19:33:07] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:33:08] [User input] add bill 0991234545 31-01-1999 b.b@gmail.com dalwdlmwdawdm 8wa wadan, wa wdwad.
+[2023-08-05 19:33:08] [Data processing] Found command to [add], parameters to ['bill', '0991234545', '31-01-1999', 'b.b@gmail.com', 'dalwdlmwdawdm', '8wa', 'wadan,', 'wa', 'wdwad.']
+[2023-08-05 19:34:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:34:49] [User input] y
+[2023-08-05 19:34:49] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:34:50] [User input] add bill 0991234545 31-01-1999 b.b@gmail.com dalwdlmwdawdm 8wa wadan, wa wdwad.
+[2023-08-05 19:34:50] [Data processing] Found command to [add], parameters to ['bill', '0991234545', '31-01-1999', 'b.b@gmail.com', 'dalwdlmwdawdm', '8wa', 'wadan,', 'wa', 'wdwad.']
+[2023-08-05 19:34:50] [Bot's answer] Name: Bill
+Phone: +380991234545
+Birthday: 31-01-1999
+Email: b.b@gmail.com
+Address: dalwdlmwdawdm 8wa wadan, wa wdwad.
+add successful
+[2023-08-05 19:36:52] [Bot's answer] Good bye!
+[2023-08-05 19:36:53] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:36:54] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:36:57] [User input] y
+[2023-08-05 19:36:57] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:37:00] [User input] show page
+[2023-08-05 19:37:00] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:37:01] [Bot's answer] No more pages
+[2023-08-05 19:39:20] [Bot's answer] Good bye!
+[2023-08-05 19:39:21] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:39:22] [User input] y
+[2023-08-05 19:39:22] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:39:23] [User input] show page
+[2023-08-05 19:39:23] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:39:23] [Bot's answer] No more pages
+[2023-08-05 19:39:51] [Bot's answer] Good bye!
+[2023-08-05 19:39:52] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:39:53] [User input] y
+[2023-08-05 19:39:53] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:40:33] [User input] change phone bill +380991234545 +380991234546
+[2023-08-05 19:40:33] [Data processing] Found command to [change], parameters to ['phone', 'bill', '+380991234545', '+380991234546']
+[2023-08-05 19:40:33] [Bot's answer] Phone +380991234545 change to +380991234546 for Bill contact 
+[2023-08-05 19:40:37] [User input] show page
+[2023-08-05 19:40:37] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:40:38] [Bot's answer] No more pages
+[2023-08-05 19:41:49] [User input] change email bill b.b@gmail.com b1.b@gmail.com
+[2023-08-05 19:41:49] [Data processing] Found command to [change], parameters to ['email', 'bill', 'b.b@gmail.com', 'b1.b@gmail.com']
+[2023-08-05 19:42:01] [User input] show page
+[2023-08-05 19:42:01] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:42:02] [Bot's answer] No more pages
+[2023-08-05 19:43:17] [User input] change birthday bill 31-01-1999 31-01-1998
+[2023-08-05 19:43:17] [Data processing] Found command to [change], parameters to ['birthday', 'bill', '31-01-1999', '31-01-1998']
+[2023-08-05 19:43:21] [User input] show page
+[2023-08-05 19:43:21] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:43:22] [Bot's answer] No more pages
+[2023-08-05 19:43:58] [User input] change address bill  kiev Ua 
+[2023-08-05 19:43:58] [Data processing] Found command to [change], parameters to ['address', 'bill', 'kiev', 'Ua']
+[2023-08-05 19:44:04] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:44:05] [User input] y
+[2023-08-05 19:44:05] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:44:09] [User input] change address bill  kiev Ua 
+[2023-08-05 19:44:09] [Data processing] Found command to [change], parameters to ['address', 'bill', 'kiev', 'Ua']
+[2023-08-05 19:44:41] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:44:42] [User input] y
+[2023-08-05 19:44:42] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:44:44] [User input] change address bill  kiev Ua 
+[2023-08-05 19:44:44] [Data processing] Found command to [change], parameters to ['address', 'bill', 'kiev', 'Ua']
+[2023-08-05 19:45:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:45:51] [User input] y
+[2023-08-05 19:45:51] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:45:53] [User input] change address bill  kiev Ua 
+[2023-08-05 19:45:53] [Data processing] Found command to [change], parameters to ['address', 'bill', 'kiev', 'Ua']
+[2023-08-05 19:46:33] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-05 19:46:33] [User input] y
+[2023-08-05 19:46:33] [Bot's answer] Downloading the contact book...
+[2023-08-05 19:46:35] [User input] change address bill  kiev Ua 
+[2023-08-05 19:46:35] [Data processing] Found command to [change], parameters to ['address', 'bill', 'kiev', 'Ua']
+[2023-08-05 19:46:43] [User input] show page
+[2023-08-05 19:46:43] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:46:44] [Bot's answer] No more pages
+[2023-08-05 19:47:09] [User input] change name  bill Grid
+[2023-08-05 19:47:09] [Data processing] Found command to [change], parameters to ['name', 'bill', 'Grid']
+[2023-08-05 19:47:11] [User input] show page
+[2023-08-05 19:47:11] [Data processing] Found command to [show page], parameters to []
+[2023-08-05 19:47:12] [Bot's answer] No more pages
+[2023-08-05 19:50:57] [Bot's answer] Good bye!

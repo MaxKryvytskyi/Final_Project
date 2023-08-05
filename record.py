@@ -1,16 +1,15 @@
-from fields import Name, Phone, Birthday, Email, Address, Status
-from my_exception import IncorrectDateFormat, IncorrectPhoneeFormat, IncorrectEmailFormat, IncorrectNameFormat, IncorrectStatusFormat, IncorrectAddressFormat, IncorrectBirthdayFormat
+from fields import Name, Phone, Birthday, Email, Address
+from my_exception import IncorrectDateFormat, IncorrectPhoneeFormat, IncorrectEmailFormat, IncorrectNameFormat, IncorrectAddressFormat, IncorrectBirthdayFormat
 from log import log
 from datetime import datetime
 
 
 class Record:
-    def __init__(self, name:Name, phone: Phone=None, birthday: Birthday=None, email: Email=None, status: Status=None, address: Address=None) -> None:
+    def __init__(self, name:Name, phone: Phone=None, birthday: Birthday=None, email: Email=None, address: Address=None) -> None:
         self.name = name
         self.phones = []
         self.birthday = birthday
         self.email = email
-        self.status = status 
         self.address = address 
         if birthday: self.add_to_birthday(birthday)
         if phone: self.phones.append(phone)
@@ -23,9 +22,9 @@ class Record:
         if len(self.phones) < 9:
             if phones not in self.phones:
                 self.phones.append(phones)
-                return log(f"Phone {phones} add to contact {self.name}", "[Bot's answer] ")
-            return log(f"The contact {self.name} already has the phone {phones}", "[Bot's answer] ")
-        else: return log(f"The limit of phones is 9", "[Bot's answer] ")
+                return f"Phone {phones} add to contact {self.name}"
+            return f"The contact {self.name} already has the phone {phones}"
+        else: return f"The limit of phones is 9"
     
     def add_to_birthday(self, birthday:Birthday):
         self.birthday = birthday
@@ -33,32 +32,25 @@ class Record:
     def add_email(self, email:Email) -> None: 
         self.email = email
 
-    def add_status(self, status:Status) -> None: 
-        self.status = status
-
     def add_address(self, address:Address) -> None: 
-        self.address = address
+        self.address = ' '.join(address)
 
 # ======================================================================================================
 # =========================================[ remove ]===================================================
 # ======================================================================================================
 
     def remove_phone(self, phones:Phone) -> str:
-        if len(self.phones) == 0: return log("This contact has no phone numbers saved", "[Bot's answer] ")
+        if len(self.phones) == 0: return "This contact has no phone numbers saved"
         for n in self.phones:
             if n.value == phones.value: 
                 self.phones.remove(n)
                 return phones
 
     def remove_birthday(self, birthday:Birthday) -> None:
-        # birthday = datetime.strptime(birthday1, r'%d-%m-%Y')
         if self.birthday.value == birthday.value: self.birthday = None
 
     def remove_email(self, email:Email) -> None: 
         if self.email.value == email.value: self.email = None
-
-    def remove_status(self, status:Status) -> None: 
-        if self.status.value == status.value: self.status = None
 
     def remove_address(self) -> None: 
         self.address = None
@@ -87,18 +79,9 @@ class Record:
         if self.email.value == email.value: self.email = new_email
         else: raise IncorrectEmailFormat
 
-    def change_status(self, status:Status, new_status:Status) -> None | IncorrectStatusFormat: 
-        if self.status.value == status.value: self.status = new_status
-        else: raise IncorrectStatusFormat
-
     def change_address(self, new_address:Address) -> None | IncorrectAddressFormat: 
         if new_address:
-            if new_address._city_value:
-                self.address._city_value = new_address._city_value
-            if new_address._street_value:
-                self.address._street_value = new_address._street_value
-            if new_address._country_value:
-                self.address._country_value = new_address._country_value
+            self.address.value = new_address.value
         else: raise IncorrectAddressFormat
 
 # ======================================================================================================
@@ -156,11 +139,9 @@ class Record:
             return log(f"{days_birthday.days} days", "[Bot's answer] ") 
 
     def __str__(self):
-        return "{}{}{}{}{}{}".format(
+        return "{}{}{}{}{}".format(
                                    f"Name: {self.name}\n", 
                                    f'Phone: {", ".join([str(p) for p in self.phones]) if self.phones else "No phone"}\n', 
-                                   'Birthday: ' + str(self.birthday.value.strftime("%d-%m-%Y")) + "\n" if self.birthday is not None else "Birthday: No birthday date\n", 
-                                   'Email: ' + str(self.email.value) + "\n" if self.email is not None else "Email: No email\n", 
-                                   'Status: ' + str(self.status.value) if self.status is not None else "Status: No status\n",
-                                   'Address: ' + str(self.address) + "\n" if self.address is not None else 'Address: No address')
-                                   
+                                   'Email: ' + str(self.email.value) + "\n" if self.email is not None else "Email: No email\n",
+                                   'Address: ' + str(self.address) + "\n" if self.address is not None else 'Address: No address\n',
+                                   'Birthday: ' + str(self.birthday.value.strftime("%d-%m-%Y")) + "\n" if self.birthday is not None else "Birthday: No birthday date\n")                       

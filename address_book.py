@@ -32,7 +32,6 @@ class AddressBook(UserDict):
             value_phone = "No phone"
             value_birthday = "No birthday date"
             value_email = "No email"
-            value_status = "No status"
             value_address = "No address"
            
             name_value = f"{i.name} "
@@ -40,9 +39,8 @@ class AddressBook(UserDict):
             birthday_value = f"{i.birthday.value.strftime('%d-%m-%Y') if i.birthday else value_birthday}"
             email_value = f"{i.email if i.email else value_email}"
             address_value = f"{i.address if i.address else value_address}"
-            status_value = f"{i.status if i.status else value_status}"
 
-            new_list = [name_value, phone_value, birthday_value, email_value, address_value, status_value]
+            new_list = [name_value, phone_value, birthday_value, email_value, address_value]
             new_list1.append(new_list)
             if count == int(num):
                 result_list[page] = self.create_print_page(page, new_list1, True)
@@ -75,7 +73,7 @@ class AddressBook(UserDict):
                 result += " {:<90}".format(" "*30 + "|" + "_"*30 + "|" + " "*29) + "\n"
 
             for i in range(0, len(contacts)):
-                name_value, phone_value, birthday_value, email_value, address_value, status_value = contacts[i]
+                name_value, phone_value, birthday_value, email_value, address_value = contacts[i]
                 p = str(phone_value).split(",")
                 count = 1 
 
@@ -89,7 +87,7 @@ class AddressBook(UserDict):
                 else:
                     new_i = re.sub(pattern, "", phone_value)
                     result += f"Name : {name_value}\n" + f"Phone {count} :{new_i}\n" + f"Birthday : {birthday_value}\n"
-                result += f"Email : {email_value}\n" + f"Address : {address_value}\n" + f"Status : {status_value}\n\n"
+                result += f"Email : {email_value}\n" + f"Address : {address_value}\n\n" 
             return result
         return None
 

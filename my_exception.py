@@ -14,10 +14,6 @@ class IncorrectNameFormat(Exception):
     pass
 
 
-class IncorrectStatusFormat(Exception): 
-    pass
-
-
 class IncorrectAddressFormat(Exception): 
     pass
 
