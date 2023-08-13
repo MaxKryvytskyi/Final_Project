@@ -6386,3 +6386,94 @@ Deleted
 [2023-08-13 22:09:23] [Bot's answer] Downloading the contact book...
 [2023-08-13 22:09:25] [User input] add email bill
 [2023-08-13 22:09:25] [Data processing] Found command to [add email], parameters to ['bill']
+[2023-08-14 01:02:07] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:02:10] [User input] n
+[2023-08-14 01:02:10] [Bot's answer] Creates new contact book...
+[2023-08-14 01:02:13] [User input] add
+[2023-08-14 01:02:13] [Data processing] Found command to [add], parameters to []
+[2023-08-14 01:02:30] [User input] add birthday max
+[2023-08-14 01:02:30] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 01:07:37] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:07:38] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:07:42] [User input] y
+[2023-08-14 01:07:42] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:07:45] [User input] add birthday max
+[2023-08-14 01:07:45] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 01:07:54] [User input] 231323
+[2023-08-14 01:07:54] [Error] There is no such command
+[2023-08-14 01:08:10] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:08:13] [User input] y
+[2023-08-14 01:08:13] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:08:14] [User input] add birthday max
+[2023-08-14 01:08:14] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 01:08:55] [User input] add birthday max
+[2023-08-14 01:08:55] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 01:22:58] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:23:00] [User input] y
+[2023-08-14 01:23:00] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:23:07] [User input] add status max
+[2023-08-14 01:23:07] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-14 01:25:55] [User input] add status max
+[2023-08-14 01:25:55] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-14 01:26:41] [User input] add phone max
+[2023-08-14 01:26:41] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-14 01:26:45] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:26:47] [User input] y
+[2023-08-14 01:26:47] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:26:50] [User input] add status max
+[2023-08-14 01:26:50] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-14 01:27:30] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:27:36] [User input] y
+[2023-08-14 01:27:40] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:27:57] [User input] add status max
+[2023-08-14 01:28:00] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-14 01:29:04] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:29:07] [User input] y
+[2023-08-14 01:29:07] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:29:09] [User input] add status max
+[2023-08-14 01:29:09] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-14 01:29:19] [User input] add status max
+[2023-08-14 01:29:19] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-14 01:37:26] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:37:27] [User input] y
+[2023-08-14 01:37:27] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:37:29] [User input] add status max
+[2023-08-14 01:37:29] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-14 01:37:48] [User input] add address max
+[2023-08-14 01:37:48] [Data processing] Found command to [add address], parameters to ['max']
+[2023-08-14 01:38:26] [User input] add address max
+[2023-08-14 01:38:26] [Data processing] Found command to [add address], parameters to ['max']
+[2023-08-14 01:38:51] [User input] add address max
+[2023-08-14 01:38:51] [Data processing] Found command to [add address], parameters to ['max']
+[2023-08-14 01:39:01] [User input] add address max
+[2023-08-14 01:39:01] [Data processing] Found command to [add address], parameters to ['max']
+[2023-08-14 01:44:28] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:44:30] [User input] y
+[2023-08-14 01:44:30] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:44:37] [User input] add note max
+[2023-08-14 01:44:37] [Data processing] Found command to [add note], parameters to ['max']
+[2023-08-14 01:45:11] [User input] add note max
+[2023-08-14 01:45:11] [Data processing] Found command to [add note], parameters to ['max']
+[2023-08-14 01:45:57] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:45:58] [User input] y
+[2023-08-14 01:45:58] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:46:00] [User input] add note max
+[2023-08-14 01:46:00] [Data processing] Found command to [add note], parameters to ['max']
+[2023-08-14 01:46:06] [User input] add note max
+[2023-08-14 01:46:06] [Data processing] Found command to [add note], parameters to ['max']
+[2023-08-14 01:47:01] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:47:03] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:47:07] [User input] y
+[2023-08-14 01:47:07] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:47:10] [User input] add note max
+[2023-08-14 01:47:10] [Data processing] Found command to [add note], parameters to ['max']
+[2023-08-14 01:48:27] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:48:28] [User input] y
+[2023-08-14 01:48:28] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:48:30] [User input] add note max
+[2023-08-14 01:48:30] [Data processing] Found command to [add note], parameters to ['max']
+[2023-08-14 01:48:50] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 01:48:51] [User input] y
+[2023-08-14 01:48:51] [Bot's answer] Downloading the contact book...
+[2023-08-14 01:48:53] [User input] add note max
+[2023-08-14 01:48:53] [Data processing] Found command to [add note], parameters to ['max']

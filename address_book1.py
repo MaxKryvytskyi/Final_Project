@@ -153,23 +153,30 @@ class Person:
         if "none" in [phone.value for phone in self.phones]: 
             self.phones[0] = new_phone
         else: self.phones.append(new_phone)
+        return f"Phone Додано"
 
     def add_email(self, new_email: PersonFormatterInfo):
         if "none" in [email.value for email in self.emails]: 
             self.emails[0] = new_email
         else: self.emails.append(new_email)
+        return f"Email Додано"
+    
 
     def add_birthday(self, new_birthday: PersonFormatterInfo):
-        pass
-
+        self.birthday = new_birthday
+        return f"Birthday Додано"
+    
     def add_status(self, new_status: PersonFormatterInfo):
-        pass
+        self.status = new_status
+        return f"Status Додано"
 
     def add_address(self, new_address: PersonFormatterInfo):
-        pass
+        self.address = new_address
+        return f"Address Додано"
 
     def add_note(self, new_note: PersonFormatterInfo):
-        pass
+        self.note = new_note
+        return f"Note Додано"
 
     def get_person_info(self):
         return f"Name: {self.name.value_of()}\nPhones: {[phone.value_of() for phone in self.phones]}\nEmail: {[email.value_of() for email in self.emails]}\nBirthday: {self.birthday.value_of()}\nStatus: {self.status.value_of()}\nAddress: {self.address.value_of()}\nNote: {self.note.value_of()}"
