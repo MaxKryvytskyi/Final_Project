@@ -1,5 +1,5 @@
 
-from test import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus, Person, AddressBook
+from address_book1 import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus, Person, AddressBook
 from my_exception import ExceptionIncorrectFormat
 from log import log
 
@@ -27,12 +27,12 @@ def input_error(func):
     def inner(*argsi,**kwargs): 
         try:
             return func(*argsi,**kwargs)
-        # except TypeError: return log(f"Wrong command", "[Error] ")
-        except IndexError: return log(f"Enter name and phone separated by a space!", "[Error] ")
-        # except ValueError: return log(f"Incorrect data", "[Error] ")
-        except KeyError: return log(f"Enter another name.", "[Error] ")
-        # except AttributeError: return log(f"Enter command.", "[Error] ")
-        # except ExceptionIncorrectFormat as error: return log(str(error), "[Error] ")
+        except TypeError: return f"Wrong command"
+        except IndexError: return f"Enter name and phone separated by a space!"
+        except ValueError: return f"Incorrect data"
+        except KeyError: return f"Enter another name."
+        except AttributeError: return f"Enter command."
+        except ExceptionIncorrectFormat as error: return error
         except KeyboardInterrupt: return exit()
     return inner
 

@@ -69,7 +69,7 @@ class PersonEmailAddress(PersonFormatterInfo):
             if verified: 
                 self.__value = verified
             else: 
-                raise ExceptionIncorrectFormat(f"Не правильний формат email {value} очікувалося m.k@gmail.com")
+                raise ExceptionIncorrectFormat(f"Не правильний формат email \"{value}\" очікувалося m.k@gmail.com")
         else: self.__value = "none"
     
     def value_of(self):
@@ -94,6 +94,7 @@ class PersonStatus(PersonFormatterInfo):
     
     def value_of(self):
         return f"{self.value.capitalize() if self.value.lower() != 'none' else ''}"
+
 
 class PersonAddress(PersonFormatterInfo):
     def __init__(self, city: str="None", street: str="None", house: str="None"):
@@ -135,6 +136,7 @@ class PersonNote(PersonFormatterInfo):
     def value_of(self):
         return f"{self.value if self.value.lower() != 'none' else ''}"
 
+
 class Person:
     def __init__(self, name: PersonFormatterInfo="None", phone: PersonFormatterInfo="None", email: PersonFormatterInfo="None", birthday: PersonFormatterInfo="None", status: PersonFormatterInfo="None", address: PersonFormatterInfo="None", note: PersonFormatterInfo="None") -> None:
         self.name = name
@@ -171,6 +173,7 @@ class Person:
 
     def get_person_info(self):
         return f"Name: {self.name.value_of()}\nPhones: {[phone.value_of() for phone in self.phones]}\nEmail: {[email.value_of() for email in self.emails]}\nBirthday: {self.birthday.value_of()}\nStatus: {self.status.value_of()}\nAddress: {self.address.value_of()}\nNote: {self.note.value_of()}"
+    
     
 class AddressBook(UserDict):
     # Додає в словник экземпляр классу Record
