@@ -136,5 +136,3 @@ class AddressBook(UserDict):
             deserialized_adress_book = pickle.load(file)
             return deserialized_adress_book
         
-
-        # result += "{:^90}".format("|" + "_"*30 +"|"+ "_"*30 +"|"+ "_"*30 +"|") + "\n"

@@ -112,7 +112,7 @@ class Record:
 
         if len(phones) > 6:
             result += " {:^91}".format("_"*91) + "\n"
-            result += "|{:^30}|{:^30}|{:^29}|".format("Phone 7", f"Phone 8","Phone 9") + "\n"
+            result += "|{:^30}|{:^30}|{:^29}|".format("Phone 7", f"Phone 8", "Phone 9") + "\n"
             result += "|{:^30}|{:^30}|{:^29}|".format(str(dict_phone["Phone 7"]), str(dict_phone["Phone 8"]), str(dict_phone["Phone 9"])) + "\n"
             result += "|{:<30}|{:^30}|{:>28}|".format("_"*30, "_"*30, "_"*29) + "\n"
 
