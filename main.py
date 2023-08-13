@@ -55,7 +55,7 @@ def add(*args: str) -> str:
     phone = Phone(args[1]) if len(args) >= 2 else None
     birthday = Birthday(args[2]) if len(args) >= 3 else None
     email = Email(args[3]) if len(args) >= 4 else None
-    address = Address(args[4:]) if len(args) >= 5 else None
+    address = Address(' '.join(args[4:])) if len(args) >= 5 else None
     rec = Record(name, phone, birthday, email, address) 
     return adress_book.add_record(rec)
 

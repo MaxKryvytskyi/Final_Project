@@ -6066,3 +6066,35 @@ Address : No address
 [2023-08-06 01:33:16] [Bot's answer] How can I help you?
 [2023-08-06 01:33:27] [User input] help
 [2023-08-06 01:33:27] [Data processing] Found command to [help], parameters to []
+[2023-08-06 22:20:14] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-06 22:20:15] [User input] y
+[2023-08-06 22:20:15] [Bot's answer] Downloading the contact book...
+[2023-08-06 23:22:09] [Bot's answer] Good bye!
+[2023-08-06 23:22:12] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-06 23:22:13] [User input] y
+[2023-08-06 23:22:13] [Bot's answer] Downloading the contact book...
+[2023-08-06 23:22:16] [User input] add max +380991122323 m.kriv@gmail.com 12-12-1999 kiev, Ua, zoi 231 wdawd awdas
+[2023-08-06 23:22:16] [Data processing] Found command to [add], parameters to ['max', '+380991122323', 'm.kriv@gmail.com', '12-12-1999', 'kiev,', 'Ua,', 'zoi', '231', 'wdawd', 'awdas']
+[2023-08-06 23:49:42] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-06 23:49:44] [User input] y
+[2023-08-06 23:49:44] [Bot's answer] Downloading the contact book...
+[2023-08-06 23:49:47] [User input] add max +380991122323 m.kriv@gmail.com 12-12-1999 kiev, Ua, zoi 231 wdawd awdas
+[2023-08-06 23:49:47] [Data processing] Found command to [add], parameters to ['max', '+380991122323', 'm.kriv@gmail.com', '12-12-1999', 'kiev,', 'Ua,', 'zoi', '231', 'wdawd', 'awdas']
+[2023-08-06 23:49:49] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-06 23:49:50] [User input] y
+[2023-08-06 23:49:50] [Bot's answer] Downloading the contact book...
+[2023-08-06 23:49:55] [User input] add max +380991122323
+[2023-08-06 23:49:55] [Data processing] Found command to [add], parameters to ['max', '+380991122323']
+[2023-08-06 23:49:55] [Bot's answer] Contact with name Max already exist. Try add phone command for add extra phone.
+[2023-08-06 23:50:00] [User input] show all
+[2023-08-06 23:50:00] [Error] There is no such command
+[2023-08-06 23:50:05] [User input] show page
+[2023-08-06 23:50:05] [Data processing] Found command to [show page], parameters to []
+[2023-08-06 23:50:05] [Bot's answer] No more pages
+[2023-08-06 23:50:33] [User input] remove phone max +380991234567
+[2023-08-06 23:50:33] [Data processing] Found command to [remove], parameters to ['phone', 'max', '+380991234567']
+[2023-08-06 23:50:33] [Bot's answer] Phone number Max : +380991234567
+Deleted
+[2023-08-06 23:50:36] [User input] show page
+[2023-08-06 23:50:36] [Data processing] Found command to [show page], parameters to []
+[2023-08-06 23:50:36] [Bot's answer] No more pages
