@@ -2,7 +2,7 @@ import re
 from datetime import datetime
 
 
-from my_exception import IncorrectDateFormat, IncorrectPhoneeFormat, IncorrectEmailFormat, IncorrectNameFormat
+from my_exception import ExceptionIncorrectFormat
 
 
 class Field:
@@ -31,9 +31,9 @@ class Name(Field):
         return self.__value
     
     @value.setter
-    def value(self, value: str) -> IncorrectNameFormat:
+    def value(self, value: str):
         if len(value) >= 3: self.__value = value.capitalize()
-        else: raise IncorrectNameFormat
+        else: raise ExceptionIncorrectFormat(f"Ім'я \"{value}\" занадто кототке потрібно минимум 3 символи")
 
 
 class Phone(Field):
@@ -42,17 +42,12 @@ class Phone(Field):
         return self.__value
     
     @value.setter
-    def value(self, value: str) -> IncorrectPhoneeFormat:
+    def value(self, value: str):
         if value:
-            correct_phone = ""
-            for i in value: 
-                if i in "+0123456789": correct_phone += i
-
-            if len(correct_phone) == 13: self.__value = correct_phone # "+380123456789"
-            elif len(correct_phone) == 12: self.__value = "+" + correct_phone # "380123456789"
-            elif len(correct_phone) == 10: self.__value = "+38" + correct_phone # "0123456789"
-            elif len(correct_phone) == 9: self.__value = "+380" + correct_phone # "123456789"
-            else: raise IncorrectPhoneeFormat
+            if not value.isdigit():
+                raise ExceptionIncorrectFormat(f"Телефон {value} має складатися тільки з літер")
+            if len(value) == 10: self.__value = value # "012 3456789"
+            else: raise ExceptionIncorrectFormat(f"Не правильний формат телефону {value} очікуєтся 0500000000")
         else: self.__value = "No phone"
 
 
@@ -62,12 +57,12 @@ class Birthday(Field):
         return self.__value
     
     @value.setter
-    def value(self, value: str) -> IncorrectDateFormat:
+    def value(self, value: str):
         if value: 
             if not type(value) == datetime: birthday = datetime.strptime(value, r'%d-%m-%Y')
             else: birthday = value
             if type(birthday) == datetime: self.__value = birthday 
-            else: raise IncorrectDateFormat
+            else: raise ExceptionIncorrectFormat(f"Не правильний формат дати {value} очікувалося день.місяць.рік")
         else: self.__value = None
 
 
@@ -77,13 +72,16 @@ class Email(Field):
         return self.__value
     
     @value.setter
-    def value(self, value: str) -> IncorrectEmailFormat:
+    def value(self, value: str):
         if value:
-            if value == None: self.__value = None
+            if value == None: 
+                self.__value = "None"
             verified = str(*re.findall(r"[a-zA-Z]{1}[a-zA-Z0-9._]{1,}@[a-zA-Z]+\.[a-zA-Z]{2,}", value))
-            if verified: self.__value = verified
-            else: raise IncorrectEmailFormat
-        else: self.__value = None
+            if verified: 
+                self.__value = verified
+            else: 
+                raise ExceptionIncorrectFormat(f"Не правильний формат email {value} очікувалося m.k@gmail.com")
+        else: self.__value = "None"
 
     
 class Address(Field):
