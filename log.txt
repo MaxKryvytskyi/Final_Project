@@ -6477,3 +6477,139 @@ Deleted
 [2023-08-14 01:48:51] [Bot's answer] Downloading the contact book...
 [2023-08-14 01:48:53] [User input] add note max
 [2023-08-14 01:48:53] [Data processing] Found command to [add note], parameters to ['max']
+[2023-08-14 21:42:19] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 21:42:21] [User input] y
+[2023-08-14 21:42:21] [Bot's answer] Downloading the contact book...
+[2023-08-14 21:43:13] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 21:43:15] [User input] n
+[2023-08-14 21:43:15] [Bot's answer] Creates new contact book...
+[2023-08-14 21:43:22] [User input] add 
+[2023-08-14 21:43:22] [Data processing] Found command to [add], parameters to []
+[2023-08-14 21:59:27] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 21:59:29] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 21:59:30] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 21:59:31] [User input] y
+[2023-08-14 21:59:31] [Bot's answer] Downloading the contact book...
+[2023-08-14 21:59:36] [User input] add bill
+[2023-08-14 21:59:36] [Data processing] Found command to [add], parameters to ['bill']
+[2023-08-14 22:00:50] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:00:52] [User input] y
+[2023-08-14 22:00:52] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:00:54] [User input] add
+[2023-08-14 22:00:54] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:02:02] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:02:04] [User input] y
+[2023-08-14 22:02:04] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:02:06] [User input] add
+[2023-08-14 22:02:06] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:05:22] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:05:23] [User input] n
+[2023-08-14 22:05:23] [Bot's answer] Creates new contact book...
+[2023-08-14 22:05:25] [User input] add
+[2023-08-14 22:05:25] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:06:03] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:06:05] [User input] n
+[2023-08-14 22:06:05] [Bot's answer] Creates new contact book...
+[2023-08-14 22:06:07] [User input] add
+[2023-08-14 22:06:07] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:06:10] [User input] 
+[2023-08-14 22:06:10] [Error] You have not entered anything
+[2023-08-14 22:07:32] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:07:33] [User input] y
+[2023-08-14 22:07:33] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:07:34] [User input] add
+[2023-08-14 22:07:34] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:07:45] [User input] 
+[2023-08-14 22:07:45] [Error] You have not entered anything
+[2023-08-14 22:07:46] [User input] 
+[2023-08-14 22:07:46] [Error] You have not entered anything
+[2023-08-14 22:07:48] [User input] add
+[2023-08-14 22:07:48] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:08:31] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:08:32] [User input] n
+[2023-08-14 22:08:32] [Bot's answer] Creates new contact book...
+[2023-08-14 22:08:35] [User input] add
+[2023-08-14 22:08:35] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:09:50] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:09:52] [User input] y
+[2023-08-14 22:09:52] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:09:56] [User input] add
+[2023-08-14 22:09:56] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:11:19] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:11:21] [User input] n
+[2023-08-14 22:11:21] [Bot's answer] Creates new contact book...
+[2023-08-14 22:11:23] [User input] add
+[2023-08-14 22:11:23] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:12:07] [User input] add
+[2023-08-14 22:12:07] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:13:49] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:13:52] [User input] y
+[2023-08-14 22:13:52] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:13:56] [User input] add
+[2023-08-14 22:13:56] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:14:02] [User input] 
+[2023-08-14 22:14:02] [Error] You have not entered anything
+[2023-08-14 22:15:19] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:15:20] [User input] n
+[2023-08-14 22:15:20] [Bot's answer] Creates new contact book...
+[2023-08-14 22:15:23] [User input] asdw
+[2023-08-14 22:15:26] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:15:27] [User input] y
+[2023-08-14 22:15:27] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:15:29] [User input] fdcsa
+[2023-08-14 22:15:45] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:15:47] [User input] add
+[2023-08-14 22:15:47] [Bot's answer] The command is not recognized
+[2023-08-14 22:15:47] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:15:53] [User input] y
+[2023-08-14 22:15:53] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:15:55] [User input] add
+[2023-08-14 22:15:55] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:16:01] [User input] 
+[2023-08-14 22:16:14] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:16:16] [User input] y
+[2023-08-14 22:16:16] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:16:19] [User input] adddsa
+[2023-08-14 22:16:19] [Data processing] Found command to [add], parameters to ['dsa']
+[2023-08-14 22:16:26] [User input] 
+[2023-08-14 22:16:26] [Error] You have not entered anything
+[2023-08-14 22:16:26] [User input] 
+[2023-08-14 22:16:26] [Error] You have not entered anything
+[2023-08-14 22:16:29] [User input] 
+[2023-08-14 22:16:29] [Error] You have not entered anything
+[2023-08-14 22:16:29] [User input] 
+[2023-08-14 22:16:29] [Error] You have not entered anything
+[2023-08-14 22:16:30] [User input] 
+[2023-08-14 22:16:30] [Error] You have not entered anything
+[2023-08-14 22:16:30] [User input] 
+[2023-08-14 22:16:30] [Error] You have not entered anything
+[2023-08-14 22:16:32] [User input] asdawd
+[2023-08-14 22:16:32] [Error] There is no such command
+[2023-08-14 22:17:06] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:17:47] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:17:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:17:49] [User input] n
+[2023-08-14 22:17:49] [Bot's answer] Creates new contact book...
+[2023-08-14 22:17:53] [User input] add 
+[2023-08-14 22:17:53] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:21:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:21:49] [User input] y
+[2023-08-14 22:21:49] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:21:57] [User input] add max
+[2023-08-14 22:21:57] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-14 22:22:03] [User input] 
+[2023-08-14 22:22:03] [Error] You have not entered anything
+[2023-08-14 22:22:06] [User input] add max
+[2023-08-14 22:22:06] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-14 22:22:16] [User input] add max
+[2023-08-14 22:22:16] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-14 22:22:18] [User input] 
+[2023-08-14 22:22:18] [Error] You have not entered anything
+[2023-08-14 22:22:19] [User input] 
+[2023-08-14 22:22:19] [Error] You have not entered anything
+[2023-08-14 22:22:19] [User input] 
+[2023-08-14 22:22:19] [Error] You have not entered anything
+[2023-08-14 22:22:19] [User input] 
+[2023-08-14 22:22:19] [Error] You have not entered anything
+[2023-08-14 22:22:19] [User input] 
+[2023-08-14 22:22:19] [Error] You have not entered anything

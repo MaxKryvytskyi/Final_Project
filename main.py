@@ -1,6 +1,9 @@
-
 from datetime import datetime
-from address_book1 import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus, Person, AddressBook
+
+
+from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
+from address_book import AddressBook
+from person import Person
 from my_exception import ExceptionIncorrectFormat
 from log import log
 
@@ -42,15 +45,23 @@ def input_error(func):
 # ======================================================================================================
 
 @input_error
-def add(*_: str) -> str:
+def add(*args: str):
     while True:  
-        name = input("Введіть ім'я контакту \n---> ").capitalize()
-        if name in adress_book.keys(): print("Name Error. Контакт с таким ім'ям вже створено")
+        if len(args) > 0:
+            name = args[0]
+            if name in adress_book.keys(): 
+                print(f"Name Error. Контакт с таким {name} вже створено")
+                name = input("Введіть ім'я контакту \n---> ").capitalize()
+        else : 
+            name = input("Введіть ім'я контакту \n---> ").capitalize()
+        if name in adress_book.keys(): 
+            print(f"Name Error. Контакт с таким {name} вже створено")
         else: break
+        
     phone = input("Введіть телефон \n---> ") 
     email = input("Введіть електронну почту \n---> ")
     birthday = input("Введіть день народження \n---> ")
-    status = input("Введіть статус \n---> ")
+    status = input("Введіть статус [work, family, friend]\n---> ")
     city = input("Введіть місто \n---> ")
     street = input("Введіть вулицю \n---> ")
     house = input("Введіть номер будинку \n---> ")
@@ -59,7 +70,7 @@ def add(*_: str) -> str:
     return adress_book.add_person(person)
 
 @input_error
-def add_phone(*args):
+def add_phone(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
         print(f"Вже існуючі Phones {args[0].capitalize()}\n{[phone.value_of() for phone in person.phones]}")
@@ -67,10 +78,10 @@ def add_phone(*args):
         if new_phone == "exit": return "Операція прервана"
         elif new_phone in [phone.value for phone in person.phones]: print("Error Цей телефон вже існує у цього контакту")
         else: break
-    return person.add_phone(PersonPhoneNumbers(new_phone))
+    return person.editing_phone(PersonPhoneNumbers(new_phone))
 
 @input_error
-def add_email(*args):
+def add_email(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
         print(f"Вже існуючі Email {args[0].capitalize()}\n{[email.value_of() for email in person.emails]}")
@@ -78,10 +89,10 @@ def add_email(*args):
         if new_email == "exit": return "Операція прервана"
         elif new_email in [email.value for email in person.emails]: print("Error Цей email вже існує у цього контакту")
         else: break
-    return person.add_email(PersonEmailAddress(new_email))
+    return person.editing_email(PersonEmailAddress(new_email))
 
 @input_error
-def add_birthday(*args):
+def add_birthday(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
         print(f"Вже існуючий Birthday {args[0].capitalize()}\n{person.birthday.value_of()}")
@@ -93,11 +104,11 @@ def add_birthday(*args):
             continue
         if new_birthday == "exit": return "Операція прервана"
         else: break
-    return person.add_birthday(PersonBirthday(new_birthday))
+    return person.editing_birthday(PersonBirthday(new_birthday))
 
 
 @input_error
-def add_status(*args):
+def add_status(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
         print(f"Вже існуючий Status {args[0].capitalize()}\n{person.status.value_of()}")
@@ -105,11 +116,11 @@ def add_status(*args):
         if new_status == "exit": return "Операція прервана"
         elif new_status.lower() in ["work", "family", "friend"]: break
         else: print("Не вірний тип статусу очікуєтся Work, Family або Friend")
-    return person.add_status(PersonStatus(new_status))
+    return person.editing_status(PersonStatus(new_status))
 
 
 @input_error
-def add_address(*args):
+def add_address(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
         print(f"Вже існуючий Address {args[0].capitalize()}\n{person.address.value_of()}")
@@ -120,10 +131,10 @@ def add_address(*args):
         house = input("Введіть номер будинку або введіть \"exit\" Для виходу\n---> ")
         if house == "exit": return "Операція прервана"
         else: break
-    return person.add_address(PersonAddress(city, street, house))
+    return person.editing_address(PersonAddress(city, street, house))
 
 @input_error
-def add_note(*args):
+def add_note(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
         print(f"Вже існуючий Note {args[0].capitalize()}\n{person.note.value_of()}")
@@ -133,7 +144,23 @@ def add_note(*args):
             print("В Note не може бути просто пробіл")
             continue
         else: break
-    return person.add_note(PersonNote(new_note))
+    return person.editing_note(PersonNote(new_note))
+
+# ======================================================================================================
+# =========================================[ del ]======================================================
+# =====================================================================================================
+
+@input_error
+def del_birthday(*args: str):
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Birthday {args[0].capitalize()}\n{person.birthday.value_of()}")
+        cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+        if cmd == "exit": return "Операція прервана"
+        elif cmd.lower() == "yes": break
+        else: print("Спробуйтте ще раз")
+    return person.editing_birthday(PersonNote("none"))
+
 
 # Список команд.
 COMMANDS = {
@@ -145,7 +172,16 @@ COMMANDS = {
     add_note : ("add note", ),  
     add : ("add", ), 
     
-    # remove : ("remove", ), # +
+    del_birthday : ("del birthday", ), 
+    # del_address : ("del address", ),
+    # del_status : ("del status", ),
+    # del_email : ("del email", ), 
+    # del_phone : ("del phone", ),
+    # del_note : ("del note", ),  
+    # del_name : ("del name", ),
+
+
+
     # change : ("change", ), # +
 
     # all_birthday : ("all birthday", ), # +
