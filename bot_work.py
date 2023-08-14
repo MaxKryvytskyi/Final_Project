@@ -9,11 +9,11 @@ def input_error(func):
     def inner(*argsi,**kwargs): 
         try:
             return func(*argsi,**kwargs)
-        except TypeError: return f"Wrong command"
-        except IndexError: return f"Enter name and phone separated by a space!"
-        except ValueError: return f"Incorrect data"
-        except KeyError: return f"Enter another name."
-        except AttributeError: return f"Enter command."
+        # except TypeError: return f"Wrong command"
+        # except IndexError: return f"Enter name and phone separated by a space!"
+        # except ValueError: return f"Incorrect data"
+        # except KeyError: return f"Enter another name."
+        # except AttributeError: return f"Enter command."
         except ExceptionIncorrectFormat as error: return error
         except KeyboardInterrupt: return exit()
     return inner

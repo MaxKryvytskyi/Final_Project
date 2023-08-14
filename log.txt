@@ -6644,3 +6644,139 @@ Deleted
 [2023-08-14 22:58:52] [Bot's answer] Downloading the contact book...
 [2023-08-14 22:58:58] [User input] add birthday max
 [2023-08-14 22:58:58] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 23:00:36] [User input] add birthday max
+[2023-08-14 23:00:36] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 23:00:43] [User input] add birthday max
+[2023-08-14 23:00:43] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 23:00:48] [User input] del
+[2023-08-14 23:00:48] [Error] There is no such command
+[2023-08-14 23:00:57] [User input] del birthday max
+[2023-08-14 23:00:57] [Data processing] Found command to [del birthday], parameters to ['max']
+[2023-08-14 23:01:44] [User input] del birthday max
+[2023-08-14 23:01:44] [Data processing] Found command to [del birthday], parameters to ['max']
+[2023-08-14 23:06:15] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 23:06:17] [User input] y
+[2023-08-14 23:06:17] [Bot's answer] Downloading the contact book...
+[2023-08-14 23:06:26] [User input] add address max
+[2023-08-14 23:06:26] [Data processing] Found command to [add address], parameters to ['max']
+[2023-08-14 23:06:41] [User input] del address max
+[2023-08-14 23:06:41] [Data processing] Found command to [del address], parameters to ['max']
+[2023-08-14 23:06:50] [User input] del address max
+[2023-08-14 23:06:50] [Data processing] Found command to [del address], parameters to ['max']
+[2023-08-15 01:53:27] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 01:53:28] [User input] y
+[2023-08-15 01:53:28] [Bot's answer] Downloading the contact book...
+[2023-08-15 01:53:40] [User input] add status max
+[2023-08-15 01:53:40] [Data processing] Found command to [add status], parameters to ['max']
+[2023-08-15 01:53:52] [User input] del status max
+[2023-08-15 01:53:52] [Data processing] Found command to [del status], parameters to ['max']
+[2023-08-15 01:54:03] [User input] del status max
+[2023-08-15 01:54:03] [Data processing] Found command to [del status], parameters to ['max']
+[2023-08-15 02:02:36] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:02:38] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:02:39] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:02:41] [User input] y
+[2023-08-15 02:02:41] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:02:49] [User input] del name  max
+[2023-08-15 02:02:49] [Data processing] Found command to [del name], parameters to ['max']
+[2023-08-15 02:03:55] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:03:56] [User input] y
+[2023-08-15 02:03:56] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:04:00] [User input] del name max
+[2023-08-15 02:04:00] [Data processing] Found command to [del name], parameters to ['max']
+[2023-08-15 02:04:08] [User input] del name  max
+[2023-08-15 02:04:08] [Data processing] Found command to [del name], parameters to ['max']
+[2023-08-15 02:04:10] [User input] del name max
+[2023-08-15 02:04:10] [Data processing] Found command to [del name], parameters to ['max']
+[2023-08-15 02:12:17] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:12:19] [User input] y
+[2023-08-15 02:12:19] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:12:23] [User input] add bill
+[2023-08-15 02:12:23] [Data processing] Found command to [add], parameters to ['bill']
+[2023-08-15 02:12:32] [User input] 
+[2023-08-15 02:12:32] [Error] You have not entered anything
+[2023-08-15 02:12:40] [User input] add phone bill
+[2023-08-15 02:12:40] [Data processing] Found command to [add phone], parameters to ['bill']
+[2023-08-15 02:13:12] [User input] del phone  max
+[2023-08-15 02:13:12] [Data processing] Found command to [del phone], parameters to ['max']
+[2023-08-15 02:13:17] [User input] del phone bill
+[2023-08-15 02:13:17] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:14:03] [User input] del phone bill
+[2023-08-15 02:14:03] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:14:35] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:14:37] [User input] y
+[2023-08-15 02:14:37] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:14:39] [User input] del phone bill
+[2023-08-15 02:14:39] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:14:54] [User input] del phone bill
+[2023-08-15 02:14:54] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:15:37] [User input] Yes
+[2023-08-15 02:15:37] [Error] There is no such command
+[2023-08-15 02:15:42] [User input] del phone bill
+[2023-08-15 02:15:42] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:16:22] [User input] del phone bill
+[2023-08-15 02:16:22] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:17:25] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:17:26] [User input] y
+[2023-08-15 02:17:26] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:17:28] [User input] del phone bill
+[2023-08-15 02:17:28] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:18:27] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:18:30] [User input] y
+[2023-08-15 02:18:30] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:18:47] [User input] del phone bill
+[2023-08-15 02:18:51] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:20:58] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:21:00] [User input] y
+[2023-08-15 02:21:00] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:21:03] [User input] del phone bill
+[2023-08-15 02:21:03] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:22:07] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:22:10] [User input] y
+[2023-08-15 02:22:10] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:22:27] [User input] del phone bill
+[2023-08-15 02:22:27] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:23:28] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:23:30] [User input] y
+[2023-08-15 02:23:30] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:23:33] [User input] del phone bill
+[2023-08-15 02:23:33] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:25:40] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:25:42] [User input] y
+[2023-08-15 02:25:42] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:25:44] [User input] del phone bill
+[2023-08-15 02:25:44] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:26:03] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:26:04] [User input] y
+[2023-08-15 02:26:04] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:26:06] [User input] del phone bill
+[2023-08-15 02:26:06] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:26:46] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:26:48] [User input] y
+[2023-08-15 02:26:48] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:26:52] [User input] del phone bill
+[2023-08-15 02:26:52] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:30:52] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:30:53] [User input] y
+[2023-08-15 02:30:53] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:30:56] [User input] del phone bill
+[2023-08-15 02:30:56] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:31:32] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:31:33] [User input] y
+[2023-08-15 02:31:33] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:31:35] [User input] del phone bill
+[2023-08-15 02:31:35] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:35:35] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:35:36] [User input] y
+[2023-08-15 02:35:36] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:35:38] [User input] del phone bill
+[2023-08-15 02:35:38] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:35:59] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-15 02:36:00] [User input] y
+[2023-08-15 02:36:00] [Bot's answer] Downloading the contact book...
+[2023-08-15 02:36:02] [User input] del phone bill
+[2023-08-15 02:36:02] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:36:11] [User input] del phone bill
+[2023-08-15 02:36:11] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-15 02:36:29] [User input] del phone bill
+[2023-08-15 02:36:29] [Data processing] Found command to [del phone], parameters to ['bill']

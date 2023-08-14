@@ -128,8 +128,78 @@ def del_birthday(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.editing_birthday(PersonNote("none"))
+    return person.editing_birthday(PersonBirthday("none"))
 
+@input_error
+def del_address(*args: str):
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Address {args[0].capitalize()}\n{person.address.value_of()}")
+        cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+        if cmd == "exit": return "Операція прервана"
+        elif cmd.lower() == "yes": break
+        else: print("Спробуйтте ще раз")
+    return person.editing_address(PersonAddress("none"))
+
+@input_error
+def del_status(*args: str):
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Status {args[0].capitalize()}\n{person.status.value_of()}")
+        cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+        if cmd == "exit": return "Операція прервана"
+        elif cmd.lower() == "yes": break
+        else: print("Спробуйтте ще раз")
+    return person.editing_status(PersonStatus("none"))
+
+@input_error
+def del_email(*args: str):
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Email {args[0].capitalize()}\n{person.email.value_of()}")
+        cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+        if cmd == "exit": return "Операція прервана"
+        elif cmd.lower() == "yes": break
+        else: print("Спробуйтте ще раз")
+    return person.editing_email(PersonEmailAddress("none"))
+
+@input_error
+def del_note(*args: str):
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Note {args[0].capitalize()}\n{person.note.value_of()}")
+        cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+        if cmd == "exit": return "Операція прервана"
+        elif cmd.lower() == "yes": break
+        else: print("Спробуйтте ще раз")
+    return person.editing_note(PersonNote("none"))
+
+@input_error
+def del_name(*args: str):
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Данні {args[0].capitalize()}\n{person.editing_person_info()}")
+        cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+        if cmd == "exit": return "Операція прервана"
+        elif cmd.lower() == "yes": break
+        else: print("Спробуйтте ще раз")
+    del adress_book[args[0].capitalize()]
+    return f"{args[0].capitalize()} видалений із списку контктів"
+
+
+@input_error
+def del_phone(*args: str):
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Phones {args[0].capitalize()}\n{[phone.value_of() for phone in person.phones]}")
+        phone = input("Введіть \"Phone\" для видалення або \"exit\" Для виходу\n---> ")
+        if phone in [phone.value for phone in person.phones]:
+            cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+            if cmd == "exit": return "Операція прервана"
+            elif cmd.lower() == "yes": break
+            else: print("Спробуйтте ще раз")
+        else: print("Такого телефону не існує у данного контакту")
+    return person.editing_phone(PersonPhoneNumbers(phone), True)
 
 # Список команд.
 COMMANDS = {
@@ -142,12 +212,12 @@ COMMANDS = {
     add : ("add", ), 
     
     del_birthday : ("del birthday", ), 
-    # del_address : ("del address", ),
-    # del_status : ("del status", ),
-    # del_email : ("del email", ), 
-    # del_phone : ("del phone", ),
-    # del_note : ("del note", ),  
-    # del_name : ("del name", ),
+    del_address : ("del address", ),
+    del_status : ("del status", ),
+    del_email : ("del email", ), 
+    del_phone : ("del phone", ),
+    del_note : ("del note", ),  
+    del_name : ("del name", ),
 
 
 

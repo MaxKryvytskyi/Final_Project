@@ -14,11 +14,19 @@ class Person:
         self.phones.append(phone)
         self.emails.append(email)
 
-    def editing_phone(self, new_phone: PersonFormatterInfo):
-        if "none" in [phone.value for phone in self.phones]: 
-            self.phones[0] = new_phone
-        else: self.phones.append(new_phone)
-        return f"Phone змінено"
+    def editing_phone(self, new_phone: PersonFormatterInfo, bool=False):
+        print(new_phone.value_of())
+        print(self.phones)
+        if bool:
+            for i in range(0, len(self.phones)-1):
+                if self.phones[i].value_of() == new_phone.value_of():
+                    del self.phones[i]
+            return f"Phone Видалено"
+        else:
+            if "none" in [phone.value for phone in self.phones]: 
+                self.phones[0] = new_phone
+            else: self.phones.append(new_phone)
+            return f"Phone змінено"
 
     def editing_email(self, new_email: PersonFormatterInfo):
         if "none" in [email.value for email in self.emails]: 
