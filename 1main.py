@@ -1,7 +1,7 @@
 import re
 
 import birthday_n_days as bd
-from log import log
+from bot_work import log
 from fields import Name, Phone, Birthday, Email, Address
 from record import Record
 from address_book import AddressBook

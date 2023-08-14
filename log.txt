@@ -6613,3 +6613,34 @@ Deleted
 [2023-08-14 22:22:19] [Error] You have not entered anything
 [2023-08-14 22:22:19] [User input] 
 [2023-08-14 22:22:19] [Error] You have not entered anything
+[2023-08-14 22:24:16] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:24:23] [User input] n
+[2023-08-14 22:24:28] [Bot's answer] Creates new contact book...
+[2023-08-14 22:24:43] [User input] add
+[2023-08-14 22:25:05] [Data processing] Found command to [add], parameters to []
+[2023-08-14 22:44:13] [User input] add birthday Max
+[2023-08-14 22:44:13] [Data processing] Found command to [add birthday], parameters to ['Max']
+[2023-08-14 22:44:31] [User input] add birthday Max
+[2023-08-14 22:44:31] [Data processing] Found command to [add birthday], parameters to ['Max']
+[2023-08-14 22:47:27] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:47:29] [User input] n
+[2023-08-14 22:47:29] [Bot's answer] Creates new contact book...
+[2023-08-14 22:47:33] [User input] add max
+[2023-08-14 22:47:33] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-14 22:47:39] [User input] 
+[2023-08-14 22:47:39] [Error] You have not entered anything
+[2023-08-14 22:47:57] [User input] add birthday
+[2023-08-14 22:47:57] [Data processing] Found command to [add birthday], parameters to []
+[2023-08-14 22:48:01] [User input] add birthday max
+[2023-08-14 22:48:01] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 22:48:20] [User input] add birthday max
+[2023-08-14 22:48:20] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 22:48:41] [User input] del birthday max
+[2023-08-14 22:48:41] [Data processing] Found command to [del birthday], parameters to ['max']
+[2023-08-14 22:48:56] [User input] add birthday max
+[2023-08-14 22:48:56] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-14 22:58:51] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-14 22:58:52] [User input] y
+[2023-08-14 22:58:52] [Bot's answer] Downloading the contact book...
+[2023-08-14 22:58:58] [User input] add birthday max
+[2023-08-14 22:58:58] [Data processing] Found command to [add birthday], parameters to ['max']

@@ -1,5 +1,5 @@
 from fields import Name, Phone, Birthday, Email, Address
-from log import log
+from bot_work import log
 from datetime import datetime
 
 

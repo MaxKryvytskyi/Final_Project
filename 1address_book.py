@@ -2,7 +2,7 @@ import pickle
 from collections import UserDict
 import re
 
-from log import log
+from bot_work import log
 from record import Record
 
 class AddressBook(UserDict):

@@ -4,41 +4,8 @@ from datetime import datetime
 from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
 from address_book import AddressBook
 from person import Person
-from my_exception import ExceptionIncorrectFormat
-from log import log
+from bot_work import log, start_work_bot, input_error
 
-# Відповідає за те загрузити стару книгу чи створити нову
-def start_work_bot(adress_book: AddressBook):
-    while True:
-        try:
-            user_input = input(log("Download contact book? Y/N ---> ", "[Bot's answer] ")).lower()
-            log(user_input, "[User input] ")
-            if user_input in "y n":
-                if user_input == "y":
-                    print(log("Downloading the contact book...", "[Bot's answer] "))
-                    return adress_book.load_address_book()
-                elif user_input == "n":
-                    print(log("Creates new contact book...", "[Bot's answer] "))
-                    return adress_book
-            else:
-                print(log("The command is not recognized", "[Bot's answer] "))
-                continue
-        except UnicodeEncodeError:
-            continue
-
-# Обробка помилок.
-def input_error(func):
-    def inner(*argsi,**kwargs): 
-        try:
-            return func(*argsi,**kwargs)
-        except TypeError: return f"Wrong command"
-        except IndexError: return f"Enter name and phone separated by a space!"
-        except ValueError: return f"Incorrect data"
-        except KeyError: return f"Enter another name."
-        except AttributeError: return f"Enter command."
-        except ExceptionIncorrectFormat as error: return error
-        except KeyboardInterrupt: return exit()
-    return inner
 
 # ======================================================================================================
 # =========================================[ add ]======================================================
@@ -57,7 +24,7 @@ def add(*args: str):
         if name in adress_book.keys(): 
             print(f"Name Error. Контакт с таким {name} вже створено")
         else: break
-        
+
     phone = input("Введіть телефон \n---> ") 
     email = input("Введіть електронну почту \n---> ")
     birthday = input("Введіть день народження \n---> ")
@@ -97,13 +64,15 @@ def add_birthday(*args: str):
     while True:
         print(f"Вже існуючий Birthday {args[0].capitalize()}\n{person.birthday.value_of()}")
         new_birthday = input("Введіть Birthday або введіть \"exit\" Для виходу\n---> ")
-        try:
-            _ = datetime.strptime(new_birthday, r'%d.%m.%Y')
-        except ValueError: 
-            print(f"Не правильний формат \"{new_birthday}\" очікуєтся день.місяць.рік")
-            continue
-        if new_birthday == "exit": return "Операція прервана"
-        else: break
+        if new_birthday == "exit": 
+            return "Операція прервана"
+        else:
+            try:
+                birthday = datetime.strptime(new_birthday, r'%d.%m.%Y')
+            except ValueError: 
+                print(f"Не правильний формат \"{new_birthday}\" очікуєтся день.місяць.рік")
+                continue
+        if birthday: break
     return person.editing_birthday(PersonBirthday(new_birthday))
 
 
@@ -193,8 +162,6 @@ COMMANDS = {
     # phone : ("phone", ), # +
     # hello : ("hello", ) # +
 }
-
-
 # Знаходить команду.
 @input_error    
 def handler(uzer_input: str):
