@@ -26,8 +26,7 @@ class PersonName(PersonFormatterInfo):
 
     def value_of(self):
         return f"{str(self.value)}"
-
-
+    
 class PersonPhoneNumbers(PersonFormatterInfo):
     def __init__(self, value: str="None"):
         self.__value = None
@@ -73,7 +72,7 @@ class PersonEmailAddress(PersonFormatterInfo):
     
     def value_of(self):
         return f"{self.value if self.value.lower() != 'none' else ''}"
-
+    
 
 class PersonStatus(PersonFormatterInfo):
     def __init__(self, value: str="None"):
@@ -93,7 +92,7 @@ class PersonStatus(PersonFormatterInfo):
     
     def value_of(self):
         return f"{self.value.capitalize() if self.value.lower() != 'none' else ''}"
-
+    
 
 class PersonAddress(PersonFormatterInfo):
     def __init__(self, city: str="None", street: str="None", house: str="None"):
@@ -123,14 +122,14 @@ class PersonBirthday(PersonFormatterInfo):
             else: raise ExceptionIncorrectFormat(f"Не правильний формат дати {value} очікувалося день.місяць.рік")
         else: self.__value = "none"
 
-
     def value_of(self):
         return f"{self.value if self.value.lower() != 'none' else ''}"
     
-
+    
 class PersonNote(PersonFormatterInfo):
     def __init__(self, value: str="None"):
         self.value = value
     
     def value_of(self):
         return f"{self.value if self.value.lower() != 'none' else ''}"
+    

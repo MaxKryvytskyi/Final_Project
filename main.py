@@ -11,6 +11,7 @@ from bot_work import log, start_work_bot, input_error
 # =========================================[ add ]======================================================
 # ======================================================================================================
 
+
 @input_error
 def add(*args: str):
     while True:  
@@ -36,6 +37,7 @@ def add(*args: str):
     person = Person(PersonName(name), PersonPhoneNumbers(phone), PersonEmailAddress(email), PersonBirthday(birthday), PersonStatus(status), PersonAddress(city, street, house), PersonNote(note))
     return adress_book.add_person(person)
 
+
 @input_error
 def add_phone(*args: str):
     person = adress_book[args[0].capitalize()]
@@ -45,7 +47,8 @@ def add_phone(*args: str):
         if new_phone == "exit": return "Операція прервана"
         elif new_phone in [phone.value for phone in person.phones]: print("Error Цей телефон вже існує у цього контакту")
         else: break
-    return person.editing_phone(PersonPhoneNumbers(new_phone))
+    return person.phone_add(PersonPhoneNumbers(new_phone))
+
 
 @input_error
 def add_email(*args: str):
@@ -56,7 +59,8 @@ def add_email(*args: str):
         if new_email == "exit": return "Операція прервана"
         elif new_email in [email.value for email in person.emails]: print("Error Цей email вже існує у цього контакту")
         else: break
-    return person.editing_email(PersonEmailAddress(new_email))
+    return person.email_add(PersonEmailAddress(new_email))
+
 
 @input_error
 def add_birthday(*args: str):
@@ -73,7 +77,7 @@ def add_birthday(*args: str):
                 print(f"Не правильний формат \"{new_birthday}\" очікуєтся день.місяць.рік")
                 continue
         if birthday: break
-    return person.editing_birthday(PersonBirthday(new_birthday))
+    return person.birthday_add(PersonBirthday(new_birthday))
 
 
 @input_error
@@ -85,7 +89,7 @@ def add_status(*args: str):
         if new_status == "exit": return "Операція прервана"
         elif new_status.lower() in ["work", "family", "friend"]: break
         else: print("Не вірний тип статусу очікуєтся Work, Family або Friend")
-    return person.editing_status(PersonStatus(new_status))
+    return person.status_add(PersonStatus(new_status))
 
 
 @input_error
@@ -100,7 +104,8 @@ def add_address(*args: str):
         house = input("Введіть номер будинку або введіть \"exit\" Для виходу\n---> ")
         if house == "exit": return "Операція прервана"
         else: break
-    return person.editing_address(PersonAddress(city, street, house))
+    return person.address_add(PersonAddress(city, street, house))
+
 
 @input_error
 def add_note(*args: str):
@@ -113,11 +118,13 @@ def add_note(*args: str):
             print("В Note не може бути просто пробіл")
             continue
         else: break
-    return person.editing_note(PersonNote(new_note))
+    return person.note_add(PersonNote(new_note))
+
 
 # ======================================================================================================
 # =========================================[ del ]======================================================
 # =====================================================================================================
+
 
 @input_error
 def del_birthday(*args: str):
@@ -128,7 +135,8 @@ def del_birthday(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.editing_birthday(PersonBirthday("none"))
+    return person.birthday_del(PersonBirthday("none"))
+
 
 @input_error
 def del_address(*args: str):
@@ -139,7 +147,8 @@ def del_address(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.editing_address(PersonAddress("none"))
+    return person.address_del(PersonAddress("none"))
+
 
 @input_error
 def del_status(*args: str):
@@ -150,18 +159,24 @@ def del_status(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.editing_status(PersonStatus("none"))
+    return person.status_del(PersonStatus("none"))
+
 
 @input_error
 def del_email(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Email {args[0].capitalize()}\n{person.email.value_of()}")
-        cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
-        if cmd == "exit": return "Операція прервана"
-        elif cmd.lower() == "yes": break
-        else: print("Спробуйтте ще раз")
-    return person.editing_email(PersonEmailAddress("none"))
+        print(f"Вже існуючий Email {args[0].capitalize()}\n{[email.value_of() for email in person.emails]}")
+        email = input("Введіть \"Email\" для видалення або \"exit\" Для виходу\n---> ")
+        if email in [email.value for email in person.emails]:
+            cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
+            if cmd == "exit": return "Операція прервана"
+            elif cmd.lower() == "yes": break
+            else: print("Спробуйтте ще раз")
+        elif email == "exit": return "Операція прервана"
+        else: print("Такого email address не існує у данного контакту")
+    return person.email_del(PersonEmailAddress(email))
+
 
 @input_error
 def del_note(*args: str):
@@ -172,7 +187,8 @@ def del_note(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.editing_note(PersonNote("none"))
+    return person.note_del(PersonNote("none"))
+
 
 @input_error
 def del_name(*args: str):
@@ -199,7 +215,8 @@ def del_phone(*args: str):
             elif cmd.lower() == "yes": break
             else: print("Спробуйтте ще раз")
         else: print("Такого телефону не існує у данного контакту")
-    return person.editing_phone(PersonPhoneNumbers(phone), True)
+    return person.phone_del(PersonPhoneNumbers(phone))
+
 
 # Список команд.
 COMMANDS = {
@@ -232,6 +249,7 @@ COMMANDS = {
     # phone : ("phone", ), # +
     # hello : ("hello", ) # +
 }
+
 # Знаходить команду.
 @input_error    
 def handler(uzer_input: str):
@@ -242,6 +260,7 @@ def handler(uzer_input: str):
                     log(f"Found command to [{a_com}], parameters to {uzer_input[len(a_com):].strip().split()}", "[Data processing] ")
                     return command, uzer_input[len(a_com):].strip().split()
     return "There is no such command", None
+
 
 @input_error
 def main():
@@ -258,6 +277,7 @@ def main():
             print(log(com, "[Error] "))
             continue
         print(com(*data))
+
 
 if __name__ == "__main__":
     adress_book = AddressBook()

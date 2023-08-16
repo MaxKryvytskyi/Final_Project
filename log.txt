@@ -6780,3 +6780,80 @@ Deleted
 [2023-08-15 02:36:11] [Data processing] Found command to [del phone], parameters to ['bill']
 [2023-08-15 02:36:29] [User input] del phone bill
 [2023-08-15 02:36:29] [Data processing] Found command to [del phone], parameters to ['bill']
+[2023-08-16 21:17:31] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:17:32] [User input] y
+[2023-08-16 21:17:32] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:17:38] [User input] add max
+[2023-08-16 21:17:38] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-16 21:17:55] [User input] 
+[2023-08-16 21:17:55] [Error] You have not entered anything
+[2023-08-16 21:17:57] [User input] 
+[2023-08-16 21:17:57] [Error] You have not entered anything
+[2023-08-16 21:18:07] [User input] del email max
+[2023-08-16 21:18:07] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:20:24] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:20:26] [User input] y
+[2023-08-16 21:20:26] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:20:29] [User input] del email max
+[2023-08-16 21:20:29] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:20:54] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:20:55] [User input] y
+[2023-08-16 21:20:55] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:20:58] [User input] del email max
+[2023-08-16 21:20:58] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:21:35] [User input] del email max
+[2023-08-16 21:21:35] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:21:52] [User input] del email max
+[2023-08-16 21:21:52] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:25:32] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:25:33] [User input] y
+[2023-08-16 21:25:33] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:25:36] [User input] del email max
+[2023-08-16 21:25:36] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:25:47] [User input] del email max
+[2023-08-16 21:25:47] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:26:54] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:26:55] [User input] y
+[2023-08-16 21:26:55] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:26:58] [User input] del email max
+[2023-08-16 21:26:58] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:27:11] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:27:13] [User input] y
+[2023-08-16 21:27:13] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:27:15] [User input] del email max
+[2023-08-16 21:27:15] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:27:20] [User input] del email max
+[2023-08-16 21:27:20] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:28:02] [User input] del email max
+[2023-08-16 21:28:02] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:28:29] [User input] del email max
+[2023-08-16 21:28:29] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:29:44] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:29:54] [User input] y
+[2023-08-16 21:29:58] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:30:21] [User input] del email max
+[2023-08-16 21:30:23] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:34:38] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 21:34:39] [User input] y
+[2023-08-16 21:34:39] [Bot's answer] Downloading the contact book...
+[2023-08-16 21:34:45] [User input] add email max 
+[2023-08-16 21:34:45] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-16 21:34:59] [User input] del email max
+[2023-08-16 21:34:59] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:35:06] [User input] del email max
+[2023-08-16 21:35:06] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 21:35:54] [User input] del email max
+[2023-08-16 21:35:54] [Data processing] Found command to [del email], parameters to ['max']
+[2023-08-16 23:22:43] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-16 23:22:44] [User input] y
+[2023-08-16 23:22:44] [Bot's answer] Downloading the contact book...
+[2023-08-16 23:22:49] [User input] add max
+[2023-08-16 23:22:49] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-16 23:22:53] [User input] 
+[2023-08-16 23:22:53] [Error] You have not entered anything
+[2023-08-16 23:23:01] [User input] add phone max
+[2023-08-16 23:23:01] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-16 23:23:11] [User input] add phone max
+[2023-08-16 23:23:11] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-16 23:23:22] [User input] add phone max
+[2023-08-16 23:23:22] [Data processing] Found command to [add phone], parameters to ['max']
