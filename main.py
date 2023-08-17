@@ -115,8 +115,8 @@ def add_note(*args: str):
         print(f"Вже існуючий Note {args[0].capitalize()}\n{person.note.value_of()}")
         new_note = input("Введіть Note або введіть \"exit\" Для виходу\n---> ")
         if new_note == "exit": return "Операція прервана"
-        elif new_note != "   ": 
-            print("В Note не може бути просто пробіл")
+        elif len(new_note) < 3: 
+            print("Note занадто короткий")
             continue
         else: break
     return person.note_add(PersonNote(new_note))
@@ -136,7 +136,7 @@ def del_birthday(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.birthday_del(PersonBirthday("none"))
+    return person.birthday_del()
 
 
 @input_error
@@ -148,7 +148,7 @@ def del_address(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.address_del(PersonAddress("none"))
+    return person.address_del()
 
 
 @input_error
@@ -160,7 +160,7 @@ def del_status(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.status_del(PersonStatus("none"))
+    return person.status_del()
 
 
 @input_error
@@ -188,7 +188,7 @@ def del_note(*args: str):
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
-    return person.note_del(PersonNote("none"))
+    return person.note_del()
 
 
 @input_error
@@ -219,6 +219,46 @@ def del_phone(*args: str):
     return person.phone_del(PersonPhoneNumbers(phone))
 
 
+# ======================================================================================================
+# =========================================[ change ]===================================================
+# ======================================================================================================
+
+
+@input_error
+def change_address(*args: str):
+    pass
+
+
+@input_error
+def change_status(*args: str):
+    pass
+
+
+@input_error
+def change_email(*args: str):
+    pass
+
+
+@input_error
+def change_phone(*args: str):
+    pass
+
+
+@input_error
+def change_name(*args: str):
+    pass
+
+
+@input_error
+def change_note(*args: str):
+    pass
+
+
+@input_error
+def change_birthday(*args: str):
+    pass
+
+
 # Список команд.
 COMMANDS = {
     add_birthday : ("add birthday", ), 
@@ -229,17 +269,21 @@ COMMANDS = {
     add_note : ("add note", ),  
     add : ("add", ), 
     
+    change_birthday : ("change birthday", ), 
+    change_address : ("change address", ),
+    change_status : ("change status", ),
+    change_email : ("change email", ), 
+    change_phone : ("change phone", ),
+    change_note : ("change note", ),  
+    change_name : ("change name", ),
+
     del_birthday : ("del birthday", ), 
     del_address : ("del address", ),
     del_status : ("del status", ),
     del_email : ("del email", ), 
     del_phone : ("del phone", ),
     del_note : ("del note", ),  
-    del_name : ("del name", ),
-
-
-
-    # change : ("change", ), # +
+    del_name : ("del name", )
 
     # all_birthday : ("all birthday", ), # +
     # birthday : ("birthday", ), # +

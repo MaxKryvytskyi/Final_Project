@@ -16,3 +16,7 @@ class TestPerson(unittest.TestCase):
 if __name__ == "__main__":
     p = person.Person(PersonName("name"), PersonPhoneNumbers("0951232323"), PersonEmailAddress(""), PersonBirthday(""), PersonStatus(""), PersonAddress("", "", ""), PersonNote(""))
     unittest.main()
+
+
+
+    list_car = [str(car) for car in range(0,100)]

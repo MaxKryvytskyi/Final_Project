@@ -89,7 +89,9 @@ class Person:
         return f"Status змінено"
 
     def address_change(self, value):
-        self.address = value
+        self.address.city = value.city
+        self.address.street = value.street
+        self.address.house = value.house 
         return f"Address змінено"
 
     def note_change(self, value):
@@ -122,7 +124,9 @@ class Person:
         return f"Status видалено"
 
     def address_del(self):
-        self.address = "none"
+        self.address.city = "none"
+        self.address.street = "none"
+        self.address.house = "none"
         return f"Address видалено"
 
     def note_del(self):
