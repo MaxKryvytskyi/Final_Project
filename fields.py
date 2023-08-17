@@ -41,12 +41,12 @@ class PersonPhoneNumbers(PersonFormatterInfo):
         if value and value.lower() != "none":
             if not value.isdigit():
                 raise ExceptionIncorrectFormat(f"Телефон {value} має складатися тільки з літер")
-            if len(value) == 10: self.__value = value # "012 3456789"
+            if len(value) == 12: self.__value = value # "380 12 345 67 89"
             else: raise ExceptionIncorrectFormat(f"Не правильний формат телефону {value} очікуєтся 0500000000")
         else: self.__value = "none"
     
     def value_of(self):
-        return f"{'+38' if self.value.lower() != 'none' else ''}{self.value if self.value.lower() != 'none' else ''}"
+        return f"{self.value if self.value.lower() != 'none' else ''}"
     
 
 class PersonEmailAddress(PersonFormatterInfo):
@@ -61,7 +61,7 @@ class PersonEmailAddress(PersonFormatterInfo):
     @value.setter
     def value(self, value: str):
         if value and value.lower() != "none":
-            if value == None: 
+            if value.lower() == "none": 
                 self.__value = "none"
             verified = str(*re.findall(r"[a-zA-Z]{1}[a-zA-Z0-9._]{1,}@[a-zA-Z]+\.[a-zA-Z]{2,}", value))
             if verified: 

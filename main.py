@@ -1,6 +1,6 @@
 from datetime import datetime
 
-
+from my_exception import ExceptionIncorrectFormat
 from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
 from address_book import AddressBook
 from person import Person
@@ -16,14 +16,14 @@ from bot_work import log, start_work_bot, input_error
 def add(*args: str):
     while True:  
         if len(args) > 0:
-            name = args[0]
+            name = args[0].capitalize()
             if name in adress_book.keys(): 
-                print(f"Name Error. Контакт с таким {name} вже створено")
+                print(f"Name Error. Контакт {name} вже створено")
                 name = input("Введіть ім'я контакту \n---> ").capitalize()
         else : 
             name = input("Введіть ім'я контакту \n---> ").capitalize()
         if name in adress_book.keys(): 
-            print(f"Name Error. Контакт с таким {name} вже створено")
+            print(f"Name Error. Контакт {name} вже створено")
         else: break
 
     phone = input("Введіть телефон \n---> ") 
@@ -57,6 +57,7 @@ def add_email(*args: str):
         print(f"Вже існуючі Email {args[0].capitalize()}\n{[email.value_of() for email in person.emails]}")
         new_email = input("Введіть Email або введіть \"exit\" Для виходу\n---> ")
         if new_email == "exit": return "Операція прервана"
+        elif len(new_email) < 5 and new_email != " ": raise ExceptionIncorrectFormat(f"Не правильний формат email \"{new_email}\" очікувалося m.k@gmail.com")
         elif new_email in [email.value for email in person.emails]: print("Error Цей email вже існує у цього контакту")
         else: break
     return person.email_add(PersonEmailAddress(new_email))
@@ -209,7 +210,7 @@ def del_phone(*args: str):
     while True:
         print(f"Вже існуючий Phones {args[0].capitalize()}\n{[phone.value_of() for phone in person.phones]}")
         phone = input("Введіть \"Phone\" для видалення або \"exit\" Для виходу\n---> ")
-        if phone in [phone.value for phone in person.phones]:
+        if phone in [phone.value_of() for phone in person.phones]:
             cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
             if cmd == "exit": return "Операція прервана"
             elif cmd.lower() == "yes": break

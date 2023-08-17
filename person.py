@@ -19,10 +19,18 @@ class Person:
 # ======================================================================================================
 
     def phone_add(self, value):
+        for i, phone in enumerate(self.phones):
+            if phone.value == "none":
+                self.phones[i] = value
+                return f"Phone додано"
         self.phones.append(value)
         return f"Phone додано"
     
     def email_add(self, value):
+        for i, email in enumerate(self.emails):
+            if email.value in "none":
+                self.emails[i] = value
+                return f"Email додано"
         self.emails.append(value)
         return f"Email додано"
 
@@ -52,24 +60,24 @@ class Person:
             for i, phone in enumerate(self.phones):
                 if phone.value == value.value: 
                     self.phones[i] = new_value 
-                    return f"Телефон {value} замінено"
+                    return f"Телефон {value.value_of()} замінено"
         else:
             for i, phone in enumerate(self.phones):
                 if phone.value == value.value: 
                     self.phones.remove(value)
-                    return f"Телефон {value} видалено"
+                    return f"Телефон {value.value_of()} видалено"
     
     def email_change(self, value, new_value=None):
         if new_value:
             for i, email in enumerate(self.emails):
                 if email.value == value.value: 
                     self.emails[i] = new_value 
-                    return f"Електронна адреса {value} замінена"
+                    return f"Електронна адреса {value.value_of()} замінена"
         else:
             for i, email in enumerate(self.emails):
                 if email.value == value.value: 
                     self.emails.remove(value)
-                    return f"Електронна адреса {value} видалена"
+                    return f"Електронна адреса {value.value_of()} видалена"
 
 
     def birthday_change(self, value):
@@ -97,13 +105,13 @@ class Person:
         for phone in self.phones:
             if phone.value == value.value: 
                 self.phones.remove(phone)
-                return f"Телефон {value} видалено"
+                return f"Телефон {value.value_of()} видалено"
     
     def email_del(self, value):
         for email in self.emails:
             if email.value == value.value: 
                 self.emails.remove(email)
-                return f"Електронна адреса {value} видалена"
+                return f"Електронна адреса {value.value_of()} видалена"
     
     def birthday_del(self):
         self.birthday = "none"

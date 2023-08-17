@@ -6857,3 +6857,236 @@ Deleted
 [2023-08-16 23:23:11] [Data processing] Found command to [add phone], parameters to ['max']
 [2023-08-16 23:23:22] [User input] add phone max
 [2023-08-16 23:23:22] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:11:21] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:11:23] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:11:25] [User input] y
+[2023-08-17 17:11:25] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:11:28] [User input] add max
+[2023-08-17 17:11:28] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 17:11:33] [User input] 
+[2023-08-17 17:11:33] [Error] You have not entered anything
+[2023-08-17 17:11:39] [User input] add max
+[2023-08-17 17:11:39] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 17:11:42] [User input] 
+[2023-08-17 17:11:42] [Error] You have not entered anything
+[2023-08-17 17:12:04] [User input] add max
+[2023-08-17 17:12:04] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 17:12:06] [User input] 
+[2023-08-17 17:12:06] [Error] You have not entered anything
+[2023-08-17 17:12:07] [User input] 
+[2023-08-17 17:12:07] [Error] You have not entered anything
+[2023-08-17 17:12:07] [User input] 
+[2023-08-17 17:12:07] [Error] You have not entered anything
+[2023-08-17 17:12:07] [User input] 
+[2023-08-17 17:12:07] [Error] You have not entered anything
+[2023-08-17 17:12:08] [User input] 
+[2023-08-17 17:12:08] [Error] You have not entered anything
+[2023-08-17 17:12:08] [User input] 
+[2023-08-17 17:12:08] [Error] You have not entered anything
+[2023-08-17 17:12:27] [User input] add Max
+[2023-08-17 17:12:27] [Data processing] Found command to [add], parameters to ['Max']
+[2023-08-17 17:13:30] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:13:32] [User input] y
+[2023-08-17 17:13:32] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:13:33] [User input] add Max
+[2023-08-17 17:13:33] [Data processing] Found command to [add], parameters to ['Max']
+[2023-08-17 17:13:40] [User input] 
+[2023-08-17 17:13:40] [Error] You have not entered anything
+[2023-08-17 17:13:41] [User input] 
+[2023-08-17 17:13:41] [Error] You have not entered anything
+[2023-08-17 17:13:45] [User input] add max
+[2023-08-17 17:13:45] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 17:14:16] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:14:17] [User input] y
+[2023-08-17 17:14:17] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:14:19] [User input] add max
+[2023-08-17 17:14:19] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 17:14:22] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:14:24] [User input] y
+[2023-08-17 17:14:24] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:14:28] [User input] add Max
+[2023-08-17 17:14:28] [Data processing] Found command to [add], parameters to ['Max']
+[2023-08-17 17:14:40] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:14:42] [User input] n
+[2023-08-17 17:14:42] [Bot's answer] Creates new contact book...
+[2023-08-17 17:14:44] [User input] add Max
+[2023-08-17 17:14:44] [Data processing] Found command to [add], parameters to ['Max']
+[2023-08-17 17:15:54] [User input] add phone max
+[2023-08-17 17:15:54] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:16:08] [User input] add phone max
+[2023-08-17 17:16:08] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:16:17] [User input] add phone max
+[2023-08-17 17:16:17] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:16:22] [User input] add phone max
+[2023-08-17 17:16:22] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:16:53] [User input] del phone max 
+[2023-08-17 17:16:53] [Data processing] Found command to [del phone], parameters to ['max']
+[2023-08-17 17:18:19] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:18:20] [User input] y
+[2023-08-17 17:18:20] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:18:23] [User input] del phone max 
+[2023-08-17 17:18:23] [Data processing] Found command to [del phone], parameters to ['max']
+[2023-08-17 17:20:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:20:50] [User input] y
+[2023-08-17 17:20:50] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:20:52] [User input] del phone max 
+[2023-08-17 17:20:52] [Data processing] Found command to [del phone], parameters to ['max']
+[2023-08-17 17:21:50] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:21:51] [User input] y
+[2023-08-17 17:21:51] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:21:53] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:21:55] [User input] n
+[2023-08-17 17:21:55] [Bot's answer] Creates new contact book...
+[2023-08-17 17:22:04] [User input] add max
+[2023-08-17 17:22:04] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 17:22:09] [User input] 
+[2023-08-17 17:22:09] [Error] You have not entered anything
+[2023-08-17 17:22:09] [User input] 
+[2023-08-17 17:22:09] [Error] You have not entered anything
+[2023-08-17 17:22:10] [User input] 
+[2023-08-17 17:22:10] [Error] You have not entered anything
+[2023-08-17 17:22:17] [User input] add phone max
+[2023-08-17 17:22:17] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:23:07] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:23:09] [User input] y
+[2023-08-17 17:23:09] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:23:10] [User input] add phone max
+[2023-08-17 17:23:10] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:23:15] [User input] add phone max
+[2023-08-17 17:23:15] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:24:50] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:24:51] [User input] y
+[2023-08-17 17:24:51] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:24:53] [User input] add phone max
+[2023-08-17 17:24:53] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:25:33] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:25:36] [User input] y
+[2023-08-17 17:25:36] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:25:37] [User input] add phone max
+[2023-08-17 17:25:37] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:25:45] [User input] add phone max
+[2023-08-17 17:25:45] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:27:00] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:27:13] [User input] y
+[2023-08-17 17:27:16] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:27:34] [User input] add phone max
+[2023-08-17 17:27:46] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:29:42] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:29:44] [User input] y
+[2023-08-17 17:29:44] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:29:46] [User input] add phone max
+[2023-08-17 17:29:46] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:31:37] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 17:31:38] [User input] y
+[2023-08-17 17:31:38] [Bot's answer] Downloading the contact book...
+[2023-08-17 17:31:40] [User input] add phone max
+[2023-08-17 17:31:40] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 17:31:46] [User input] add phone max
+[2023-08-17 17:31:46] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:24:32] [User input] add email  max
+[2023-08-17 18:24:32] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:24:55] [User input] add email  max
+[2023-08-17 18:24:55] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:25:25] [User input] add email  max
+[2023-08-17 18:25:25] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:25:35] [User input] add email max
+[2023-08-17 18:25:35] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:26:19] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:26:20] [User input] y
+[2023-08-17 18:26:20] [Bot's answer] Downloading the contact book...
+[2023-08-17 18:26:21] [User input] add email max
+[2023-08-17 18:26:21] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:27:00] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:27:01] [User input] y
+[2023-08-17 18:27:01] [Bot's answer] Downloading the contact book...
+[2023-08-17 18:27:03] [User input] add email max
+[2023-08-17 18:27:03] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:27:21] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:27:23] [User input] n
+[2023-08-17 18:27:23] [Bot's answer] Creates new contact book...
+[2023-08-17 18:27:29] [User input] add max
+[2023-08-17 18:27:29] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 18:27:33] [User input] 
+[2023-08-17 18:27:33] [Error] You have not entered anything
+[2023-08-17 18:27:33] [User input] 
+[2023-08-17 18:27:33] [Error] You have not entered anything
+[2023-08-17 18:27:40] [User input] add email max
+[2023-08-17 18:27:40] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:27:47] [User input] add email max
+[2023-08-17 18:27:47] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:28:07] [User input] add email max
+[2023-08-17 18:28:07] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:29:44] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:29:45] [User input] y
+[2023-08-17 18:29:45] [Bot's answer] Downloading the contact book...
+[2023-08-17 18:29:47] [User input] add email max
+[2023-08-17 18:29:47] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:29:56] [User input] add email max
+[2023-08-17 18:29:56] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:30:02] [User input] 
+[2023-08-17 18:30:02] [Error] You have not entered anything
+[2023-08-17 18:30:04] [User input] add email max
+[2023-08-17 18:30:04] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:35:03] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:35:04] [User input] y
+[2023-08-17 18:35:04] [Bot's answer] Downloading the contact book...
+[2023-08-17 18:35:05] [User input] add email max
+[2023-08-17 18:35:05] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:35:17] [User input] add email max
+[2023-08-17 18:35:17] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:35:28] [User input] add email max
+[2023-08-17 18:35:28] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:35:38] [User input] add email max
+[2023-08-17 18:35:38] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:35:44] [User input] add email max
+[2023-08-17 18:35:44] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:37:27] [User input] add email max
+[2023-08-17 18:37:27] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:37:51] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:37:52] [User input] y
+[2023-08-17 18:37:52] [Bot's answer] Downloading the contact book...
+[2023-08-17 18:37:54] [User input] add email max
+[2023-08-17 18:37:54] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:37:59] [User input] add email max
+[2023-08-17 18:37:59] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:40:49] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:40:50] [User input] n
+[2023-08-17 18:40:50] [Bot's answer] Creates new contact book...
+[2023-08-17 18:40:54] [User input] add max
+[2023-08-17 18:40:54] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-17 18:40:59] [User input] 
+[2023-08-17 18:40:59] [Error] You have not entered anything
+[2023-08-17 18:41:02] [User input] add email max
+[2023-08-17 18:41:02] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:41:06] [User input] add email max
+[2023-08-17 18:41:06] [Data processing] Found command to [add email], parameters to ['max']
+[2023-08-17 18:41:31] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:41:32] [User input] y
+[2023-08-17 18:41:32] [Bot's answer] Downloading the contact book...
+[2023-08-17 18:41:37] [User input] add phone max
+[2023-08-17 18:41:37] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:41:53] [User input] add phone max
+[2023-08-17 18:41:53] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:42:00] [User input] add phone max
+[2023-08-17 18:42:00] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:42:08] [User input] add phone max
+[2023-08-17 18:42:08] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:42:14] [User input] add phone max
+[2023-08-17 18:42:14] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:42:20] [User input] add phone max
+[2023-08-17 18:42:20] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:42:26] [User input] add phone max
+[2023-08-17 18:42:26] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:42:32] [User input] add phone max
+[2023-08-17 18:42:32] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:42:40] [User input] add phone max
+[2023-08-17 18:42:40] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-17 18:43:29] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-17 18:43:31] [User input] y
+[2023-08-17 18:43:31] [Bot's answer] Downloading the contact book...
+[2023-08-17 18:43:39] [User input] add birthday max
+[2023-08-17 18:43:39] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-17 18:43:52] [User input] add birthday max
+[2023-08-17 18:43:52] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-17 18:44:01] [User input] add birthday max
+[2023-08-17 18:44:01] [Data processing] Found command to [add birthday], parameters to ['max']
