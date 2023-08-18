@@ -7200,3 +7200,200 @@ Deleted
 [2023-08-18 00:58:28] [Data processing] Found command to [add address], parameters to ['max']
 [2023-08-18 00:58:44] [User input] change address max
 [2023-08-18 00:58:44] [Error] There is no such command
+[2023-08-18 21:44:27] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:44:28] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:44:30] [User input] y
+[2023-08-18 21:44:30] [Bot's answer] Downloading the contact book...
+[2023-08-18 21:44:34] [User input] add bill
+[2023-08-18 21:44:34] [Data processing] Found command to [add], parameters to ['bill']
+[2023-08-18 21:44:37] [User input] 
+[2023-08-18 21:44:37] [Error] You have not entered anything
+[2023-08-18 21:44:50] [User input] change address bill
+[2023-08-18 21:44:50] [Data processing] Found command to [change address], parameters to ['bill']
+[2023-08-18 21:45:02] [User input] change address bill
+[2023-08-18 21:45:02] [Data processing] Found command to [change address], parameters to ['bill']
+[2023-08-18 21:47:17] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:47:18] [User input] y
+[2023-08-18 21:47:18] [Bot's answer] Downloading the contact book...
+[2023-08-18 21:47:27] [User input] change note bill
+[2023-08-18 21:47:27] [Data processing] Found command to [change note], parameters to ['bill']
+[2023-08-18 21:47:41] [User input] change note bill
+[2023-08-18 21:47:41] [Data processing] Found command to [change note], parameters to ['bill']
+[2023-08-18 21:49:37] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:49:38] [User input] y
+[2023-08-18 21:49:38] [Bot's answer] Downloading the contact book...
+[2023-08-18 21:49:40] [User input] change note bill
+[2023-08-18 21:49:40] [Data processing] Found command to [change note], parameters to ['bill']
+[2023-08-18 21:49:52] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:49:53] [User input] y
+[2023-08-18 21:49:53] [Bot's answer] Downloading the contact book...
+[2023-08-18 21:49:54] [User input] change note bill
+[2023-08-18 21:49:54] [Data processing] Found command to [change note], parameters to ['bill']
+[2023-08-18 21:50:14] [User input] change note bill
+[2023-08-18 21:50:14] [Data processing] Found command to [change note], parameters to ['bill']
+[2023-08-18 21:50:41] [User input] del note bill
+[2023-08-18 21:50:41] [Data processing] Found command to [del note], parameters to ['bill']
+[2023-08-18 21:52:43] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:52:44] [User input] y
+[2023-08-18 21:52:44] [Bot's answer] Downloading the contact book...
+[2023-08-18 21:52:46] [User input] del note bill
+[2023-08-18 21:52:46] [Data processing] Found command to [del note], parameters to ['bill']
+[2023-08-18 21:52:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:52:49] [User input] n
+[2023-08-18 21:52:49] [Bot's answer] Creates new contact book...
+[2023-08-18 21:52:58] [User input] add nill
+[2023-08-18 21:52:58] [Data processing] Found command to [add], parameters to ['nill']
+[2023-08-18 21:53:02] [User input] 
+[2023-08-18 21:53:02] [Error] You have not entered anything
+[2023-08-18 21:53:03] [User input] 
+[2023-08-18 21:53:03] [Error] You have not entered anything
+[2023-08-18 21:53:10] [User input] add note nill
+[2023-08-18 21:53:10] [Data processing] Found command to [add note], parameters to ['nill']
+[2023-08-18 21:53:21] [User input] change note nill
+[2023-08-18 21:53:21] [Data processing] Found command to [change note], parameters to ['nill']
+[2023-08-18 21:53:37] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:53:38] [User input] y
+[2023-08-18 21:53:38] [Bot's answer] Downloading the contact book...
+[2023-08-18 21:53:40] [User input] change note nill
+[2023-08-18 21:53:40] [Data processing] Found command to [change note], parameters to ['nill']
+[2023-08-18 21:54:39] [User input] change note nill
+[2023-08-18 21:54:39] [Data processing] Found command to [change note], parameters to ['nill']
+[2023-08-18 21:56:58] [User input] change note nill
+[2023-08-18 21:56:58] [Data processing] Found command to [change note], parameters to ['nill']
+[2023-08-18 21:57:06] [User input] change note nill
+[2023-08-18 21:57:06] [Data processing] Found command to [change note], parameters to ['nill']
+[2023-08-18 21:58:46] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 21:58:47] [User input] y
+[2023-08-18 21:58:47] [Bot's answer] Downloading the contact book...
+[2023-08-18 21:58:55] [User input] change status nill
+[2023-08-18 21:58:55] [Data processing] Found command to [change status], parameters to ['nill']
+[2023-08-18 21:59:05] [User input] change status nill
+[2023-08-18 21:59:05] [Data processing] Found command to [change status], parameters to ['nill']
+[2023-08-18 22:02:55] [User input] exit
+[2023-08-18 22:02:55] [Error] There is no such command
+[2023-08-18 22:03:03] [User input] del name nill
+[2023-08-18 22:03:03] [Data processing] Found command to [del name], parameters to ['nill']
+[2023-08-18 22:14:54] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:14:55] [User input] y
+[2023-08-18 22:14:55] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:14:59] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:15:00] [User input] n
+[2023-08-18 22:15:00] [Bot's answer] Creates new contact book...
+[2023-08-18 22:16:25] [User input] add max
+[2023-08-18 22:16:25] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-18 22:16:28] [User input] 
+[2023-08-18 22:16:28] [Error] You have not entered anything
+[2023-08-18 22:16:28] [User input] 
+[2023-08-18 22:16:28] [Error] You have not entered anything
+[2023-08-18 22:17:03] [User input] change name max
+[2023-08-18 22:17:03] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:17:38] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:17:39] [User input] y
+[2023-08-18 22:17:39] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:17:41] [User input] change name max
+[2023-08-18 22:17:41] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:17:56] [User input] change name max
+[2023-08-18 22:17:56] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:18:02] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:18:03] [User input] y
+[2023-08-18 22:18:03] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:18:07] [User input] change name bill
+[2023-08-18 22:18:07] [Data processing] Found command to [change name], parameters to ['bill']
+[2023-08-18 22:18:20] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:18:21] [User input] y
+[2023-08-18 22:18:21] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:18:22] [User input] change name bill
+[2023-08-18 22:18:22] [Data processing] Found command to [change name], parameters to ['bill']
+[2023-08-18 22:18:26] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:18:28] [User input] y
+[2023-08-18 22:18:28] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:18:35] [User input] change name Bill
+[2023-08-18 22:18:35] [Data processing] Found command to [change name], parameters to ['Bill']
+[2023-08-18 22:18:48] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:18:50] [User input] n
+[2023-08-18 22:18:50] [Bot's answer] Creates new contact book...
+[2023-08-18 22:18:59] [User input] add max
+[2023-08-18 22:18:59] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-18 22:19:04] [User input] 
+[2023-08-18 22:19:04] [Error] You have not entered anything
+[2023-08-18 22:19:12] [User input] change name max
+[2023-08-18 22:19:12] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:19:53] [User input] change name bill
+[2023-08-18 22:19:53] [Data processing] Found command to [change name], parameters to ['bill']
+[2023-08-18 22:20:49] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:20:50] [User input] n
+[2023-08-18 22:20:50] [Bot's answer] Creates new contact book...
+[2023-08-18 22:20:54] [User input] add max
+[2023-08-18 22:20:54] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-18 22:21:09] [User input] change name max
+[2023-08-18 22:21:09] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:22:31] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:22:33] [User input] n
+[2023-08-18 22:22:33] [Bot's answer] Creates new contact book...
+[2023-08-18 22:22:36] [User input] add max
+[2023-08-18 22:22:36] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-18 22:22:38] [User input] 
+[2023-08-18 22:22:38] [Error] You have not entered anything
+[2023-08-18 22:22:44] [User input] change name max
+[2023-08-18 22:22:44] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:23:28] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:23:29] [User input] y
+[2023-08-18 22:23:29] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:23:37] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:23:39] [User input] n
+[2023-08-18 22:23:39] [Bot's answer] Creates new contact book...
+[2023-08-18 22:23:42] [User input] add max
+[2023-08-18 22:23:42] [Data processing] Found command to [add], parameters to ['max']
+[2023-08-18 22:23:45] [User input] 
+[2023-08-18 22:23:45] [Error] You have not entered anything
+[2023-08-18 22:23:47] [User input] change name max
+[2023-08-18 22:23:47] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:24:04] [User input] change name bill
+[2023-08-18 22:24:04] [Data processing] Found command to [change name], parameters to ['bill']
+[2023-08-18 22:24:55] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:24:57] [User input] y
+[2023-08-18 22:24:57] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:25:07] [User input] change name Bill
+[2023-08-18 22:25:07] [Data processing] Found command to [change name], parameters to ['Bill']
+[2023-08-18 22:25:17] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:25:18] [User input] y
+[2023-08-18 22:25:18] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:25:22] [User input] change name max
+[2023-08-18 22:25:22] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:25:55] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:25:56] [User input] n
+[2023-08-18 22:25:56] [Bot's answer] Creates new contact book...
+[2023-08-18 22:26:00] [User input] add bill
+[2023-08-18 22:26:00] [Data processing] Found command to [add], parameters to ['bill']
+[2023-08-18 22:26:02] [User input] 
+[2023-08-18 22:26:02] [Error] You have not entered anything
+[2023-08-18 22:26:06] [User input] change name Bill
+[2023-08-18 22:26:06] [Data processing] Found command to [change name], parameters to ['Bill']
+[2023-08-18 22:26:33] [User input] add phone max
+[2023-08-18 22:26:33] [Data processing] Found command to [add phone], parameters to ['max']
+[2023-08-18 22:27:13] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:27:14] [User input] n
+[2023-08-18 22:27:14] [Bot's answer] Creates new contact book...
+[2023-08-18 22:27:22] [User input] add bill
+[2023-08-18 22:27:22] [Data processing] Found command to [add], parameters to ['bill']
+[2023-08-18 22:27:24] [User input] 
+[2023-08-18 22:27:24] [Error] You have not entered anything
+[2023-08-18 22:27:24] [User input] 
+[2023-08-18 22:27:24] [Error] You have not entered anything
+[2023-08-18 22:27:25] [User input] 
+[2023-08-18 22:27:25] [Error] You have not entered anything
+[2023-08-18 22:28:00] [User input] change name bill
+[2023-08-18 22:28:00] [Data processing] Found command to [change name], parameters to ['bill']
+[2023-08-18 22:28:19] [User input] change name max
+[2023-08-18 22:28:19] [Data processing] Found command to [change name], parameters to ['max']
+[2023-08-18 22:31:25] [Bot's answer] Download contact book? Y/N ---> 
+[2023-08-18 22:31:27] [User input] y
+[2023-08-18 22:31:27] [Bot's answer] Downloading the contact book...
+[2023-08-18 22:31:42] [User input] add birthday max
+[2023-08-18 22:31:42] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-18 22:32:04] [User input] add birthday max
+[2023-08-18 22:32:04] [Data processing] Found command to [add birthday], parameters to ['max']
+[2023-08-18 22:33:59] [User input] change birthday max
+[2023-08-18 22:33:59] [Data processing] Found command to [change birthday], parameters to ['max']
+[2023-08-18 22:34:10] [User input] change birthday max
+[2023-08-18 22:34:10] [Data processing] Found command to [change birthday], parameters to ['max']

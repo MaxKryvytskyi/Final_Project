@@ -11,7 +11,7 @@ class AddressBook(UserDict):
         return f"Контакт {person.name.value_of()} доданий"
 
 
-        # Зберігає книгу контактів
+    # Зберігає книгу контактів
     def save_address_book(self, adress_book):
         with open("Save_adress_book.bin", "wb") as file:
             pickle.dump(adress_book, file)

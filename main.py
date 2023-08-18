@@ -201,7 +201,7 @@ def del_name(*args: str):
         elif cmd.lower() == "yes": break
         else: print("Спробуйтте ще раз")
     del adress_book[args[0].capitalize()]
-    return f"{args[0].capitalize()} видалений із списку контктів"
+    return f"{args[0].capitalize()} видалений із списку контактів"
 
 
 @input_error
@@ -226,12 +226,29 @@ def del_phone(*args: str):
 
 @input_error
 def change_address(*args: str):
-    pass
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Address {args[0].capitalize()}\n{person.address.value_of()}")
+        city = input("Введіть місто або \"exit\" Для виходу\n---> ")
+        if city == "exit": return "Операція прервана"
+        street = input("Введіть вулицю або \"exit\" Для виходу\n---> ")
+        if street == "exit": return "Операція прервана"
+        house = input("Введіть номер будинку або \"exit\" Для виходу\n---> ")
+        if house == "exit": return "Операція прервана"
+        else: break
+    return person.address_change(PersonAddress(city, street, house))
 
 
 @input_error
 def change_status(*args: str):
-    pass
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Status {args[0].capitalize()}\n{person.status.value_of()}")
+        new_status = input("Введіть Status або \"exit\" Для виходу\n---> ")
+        if new_status == "exit": return "Операція прервана"
+        elif new_status.lower() in ["work", "family", "friend"]: break
+        else: print("Не вірний тип статусу очікуєтся Work, Family або Friend")
+    return person.status_change(PersonStatus(new_status))
 
 
 @input_error
@@ -246,17 +263,49 @@ def change_phone(*args: str):
 
 @input_error
 def change_name(*args: str):
-    pass
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Данні {args[0].capitalize()}\n{person.editing_person_info()}")
+        name = input("Введіть \"нове ім'я\" для заміни або \"exit\" Для виходу\n---> ").capitalize()
+        cmd = input("Введіть \"Yes\" для зміни або \"exit\" Для виходу\n---> ")
+        if cmd == "exit": return "Операція прервана"
+        elif cmd.lower() == "yes": break
+        else: print("Спробуйтте ще раз")
+    person.name_change(PersonName(person.name.value), PersonName(name))
+    adress_book.data.pop(args[0].capitalize())
+    adress_book[name] = person
 
 
 @input_error
 def change_note(*args: str):
-    pass
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Note {args[0].capitalize()}\n{person.note.value_of()}")
+        new_note = input("Введіть Note або \"exit\" Для виходу\n---> ")
+        if new_note == "exit": return "Операція прервана"
+        elif len(new_note) < 3: 
+            print("Note занадто короткий")
+            continue
+        else: break
+    return person.note_change(PersonNote(new_note))
 
 
 @input_error
 def change_birthday(*args: str):
-    pass
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print(f"Вже існуючий Birthday {args[0].capitalize()}\n{person.birthday.value_of()}")
+        new_birthday = input("Введіть Birthday або \"exit\" Для виходу\n---> ")
+        if new_birthday == "exit": 
+            return "Операція прервана"
+        else:
+            try:
+                birthday = datetime.strptime(new_birthday, r'%d.%m.%Y')
+            except ValueError: 
+                print(f"Не правильний формат \"{new_birthday}\" очікуєтся день.місяць.рік")
+                continue
+        if birthday: break
+    return person.birthday_change(PersonBirthday(new_birthday))
 
 
 # Список команд.
@@ -285,6 +334,8 @@ COMMANDS = {
     del_note : ("del note", ),  
     del_name : ("del name", )
 
+   
+   
     # all_birthday : ("all birthday", ), # +
     # birthday : ("birthday", ), # +
     # exit_uzer : ("close", "exit", "good bye"), # +

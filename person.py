@@ -50,7 +50,6 @@ class Person:
         self.note = value
         return f"Note додано"
 
-
 # ======================================================================================================
 # =========================================[ change ]===================================================
 # ======================================================================================================
@@ -79,13 +78,17 @@ class Person:
                     self.emails.remove(value)
                     return f"Електронна адреса {value.value_of()} видалена"
 
+    def name_change(self, value, new_value):
+        if self.name.value == value.value:
+            self.name.value = new_value.value
+        return f"Name змінено"
 
     def birthday_change(self, value):
-        self.birthday = value
+        self.birthday.value = value.value
         return f"Birthday змінено"
 
     def status_change(self, value):
-        self.status = value
+        self.status.value = value.value
         return f"Status змінено"
 
     def address_change(self, value):
@@ -95,13 +98,12 @@ class Person:
         return f"Address змінено"
 
     def note_change(self, value):
-        self.note = value
+        self.note.value = value.value
         return f"Note змінено"
 
 # ======================================================================================================
 # =========================================[ del ]======================================================
 # ======================================================================================================
-
 
     def phone_del(self, value):
         for phone in self.phones:
@@ -116,11 +118,11 @@ class Person:
                 return f"Електронна адреса {value.value_of()} видалена"
     
     def birthday_del(self):
-        self.birthday = "none"
+        self.birthday.value = "none"
         return f"Birthday видалено"
 
     def status_del(self):
-        self.status = "none"
+        self.status.value = "none"
         return f"Status видалено"
 
     def address_del(self):
@@ -130,50 +132,8 @@ class Person:
         return f"Address видалено"
 
     def note_del(self):
-        self.note = "none"
+        self.note.value = "none"
         return f"Note видалено"
-
-
-    # def editing_phone(self, new_phone: PersonFormatterInfo, bool=False):
-    #     if bool:
-    #         for i in range(0, len(self.phones)-1):
-    #             if self.phones[i].value_of() == new_phone.value_of():
-    #                 del self.phones[i]
-    #         return f"Phone Видалено"
-    #     else:
-    #         if "none" in [phone.value for phone in self.phones]: 
-    #             self.phones[0] = new_phone
-    #         else: self.phones.append(new_phone)
-    #         return f"Phone змінено"
-
-    # def editing_email(self, new_email: PersonFormatterInfo, bool=False):
-    #     if bool:
-    #         for i in range(0, len(self.emails)-1):
-    #             if self.emails[i].value_of() == new_email.value_of():
-    #                 del self.emails[i]
-    #         return f"Email Видалено"
-    #     else:
-    #         if "none" in [email.value for email in self.emails]: 
-    #             self.emails[0] = new_email
-    #         else: self.emails.append(new_email)
-    #         return f"Email змінено"
-    
-
-    # def editing_birthday(self, new_birthday: PersonFormatterInfo):
-    #     self.birthday = new_birthday
-    #     return f"Birthday змінено"
-    
-    # def editing_status(self, new_status: PersonFormatterInfo):
-    #     self.status = new_status
-    #     return f"Status змінено"
-
-    # def editing_address(self, new_address: PersonFormatterInfo):
-    #     self.address = new_address
-    #     return f"Address змінено"
-
-    # def editing_note(self, new_note: PersonFormatterInfo):
-    #     self.note = new_note
-    #     return f"Note змінено"
 
     def editing_person_info(self):
         return f"Name: {self.name.value_of()}\nPhones: {[phone.value_of() for phone in self.phones]}\nEmail: {[email.value_of() for email in self.emails]}\nBirthday: {self.birthday.value_of()}\nStatus: {self.status.value_of()}\nAddress: {self.address.value_of()}\nNote: {self.note.value_of()}"

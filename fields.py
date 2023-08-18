@@ -27,6 +27,7 @@ class PersonName(PersonFormatterInfo):
     def value_of(self):
         return f"{str(self.value)}"
     
+    
 class PersonPhoneNumbers(PersonFormatterInfo):
     def __init__(self, value: str="None"):
         self.__value = None
