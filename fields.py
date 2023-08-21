@@ -25,7 +25,7 @@ class PersonName(PersonFormatterInfo):
         else: raise ExceptionIncorrectFormat(f"Ім'я \"{value}\" занадто кототке потрібно минимум 3 символи")
 
     def value_of(self):
-        return f"{str(self.value)}"
+        return f"{self.value}"
     
     
 class PersonPhoneNumbers(PersonFormatterInfo):
@@ -102,7 +102,13 @@ class PersonAddress(PersonFormatterInfo):
         self.house = house
     
     def value_of(self):
-        return f"City: {self.city + ',' if self.city.lower() != 'none' else ''} Street: {self.street + ',' if self.street.lower() != 'none' else ''} House: {self.house + '.' if self.house.lower() != 'none' else ''}"
+        city = self.city if self.city.lower() != 'none' else ''
+        street = self.street if self.street.lower() != 'none' else ''
+        house = self.house if self.house.lower() != 'none' else ''
+        if city != '': city = f"City: {city + ','}"
+        if street != '': street = f"Street: {street + ','}"
+        if house != '': house = f"House: {house + '.'}"
+        return f"{city} {street} {house}"
     
 
 class PersonBirthday(PersonFormatterInfo):
@@ -126,6 +132,19 @@ class PersonBirthday(PersonFormatterInfo):
     def value_of(self):
         return f"{self.value if self.value.lower() != 'none' else ''}"
     
+    def days_to_birthday(self) -> str|None:
+        try:
+            date_birthday = datetime.strptime(self.value, "%d.%m.%Y")
+        except AttributeError: return None
+        current_datetime = datetime.now()
+        new_date = date_birthday.replace(year=current_datetime.year)
+        days_birthday = new_date - current_datetime
+        if days_birthday.days >= 0: return f"{days_birthday.days} days"
+        else:
+            date = date_birthday.replace(year=current_datetime.year + 1)
+            days_birthday = date - current_datetime
+            return f"{days_birthday.days} days"
+
     
 class PersonNote(PersonFormatterInfo):
     def __init__(self, value: str="None"):

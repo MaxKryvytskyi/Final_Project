@@ -1,10 +1,13 @@
 from datetime import datetime
+from rich.console import Console
+from rich.table import Table
 
 from my_exception import ExceptionIncorrectFormat
+import birthday_n_days as bd
 from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
 from address_book import AddressBook
 from person import Person
-from bot_work import log, start_work_bot, input_error
+from bot_work import log, start_work_bot, input_error, works_bot, print_phones, print_emails, print_address, print_birthday, print_note, print_status, print_name
 
 
 # ======================================================================================================
@@ -42,7 +45,7 @@ def add(*args: str):
 def add_phone(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючі Phones {args[0].capitalize()}\n{[phone.value_of() for phone in person.phones]}")
+        print_phones(person)
         new_phone = input("Введіть Phone або введіть \"exit\" Для виходу\n---> ")
         if new_phone == "exit": return "Операція прервана"
         elif new_phone in [phone.value for phone in person.phones]: print("Error Цей телефон вже існує у цього контакту")
@@ -54,7 +57,7 @@ def add_phone(*args: str):
 def add_email(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючі Email {args[0].capitalize()}\n{[email.value_of() for email in person.emails]}")
+        print_emails(person)
         new_email = input("Введіть Email або введіть \"exit\" Для виходу\n---> ")
         if new_email == "exit": return "Операція прервана"
         elif len(new_email) < 5 and new_email != " ": raise ExceptionIncorrectFormat(f"Не правильний формат email \"{new_email}\" очікувалося m.k@gmail.com")
@@ -67,7 +70,7 @@ def add_email(*args: str):
 def add_birthday(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Birthday {args[0].capitalize()}\n{person.birthday.value_of()}")
+        print_birthday(person)
         new_birthday = input("Введіть Birthday або введіть \"exit\" Для виходу\n---> ")
         if new_birthday == "exit": 
             return "Операція прервана"
@@ -85,7 +88,7 @@ def add_birthday(*args: str):
 def add_status(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Status {args[0].capitalize()}\n{person.status.value_of()}")
+        print_status(person)
         new_status = input("Введіть Status або введіть \"exit\" Для виходу\n---> ")
         if new_status == "exit": return "Операція прервана"
         elif new_status.lower() in ["work", "family", "friend"]: break
@@ -97,7 +100,7 @@ def add_status(*args: str):
 def add_address(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Address {args[0].capitalize()}\n{person.address.value_of()}")
+        print_address(person)
         city = input("Введіть місто або введіть \"exit\" Для виходу\n---> ")
         if city == "exit": return "Операція прервана"
         street = input("Введіть вулицю або введіть \"exit\" Для виходу\n---> ")
@@ -112,7 +115,7 @@ def add_address(*args: str):
 def add_note(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Note {args[0].capitalize()}\n{person.note.value_of()}")
+        print_note(person)
         new_note = input("Введіть Note або введіть \"exit\" Для виходу\n---> ")
         if new_note == "exit": return "Операція прервана"
         elif len(new_note) < 3: 
@@ -131,7 +134,7 @@ def add_note(*args: str):
 def del_birthday(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Birthday {args[0].capitalize()}\n{person.birthday.value_of()}")
+        print_birthday(person)
         cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
@@ -143,7 +146,7 @@ def del_birthday(*args: str):
 def del_address(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Address {args[0].capitalize()}\n{person.address.value_of()}")
+        print_address(person)
         cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
@@ -155,7 +158,7 @@ def del_address(*args: str):
 def del_status(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Status {args[0].capitalize()}\n{person.status.value_of()}")
+        print_status(person)
         cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
@@ -167,7 +170,7 @@ def del_status(*args: str):
 def del_email(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Email {args[0].capitalize()}\n{[email.value_of() for email in person.emails]}")
+        print_emails(person)
         email = input("Введіть \"Email\" для видалення або \"exit\" Для виходу\n---> ")
         if email in [email.value for email in person.emails]:
             cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
@@ -183,7 +186,7 @@ def del_email(*args: str):
 def del_note(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Note {args[0].capitalize()}\n{person.note.value_of()}")
+        print_note(person)
         cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
@@ -195,7 +198,7 @@ def del_note(*args: str):
 def del_name(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Данні {args[0].capitalize()}\n{person.editing_person_info()}")
+        print_name(person)
         cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
         if cmd == "exit": return "Операція прервана"
         elif cmd.lower() == "yes": break
@@ -208,7 +211,7 @@ def del_name(*args: str):
 def del_phone(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Phones {args[0].capitalize()}\n{[phone.value_of() for phone in person.phones]}")
+        print_phones(person)
         phone = input("Введіть \"Phone\" для видалення або \"exit\" Для виходу\n---> ")
         if phone in [phone.value_of() for phone in person.phones]:
             cmd = input("Введіть \"Yes\" для видалення або \"exit\" Для виходу\n---> ")
@@ -228,7 +231,7 @@ def del_phone(*args: str):
 def change_address(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Address {args[0].capitalize()}\n{person.address.value_of()}")
+        print_address(person)
         city = input("Введіть місто або \"exit\" Для виходу\n---> ")
         if city == "exit": return "Операція прервана"
         street = input("Введіть вулицю або \"exit\" Для виходу\n---> ")
@@ -243,7 +246,7 @@ def change_address(*args: str):
 def change_status(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Status {args[0].capitalize()}\n{person.status.value_of()}")
+        print_status(person)
         new_status = input("Введіть Status або \"exit\" Для виходу\n---> ")
         if new_status == "exit": return "Операція прервана"
         elif new_status.lower() in ["work", "family", "friend"]: break
@@ -253,19 +256,40 @@ def change_status(*args: str):
 
 @input_error
 def change_email(*args: str):
-    pass
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print_emails(person)
+        email = input("Введіть Email для зміни або введіть \"exit\" Для виходу\n---> ")
+        if email == "exit": return "Операція прервана"
+        elif len(email) < 5 and new_email != " ": raise ExceptionIncorrectFormat(f"Не правильний формат email \"{email}\" очікувалося m.k@gmail.com")
+        new_email = input("Введіть змінений Email або введіть \"exit\" Для виходу\n---> ")
+        if new_email == "exit": return "Операція прервана"
+        elif len(new_email) < 5 and new_email != " ": raise ExceptionIncorrectFormat(f"Не правильний формат email \"{new_email}\" очікувалося m.k@gmail.com")
+        elif new_email in [email.value for email in person.emails]: print("Error Цей email вже існує у цього контакту")
+        else: break
+    return person.email_change(PersonEmailAddress(email), PersonEmailAddress(new_email))
 
 
 @input_error
 def change_phone(*args: str):
-    pass
+    person = adress_book[args[0].capitalize()]
+    while True:
+        print_phones(person)
+        phone = input("Введіть Phone для зміни або введіть \"exit\" Для виходу\n---> ")
+        if phone == "exit": return "Операція прервана"
+        elif phone not in [phone.value for phone in person.phones]: print("Error Цього телефону не існує у цього контакту-> ")
+        new_phone = input("Введіть змінений Email або введіть \"exit\" Для виходу\n---> ")
+        if new_phone == "exit": return "Операція прервана"
+        elif new_phone in [phone.value for phone in person.phones]: print("Error Цей телефон вже існує у цього контакту")
+        else: break
+    return person.phone_change(PersonPhoneNumbers(phone), PersonPhoneNumbers(new_phone))
 
 
 @input_error
 def change_name(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Данні {args[0].capitalize()}\n{person.editing_person_info()}")
+        print_name(person)
         name = input("Введіть \"нове ім'я\" для заміни або \"exit\" Для виходу\n---> ").capitalize()
         cmd = input("Введіть \"Yes\" для зміни або \"exit\" Для виходу\n---> ")
         if cmd == "exit": return "Операція прервана"
@@ -274,13 +298,14 @@ def change_name(*args: str):
     person.name_change(PersonName(person.name.value), PersonName(name))
     adress_book.data.pop(args[0].capitalize())
     adress_book[name] = person
+    return f"Name змінено"
 
 
 @input_error
 def change_note(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Note {args[0].capitalize()}\n{person.note.value_of()}")
+        print_note(person)
         new_note = input("Введіть Note або \"exit\" Для виходу\n---> ")
         if new_note == "exit": return "Операція прервана"
         elif len(new_note) < 3: 
@@ -294,7 +319,7 @@ def change_note(*args: str):
 def change_birthday(*args: str):
     person = adress_book[args[0].capitalize()]
     while True:
-        print(f"Вже існуючий Birthday {args[0].capitalize()}\n{person.birthday.value_of()}")
+        print_birthday(person)
         new_birthday = input("Введіть Birthday або \"exit\" Для виходу\n---> ")
         if new_birthday == "exit": 
             return "Операція прервана"
@@ -308,8 +333,62 @@ def change_birthday(*args: str):
     return person.birthday_change(PersonBirthday(new_birthday))
 
 
+# ======================================================================================================
+# =========================================[ others ]===================================================
+# ======================================================================================================
+
+
+@input_error
+def all_birthday(*args: str) -> str:
+    days = 7
+    if args:
+        days = int(args[0])
+    console = Console()
+    console.print(bd.main(adress_book, days))
+    return f""
+
+
+@input_error
+def birthday(*args: str):
+    person = adress_book[args[0].capitalize()]
+    time = person.birthday.days_to_birthday() 
+    if not time: return f"Contact {args[0].capitalize()} has no stored date of birth"
+    else: return f"To the bottom of the birth of {args[0].capitalize()} remained {time}"
+    
+
+@input_error
+def show_page(*args:str) -> str:
+    n = 1
+    count = args[0] if len(args) >= 1 else 5
+    c = adress_book.iterator(int(count))
+    for _ in range(1000):
+        try:
+            text = next(c)
+            if text == None: raise StopIteration
+        except StopIteration:
+            if n > 1 : return log(f"No more pages", "[Bot's answer] ")
+            else: return f"No saved contacts"
+        stop = input(f"Page : {n}")
+
+        if stop.lower() == "stop": return ""
+        console = Console()
+        console.print(text)
+        n += 1
+
+
+@input_error
+def hello(*args:str):
+    return "How can I help you?"
+
+
+def exit_uzer(*args:str):
+    global works_bot 
+    works_bot = False
+    return "Good bye!"
+
 # Список команд.
 COMMANDS = {
+
     add_birthday : ("add birthday", ), 
     add_address : ("add address", ),
     add_status : ("add status", ),
@@ -332,18 +411,15 @@ COMMANDS = {
     del_email : ("del email", ), 
     del_phone : ("del phone", ),
     del_note : ("del note", ),  
-    del_name : ("del name", )
+    del_name : ("del name", ),
 
-   
-   
-    # all_birthday : ("all birthday", ), # +
-    # birthday : ("birthday", ), # +
-    # exit_uzer : ("close", "exit", "good bye"), # +
-    # show_page : ("show page", ), # +
+    all_birthday : ("all birthday", ), # +
+    birthday : ("birthday", ), 
+    exit_uzer : ("close", "exit", "good bye"), 
+    show_page : ("show page", ), # +
     # search : ("search", ), # +
     # helper : ("help", ), # +-
-    # phone : ("phone", ), # +
-    # hello : ("hello", ) # +
+    hello : ("hello", ) 
 }
 
 # Знаходить команду.
@@ -360,7 +436,7 @@ def handler(uzer_input: str):
 
 @input_error
 def main():
-    while True:
+    while works_bot:
         adress_book.save_address_book(adress_book)
         uzer_input = log(input("-->"), "[User input] ")
         

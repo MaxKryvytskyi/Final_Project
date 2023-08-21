@@ -81,7 +81,6 @@ class Person:
     def name_change(self, value, new_value):
         if self.name.value == value.value:
             self.name.value = new_value.value
-        return f"Name змінено"
 
     def birthday_change(self, value):
         self.birthday.value = value.value
