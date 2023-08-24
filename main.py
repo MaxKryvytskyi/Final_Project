@@ -7,6 +7,7 @@ import birthday_n_days as bd
 from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
 from address_book import AddressBook
 from person import Person
+from clean import sort_main
 from bot_work import log, start_work_bot, input_error, works_bot, print_phones, print_emails, print_address, print_birthday, print_note, print_status, print_name
 
 
@@ -337,6 +338,13 @@ def change_birthday(*args: str):
 # =========================================[ others ]===================================================
 # ======================================================================================================
 
+@input_error
+def sort_path(*args: str):
+    if args[0] == "":
+        return f"Enter path"
+    
+    return sort_main(args[2])
+
 
 @input_error
 def all_birthday(*args: str) -> str:
@@ -413,13 +421,15 @@ COMMANDS = {
     del_note : ("del note", ),  
     del_name : ("del name", ),
 
-    all_birthday : ("all birthday", ), # +
+    all_birthday : ("all birthday", ), 
     birthday : ("birthday", ), 
+    sort_path : ("sort path"),
     exit_uzer : ("close", "exit", "good bye"), 
     show_page : ("show page", ), # +
     # search : ("search", ), # +
     # helper : ("help", ), # +-
-    hello : ("hello", ) 
+    hello : ("hello", ),
+    
 }
 
 # Знаходить команду.
@@ -438,15 +448,15 @@ def handler(uzer_input: str):
 def main():
     while works_bot:
         adress_book.save_address_book(adress_book)
-        uzer_input = log(input("-->"), "[User input] ")
+        uzer_input = input("-->")
         
         if not uzer_input:
-            print(log("You have not entered anything", "[Error] "))
+            print("You have not entered anything")
             continue
         com, data = handler(uzer_input)
     
         if com == "There is no such command":
-            print(log(com, "[Error] "))
+            print(com)
             continue
         print(com(*data))
 
