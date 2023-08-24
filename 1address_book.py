@@ -3,7 +3,7 @@ from collections import UserDict
 import re
 
 from bot_work import log
-from record import Record
+from record1 import Record
 
 class AddressBook(UserDict):
     # Додає в словник экземпляр классу Record
