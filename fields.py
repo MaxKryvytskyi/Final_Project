@@ -1,11 +1,12 @@
 import re
 from datetime import datetime
-
+from abc import ABC, abstractmethod
 from my_exception import ExceptionIncorrectFormat
 
 
-class PersonFormatterInfo:
+class PersonFormatterInfo(ABC):
 
+    @abstractmethod
     def value_of(self):
         raise NotImplementedError
     

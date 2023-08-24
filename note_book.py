@@ -1,7 +1,9 @@
 from collections import UserDict
 from datetime import datetime
 from abc import ABC, abstractmethod
-from time import sleep
+import pickle
+from rich.table import Table
+
 
 class AbstractView(ABC):
     
@@ -71,13 +73,15 @@ class NoteBook(UserDict):
 
     def add_note(self, record):
         self.data[datetime.now().timestamp()] = record
+        self.normal_keys()
         return f"Нотатка додана"
 
     def add_tag(self, num, new_tag):
         keys = self.dict_keys.get(str(num))
         if float(keys) is not None and float(keys) in self.data:
             value = self.data[float(keys)]
-            value.tags.append(Tag(new_tag))
+            value.tags.append(new_tag)
+            self.normal_keys()
             return f"Тег \"{new_tag}\" додано"
         else: return f"Такої нотатки \"{num}\" не знайдено"
 
@@ -88,6 +92,7 @@ class NoteBook(UserDict):
             for n, k in enumerate(value.tags):
                 if str(k) == del_tag:
                     del value.tags[n]
+                    self.normal_keys()
                     return f"Тег \"{del_tag}\" видалено"
             return f"Тег \"{del_tag}\" Не знайдено"
         else: return f"Такої нотатки \"{num}\" не знайдено"
@@ -97,8 +102,9 @@ class NoteBook(UserDict):
         if float(keys) is not None and float(keys) in self.data:
             value = self.data[float(keys)]
             for n, k in enumerate(value.tags):
-                if str(k) == del_tag:
+                if str(k) == str(del_tag):
                     value.tags[n] = new_tag
+                    self.normal_keys()
                     return f"Тег \"{del_tag}\" змінено на \"{new_tag}\""
             return f"Тег \"{del_tag}\" Не знайдено"
         else: return f"Такої нотатки \"{num}\" не знайдено"
@@ -108,6 +114,7 @@ class NoteBook(UserDict):
         if float(keys) is not None and float(keys) in self.data:
             del_note = self.data[float(keys)]
             self.data[float(keys)] == new_note
+            self.normal_keys()
             return f"Нотатка \"{del_note}\" змінена на \"{new_note}\""
         else: return f"Такої нотатки \"{num}\" не знайдено"
 
@@ -115,6 +122,8 @@ class NoteBook(UserDict):
         keys = self.dict_keys.get(str(num))
         if float(keys) is not None and float(keys) in self.data:
             del self.data[float(keys)]
+            self.normal_keys()
+            return f"Нотатка \"{num}\" видалена"
 
     def normal_keys(self):
         for num, keys in enumerate(self.data.keys()):
@@ -122,68 +131,39 @@ class NoteBook(UserDict):
             self.dict_keys[str(num)] = str(keys)
 
     def show_all(self):
-        for num, note in self.data.items():
-            print(self.dict_num[str(num)], note)
+        table = Table(title=f"Note Book")
+        table.add_column("Num", justify="center", style="cyan", no_wrap=False)
+        table.add_column("Tag", justify="center", style="cyan", no_wrap=False)
+        table.add_column("Note", justify="center", style="cyan", no_wrap=False)
+  
+        for num, record in self.data.items():
+            table.add_row(f"{self.dict_num[str(num)]}", 
+                          f"{record.tags}",
+                          f"{record.note}")
+        return table
     
-    def value_of(self):
-        return str(self.data.values())
-    
-    def note_all(self):
-        return f"{self.data.items()}"
+    def search_note_book(self, name:list) -> str:
+        if name:
+            table = Table(title=f"Coincides {len(name)}")
+            table.add_column("Num", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Tag", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Note", justify="center", style="cyan", no_wrap=False)
+            for num in name:
+                keys = self.dict_num.get(str(num))
+                table.add_row(f"{keys}", 
+                            f"{self.data[float(num)].tags}",
+                            f"{self.data[float(num)].note}")
+            return table
+        else: return f"Нічого не знайдено"
+        
+    # Зберігає книгу контактів
+    def save_address_book(self, note_book):
+        with open("Save_note_book.bin", "wb") as file:
+            pickle.dump(note_book, file)
 
-
-
-if __name__ == "__main__":
-    note_book = NoteBook()
-    tag = Tag("Work 0")
-    note = Note("Note 0")
-    tag1 = Tag("Work 1")
-    note1 = Note("Note 1")
-    tag2 = Tag("Work 2")
-    note2 = Note("Note 2")
-    tag3 = Tag("Work 3")
-    note3 = Note("Note 3")
-    note_book.add_note(Record(note, tag))
-    sleep(0.1)
-    # print("0")
-    # print(note_book.value_of())
-    # print(note_book.note_all())
-    note_book.add_note(Record(note1, tag1))
-    sleep(0.1)
-    # print("1")
-    # print(note_book.value_of())
-    # print(note_book.note_all())
-    note_book.add_note(Record(note2, tag2))
-    sleep(0.1)
-    # print("2")
-    # print(note_book.value_of())
-    # print(note_book.note_all())
-    note_book.add_note(Record(note3, tag3))
-    sleep(0.1)
-    # print("3")
-    # print(note_book.value_of())
-    # print(note_book.note_all())
-
-    # print(note_book.dict_num)
-    note_book.normal_keys()
-    # print(note_book.dict_num)
-    # note_book.show_all()
-
-    note_book.add_tag("2", "sawdw 01")
-    note_book.show_all()
-    note_book.add_tag("3", "sawdw 03")
-    note_book.show_all()
-    note_book.change_tag("3", "Work 3", "new Tag")
-    note_book.del_tag("2", "sawdw 01")
-    note_book.del_tag("2", "Work 2")
-    note_book.show_all()
-    # note_book.del_tag("3", "sawdw 03")
-    # note_book.del_tag("2", "sawdw 01")
-    # note_book.show_all()
-    # note_book.del_note('3')
-    # note_book.show_all()
-    # note_book.del_note('1')
-    # note_book.show_all()
-    # note_book.del_note('2')
-    # note_book.show_all()
-
+    # Відповідає за завантаження книги контактів яку зберегли минулого разу
+    def load_address_book(self): 
+        with open("Save_note_book.bin", "rb") as file:
+            deserialized_note_book = pickle.load(file)
+            return deserialized_note_book
+        

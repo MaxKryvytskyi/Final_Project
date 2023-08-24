@@ -4,6 +4,7 @@ from rich.table import Table
 
 
 from address_book import AddressBook
+from note_book import NoteBook
 from my_exception import ExceptionIncorrectFormat
 
 works_bot = True
@@ -13,16 +14,16 @@ def input_error(func):
     def inner(*argsi,**kwargs): 
         try:
             return func(*argsi,**kwargs)
-        # except TypeError: return f"Wrong command"
-        # except IndexError: return f"Enter name and phone separated by a space!"
-        # except ValueError: return f"Incorrect data"
-        # except KeyError: return f"Enter another name."
-        # except AttributeError: return f"Enter command."
+        except TypeError: return f"Wrong command"
+        except IndexError: return f"Enter name and phone separated by a space!"
+        except ValueError: return f"Incorrect data"
+        except KeyError: return f"Enter another name."
+        except AttributeError: return f"Enter command."
         except ExceptionIncorrectFormat as error: return error
         except KeyboardInterrupt: return exit()
     return inner
 
-# Логування
+@input_error
 def log(args, message=""):
     with open("log.txt", "a") as fn:
         date = dt.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -32,20 +33,20 @@ def log(args, message=""):
 
 # Відповідає за те загрузити стару книгу чи створити нову
 @input_error  
-def start_work_bot(adress_book: AddressBook):
+def start_work_bot(book: AddressBook | NoteBook):
     while True:
         try:
-            user_input = input(log("Download contact book? Y/N ---> ", "[Bot's answer] ")).lower()
-            log(user_input, "[User input] ")
+            user_input = input("Download book? Y/N ---> ").lower()
+            
             if user_input in "y n":
                 if user_input == "y":
-                    print(log("Downloading the contact book...", "[Bot's answer] "))
-                    return adress_book.load_address_book()
+                    print("Downloading the book...")
+                    return book.load_address_book()
                 elif user_input == "n":
-                    print(log("Creates new contact book...", "[Bot's answer] "))
-                    return adress_book
+                    print("Creates new book...")
+                    return book
             else:
-                print(log("The command is not recognized", "[Bot's answer] "))
+                print("The command is not recognized")
                 continue
         except UnicodeEncodeError:
             continue
