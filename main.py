@@ -1,14 +1,17 @@
 from datetime import datetime
 from rich.console import Console
 from rich.table import Table
+import re
 
 from my_exception import ExceptionIncorrectFormat
 import birthday_n_days as bd
 from fields import PersonName, PersonPhoneNumbers, PersonAddress, PersonEmailAddress, PersonBirthday, PersonNote, PersonStatus
 from address_book import AddressBook
+from note_book import Note, Tag, NoteBook
 from person import Person
+from functions import add,
 from clean import sort_main
-from bot_work import log, start_work_bot, input_error, works_bot, print_phones, print_emails, print_address, print_birthday, print_note, print_status, print_name
+from bot_work import start_work_bot, input_error, works_bot, print_phones, print_emails, print_address, print_birthday, print_note, print_status, print_name
 
 
 # ======================================================================================================
@@ -339,11 +342,26 @@ def change_birthday(*args: str):
 # ======================================================================================================
 
 @input_error
+def search(*args: str):
+    if len(args[0]) < 3:
+        return f"Minimum search length is 3"
+    pattern = rf"{re.escape(args[0].lower())}"
+    coincidence_list = []
+    for k, v in adress_book.data.items():
+        if re.findall(pattern, str(v).lower()): 
+            coincidence_list.append(f"{k}")
+    table = adress_book.search_contacts(coincidence_list)
+    console = Console()
+    console.print(table)
+    return ""
+
+
+@input_error
 def sort_path(*args: str):
-    if args[0] == "":
+    if len(args) < 1:
         return f"Enter path"
     
-    return sort_main(args[2])
+    return sort_main(args)
 
 
 @input_error
@@ -374,7 +392,7 @@ def show_page(*args:str) -> str:
             text = next(c)
             if text == None: raise StopIteration
         except StopIteration:
-            if n > 1 : return log(f"No more pages", "[Bot's answer] ")
+            if n > 1 : return "No more pages"
             else: return f"No saved contacts"
         stop = input(f"Page : {n}")
 
@@ -388,7 +406,7 @@ def show_page(*args:str) -> str:
 def hello(*args:str):
     return "How can I help you?"
 
-
+@input_error
 def exit_uzer(*args:str):
     global works_bot 
     works_bot = False
@@ -396,7 +414,7 @@ def exit_uzer(*args:str):
 
 # Список команд.
 COMMANDS = {
-
+    sort_path : ("sort", ),
     add_birthday : ("add birthday", ), 
     add_address : ("add address", ),
     add_status : ("add status", ),
@@ -420,17 +438,31 @@ COMMANDS = {
     del_phone : ("del phone", ),
     del_note : ("del note", ),  
     del_name : ("del name", ),
-
+    
     all_birthday : ("all birthday", ), 
     birthday : ("birthday", ), 
-    sort_path : ("sort path"),
     exit_uzer : ("close", "exit", "good bye"), 
-    show_page : ("show page", ), # +
-    # search : ("search", ), # +
+    show_page : ("show page", ), 
+    search : ("search", ), 
     # helper : ("help", ), # +-
     hello : ("hello", ),
     
 }
+
+# COMMANDS_NOTE = {
+#     add_note : ("add notes", ),
+#     add_tag : ("add note", ),
+
+#     change_note : ("change notes", ),
+#     change_tag : ("change note", ),
+
+#     del_note : ("del note", ),
+#     del_tag : ("del note", ),
+
+#     search : ("search", ), 
+#     # helper_note : ("help", ), # +-
+#     show_note : ("show note", ),
+# }
 
 # Знаходить команду.
 @input_error    
@@ -439,7 +471,7 @@ def handler(uzer_input: str):
         for a_com in args_com:
             if uzer_input.lower().startswith(a_com):
                 if uzer_input[:len(a_com)].lower() == a_com:
-                    log(f"Found command to [{a_com}], parameters to {uzer_input[len(a_com):].strip().split()}", "[Data processing] ")
+                    f"Found command to [{a_com}], parameters to {uzer_input[len(a_com):].strip().split()}"
                     return command, uzer_input[len(a_com):].strip().split()
     return "There is no such command", None
 

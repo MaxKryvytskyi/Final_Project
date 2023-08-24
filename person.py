@@ -137,4 +137,12 @@ class Person:
     def editing_person_info(self):
         return f"Name: {self.name.value_of()}\nPhones: {[phone.value_of() for phone in self.phones]}\nEmail: {[email.value_of() for email in self.emails]}\nBirthday: {self.birthday.value_of()}\nStatus: {self.status.value_of()}\nAddress: {self.address.value_of()}\nNote: {self.note.value_of()}"
     
-    
+    def __str__(self):
+        return "{}{}{}{}{}{}{}".format(
+                                   f"Name: {self.name.value_of()}\n", 
+                                   f"Phones: {[phone.value_of() for phone in self.phones]}\n", 
+                                   f"Email: {[email.value_of() for email in self.emails]}\n",
+                                   f"Birthday: {self.birthday.value_of()}\n",
+                                   f"Status: {self.status.value_of()}\n",
+                                   f"Address: {self.address.value_of()}\n",
+                                   f"Note: {self.note.value_of()}")                       

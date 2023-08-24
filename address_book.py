@@ -46,13 +46,13 @@ class AddressBook(UserDict):
             count +=1
             if work:
                 table = Table(title=f"Page {page}")
-                table.add_column("Name", justify="center", style="cyan", no_wrap=True)
-                table.add_column("Phones", justify="center", style="magenta", no_wrap=True)
-                table.add_column("Emails", justify="center", style="cyan", no_wrap=True)
-                table.add_column("Birthday", justify="center", style="cyan", no_wrap=True)
-                table.add_column("Status", justify="center", style="cyan", no_wrap=True)
-                table.add_column("Address", justify="center", style="cyan", no_wrap=True)
-                table.add_column("Note", justify="center", style="cyan", no_wrap=True)
+                table.add_column("Name", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Phones", justify="center", style="magenta", no_wrap=False)
+                table.add_column("Emails", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Birthday", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Status", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Address", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Note", justify="center", style="cyan", no_wrap=False)
 
             table.add_row(f"{i.name.value_of()}", 
                           f"{[el.value_of() for el in i.phones] if [el.value_of() for el in i.phones] != [''] else ''}", 
@@ -77,19 +77,25 @@ class AddressBook(UserDict):
         return result_list
 
 
-    # # Виконує пошук в кнізі контактів за ключовим значенням
-    # def search_contacts(self, name:list) -> str:
-    #     dict_contacts = {}
-    #     text = f"Nothing found"
-    #     if name:
-    #         num = 0
-    #         for i in name:
-    #             birthday = self.data[i].birthday.value.strftime('%d-%m-%Y') if self.data[i].birthday else "No birthday date"
-    #             phones = self.data[i].phones if self.data[i].phones else " No phone"
-    #             email = self.data[i].email if self.data[i].email else "No email"
-    #             address = self.data[i].address if self.data[i].address else "No address"
-    #             dict_contacts[num] = [str(self.data[i].name), phones, birthday, email, address]
-    #             num += 1
-    #         text = self.create_print_page(len(dict_contacts), dict_contacts, False)
-        
-    #     return text
+    # Виконує пошук в кнізі контактів за ключовим значенням
+    def search_contacts(self, name:list) -> str:
+        if name:
+            table = Table(title=f"Coincides {len(name)}")
+            table.add_column("Name", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Phones", justify="center", style="magenta", no_wrap=False)
+            table.add_column("Emails", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Birthday", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Status", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Address", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Note", justify="center", style="cyan", no_wrap=False)
+
+            for i in name:
+                table.add_row(f"{self.data[i].name.value_of()}", 
+                            f"{[el.value_of() for el in self.data[i].phones] if [el.value_of() for el in self.data[i].phones] != [''] else ''}", 
+                            f"{[el.value_of() for el in self.data[i].emails] if [el.value_of() for el in self.data[i].emails] != [''] else ''}",
+                            f"{self.data[i].birthday.value_of()}",
+                            f"{self.data[i].status.value_of()}",
+                            f"{self.data[i].address.value_of()}",
+                            f"{self.data[i].note.value_of()}")
+            return(table)
+        else: return f"Нічого не знайдено"
