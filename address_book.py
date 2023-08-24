@@ -1,133 +1,101 @@
-import pickle
 from collections import UserDict
-import re
+import pickle
 
-from log import log
-from record import Record
+
+from rich.table import Table
+
+from person import Person
+
 
 class AddressBook(UserDict):
     # Додає в словник экземпляр классу Record
-    def add_record(self, record: Record) -> str:
-        if record.name.value not in self.keys():
-            self.data[record.name.value] = record
-            t = str(record) + " "
-            return log(f"{t.rstrip()}\nadd successful", "[Bot's answer] ")
-        else: return log(f"Contact with name {record.name} already exist. Try add phone command for add extra phone.", "[Bot's answer] ")
+    def add_person(self, person: Person) -> str:
+        self.data[person.name.value] = person
+        return f"Контакт {person.name.value_of()} доданий"
 
-    # Ітерується за книгою контактів
-    def iterator(self, num:int) -> str:
-        result = self.create_page(num)
-        if result == None: return log("No saved contacts", "[Bot's answer] ")
-        for _, value in result.items(): yield value
 
-    # Розбиває книгу контактів посторінково 
-    def create_page(self, num:int) -> dict|None:
-        if len(self.data) == 0: return None
-        result_list = {}
-        count = 1
-        page = 1
-        new_list1 = []
-
-        for i in self.data.values():
-            value_phone = "No phone"
-            value_birthday = "No birthday date"
-            value_email = "No email"
-            value_address = "No address"
-           
-            name_value = f"{i.name} "
-            phone_value = f" { [el.value for el in i.phones] if [el.value for el in i.phones] else value_phone}"
-            birthday_value = f"{i.birthday.value.strftime('%d-%m-%Y') if i.birthday else value_birthday}"
-            email_value = f"{i.email if i.email else value_email}"
-            address_value = f"{i.address if i.address else value_address}"
-
-            new_list = [name_value, phone_value, birthday_value, email_value, address_value]
-            new_list1.append(new_list)
-            if count == int(num):
-                result_list[page] = self.create_print_page(page, new_list1, True)
-                new_list1.clear()
-                page += 1
-                count = 0
-            count += 1
-
-        result_list[page] = self.create_print_page(page, new_list1, True)
-
-        return result_list
-
-    # Записує книгу контактів посторінково для виводу в консоль 
-    def create_print_page(self, page:int, contacts:list, flag:bool) -> str | None:
-        result = ""
-        n = 12
-        pattern = r"[\[\'\'\"\"\]]" 
-        if page > 9: n = 11
-        elif page > 99: n = 10
-        if contacts:
-            if flag:
-                x = "Page" 
-                result += " {:^90}".format(" "*31 + "_"*30 + " "*29) + "\n"
-                result += " {:^92}".format("|" + " "*n +f"{x} {page}" + " "*12 + "|") + "\n"
-                result += " {:<90}".format(" "*30 + "|" + "_"*30 + "|" + " "*29) + "\n"
-            else:
-                x = "Coincidence"
-                result += " {:^90}".format(" "*31 + "_"*30 + " "*29) + "\n"
-                result += " {:^92}".format("|" + " "*(n-4) +f"{page} {x}" + " "*9 + "|") + "\n"
-                result += " {:<90}".format(" "*30 + "|" + "_"*30 + "|" + " "*29) + "\n"
-
-            for i in range(0, len(contacts)):
-                name_value, phone_value, birthday_value, email_value, address_value = contacts[i]
-                p = str(phone_value).split(",")
-                count = 1 
-
-                if len(p) > 1:
-                    for iii in p:
-                        new_i = re.sub(pattern, "", iii)
-                        if count == 1 and i == 0: result += f"Name : {name_value}\n" + f"Phone {count} :{new_i}\n"
-                        else: result += f"Phone {count} :{new_i}\n"
-                        count += 1
-                    result += f"Birthday : {birthday_value}\n"
-                else:
-                    new_i = re.sub(pattern, "", phone_value)
-                    result += f"Name : {name_value}\n" + f"Phone {count} :{new_i}\n" + f"Birthday : {birthday_value}\n"
-                result += f"Email : {email_value}\n" + f"Address : {address_value}\n\n" 
-            return result
-        return None
-
-    def correct_text(self, text:str):
-        new_text = text.split()
-        suma = 0
-        text = ""
-        list_t = []
-        for i in new_text:
-            suma += len(i) 
-            text += i + " "
-            if suma > 60:
-                list_t.append(text)
-                text = ""
-                suma = 0
-        if text != "":
-            list_t.append(text)
-        return list_t
-
-    # Виконує пошук в кнізі контактів за ключовим значенням
-    def search_contacts(self, name:list) -> str:
-        dict_contacts = {}
-        text = log(f"Nothing found", "[Bot's answer] ")
-        if name:
-            num = 0
-            for i in name:
-                birthday = self.data[i].birthday.value.strftime('%d-%m-%Y') if self.data[i].birthday else log("No birthday date", "[Bot's answer] ")
-                dict_contacts[num] = [str(self.data[i].name), f" {self.data[i].phones}", birthday]
-                num += 1
-            text = self.create_print_page(len(dict_contacts), dict_contacts, False)
-        
-        return text
-    
     # Зберігає книгу контактів
     def save_address_book(self, adress_book):
         with open("Save_adress_book.bin", "wb") as file:
             pickle.dump(adress_book, file)
+
 
     # Відповідає за завантаження книги контактів яку зберегли минулого разу
     def load_address_book(self): 
         with open("Save_adress_book.bin", "rb") as file:
             deserialized_adress_book = pickle.load(file)
             return deserialized_adress_book
+
+
+    # Ітерується за книгою контактів
+    def iterator(self, num:int) -> str:
+        result = self.create_page(num)
+        if result == None: return "No saved contacts"
+        for value in result: yield value
+
+
+    # Розбиває книгу контактів посторінково 
+    def create_page(self, num:int) -> dict|None:
+        if len(self.data) == 0: return None
+        result_list = []
+        page = 1
+        count = 0
+        work = True
+
+        for i in self.data.values():
+            count +=1
+            if work:
+                table = Table(title=f"Page {page}")
+                table.add_column("Name", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Phones", justify="center", style="magenta", no_wrap=False)
+                table.add_column("Emails", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Birthday", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Status", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Address", justify="center", style="cyan", no_wrap=False)
+                table.add_column("Note", justify="center", style="cyan", no_wrap=False)
+
+            table.add_row(f"{i.name.value_of()}", 
+                          f"{[el.value_of() for el in i.phones] if [el.value_of() for el in i.phones] != [''] else ''}", 
+                          f"{[el.value_of() for el in i.emails] if [el.value_of() for el in i.emails] != [''] else ''}",
+                          f"{i.birthday.value_of()}",
+                          f"{i.status.value_of()}",
+                          f"{i.address.value_of()}",
+                          f"{i.note.value_of()}")
+            
+            work = False
+            if count == len(self.data):
+                result_list.append(table)
+                return result_list
+            if count == num: 
+                result_list.append(table)
+                count = 0
+                page += 1
+                work = True
+     
+        
+        result_list.append(table)
+        return result_list
+
+
+    # Виконує пошук в кнізі контактів за ключовим значенням
+    def search_contacts(self, name:list) -> str:
+        if name:
+            table = Table(title=f"Coincides {len(name)}")
+            table.add_column("Name", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Phones", justify="center", style="magenta", no_wrap=False)
+            table.add_column("Emails", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Birthday", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Status", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Address", justify="center", style="cyan", no_wrap=False)
+            table.add_column("Note", justify="center", style="cyan", no_wrap=False)
+
+            for i in name:
+                table.add_row(f"{self.data[i].name.value_of()}", 
+                            f"{[el.value_of() for el in self.data[i].phones] if [el.value_of() for el in self.data[i].phones] != [''] else ''}", 
+                            f"{[el.value_of() for el in self.data[i].emails] if [el.value_of() for el in self.data[i].emails] != [''] else ''}",
+                            f"{self.data[i].birthday.value_of()}",
+                            f"{self.data[i].status.value_of()}",
+                            f"{self.data[i].address.value_of()}",
+                            f"{self.data[i].note.value_of()}")
+            return(table)
+        else: return f"Нічого не знайдено"

@@ -1,22 +1,7 @@
-class IncorrectDateFormat(Exception):
-    pass
 
-
-class IncorrectPhoneeFormat(Exception):
-    pass
-
-
-class IncorrectEmailFormat(Exception): 
-    pass
-
-
-class IncorrectNameFormat(Exception): 
-    pass
-
-
-class IncorrectAddressFormat(Exception): 
-    pass
-
-
-class IncorrectBirthdayFormat(Exception): 
-    pass
+class ExceptionIncorrectFormat(Exception):
+    def __init__(self, message):
+        self.message = message
+    
+    def __str__(self):
+        return f"Attention: {self.message}"
